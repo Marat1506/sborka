@@ -10,11 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="/styles.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <script type="module" crossorigin src="/assets/main-BA7jZjRM.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-C-wlEjdz.css">
 </head>
 
 <body class="text-white" style="background-color: rgba(15, 16, 16, 1);">
@@ -22,21 +21,21 @@
     <!-- Header Placeholder - будет вставлен динамически -->
     <!--    <div id="header-placeholder"></div>-->
 
-   <header class="header header-responsive">
-    <nav class="navbar navbar-expand-lg navbar-dark" style="padding-left: 0; padding-right: 0">
-        <div class="container-fluid d-flex justify-content-between" style="padding-left: 0; padding-right: 0">
+    <header class="header header-responsive">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="padding-left: 0; padding-right: 0">
+            <div class="container-fluid d-flex justify-content-between" style="padding-left: 0; padding-right: 0">
 
-            <div class="d-flex justify-content-between" style="gap: 7rem">
-                <div>
-                    <img src="/assets/_105553233322080-CvTpnkPn.png" alt="Logo" class="header-logo d-none d-sm-block"
-                         style="max-height: 36px" />
-                    <img src="/assets/logo-mobile-LGih00xV.png" alt="Logo" class="header-logo-mobile d-block d-sm-none"
-                         style="max-height: 22px" />
-                </div>
+                <div class="d-flex justify-content-between" style="gap: 7rem">
+                    <div>
+                        <img src="assets/_105553233322080.png" alt="Logo" class="header-logo d-none d-sm-block"
+                            style="max-height: 36px" />
+                        <img src="assets/logo-mobile.png" alt="Logo" class="header-logo-mobile d-block d-sm-none"
+                            style="max-height: 22px" />
+                    </div>
 
-                <ul class="navbar-nav mx-auto gap-4">
-                    <li class="nav-item">
-                        <div class="custom-select-wrapper">
+                    <ul class="navbar-nav mx-auto gap-4">
+                        <li class="nav-item">
+                            <!-- <div class="custom-select-wrapper">
                             <select class="custom-select nav-link">
                                 <option value="">Турниры</option>
                                 <option value="tournament1">Турнир 1</option>
@@ -44,73 +43,90 @@
                                 <option value="tournament3">Турнир 3</option>
                             </select>
                             <span class="custom-arrow">▼</span>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Сообщество</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Membership</a>
-                    </li>
-                </ul>
-            </div>
+                        </div> -->
 
-            <!-- Правая часть с флагом (dropdown), пользователем и кнопкой -->
-            <div class="header-right d-flex align-items-center d-none d-lg-flex">
-                <div class="flag-dropdown-wrapper me-2 me-md-3">
-                    <div class="flag-dropdown custom-select-wrapper">
-                        <div class="selected-flag d-flex align-items-center">
-                            <img src="data:image/png;base64,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" alt="Ru" class="selected-flag-icon" />
-                        </div>
-                        <ul class="dropdown-list">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle drop-btn" type="button"
+                                    id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Турниры
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Предстоящие турниры</a>
+                                    <a class="dropdown-item" href="#">Прошедшие турниры</a>
+                                    <a class="dropdown-item" href="#">Все турниры</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Сообщество</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Membership</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Правая часть с флагом (dropdown), пользователем и кнопкой -->
+                <div class="header-right d-flex align-items-center d-none d-lg-flex">
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle drop_btn_flag" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="selected-flag d-flex align-items-center">
+                                <img src="assets/Frame%2011.png" alt="Ru" class="selected-flag-icon" />
+                            </div>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li class="dropdown-item d-flex align-items-center" data-value="ru">
                                 <span>Ru</span>
-                                <img src="data:image/png;base64,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" alt="Ru" class="flag-icon me-1" />
-                                
+                                <img src="assets/Frame%2011.png" alt="Ru" class="flag-icon me-1" />
+
                             </li>
                             <li class="dropdown-item d-flex align-items-center" data-value="en">
                                 <span>En</span>
-                                <img src="data:image/png;base64,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" alt="En" class="flag-icon me-1" />
-                                
+                                <img src="assets/Frame%2011.png" alt="En" class="flag-icon me-1" />
+
                             </li>
+
                         </ul>
                     </div>
+                    <img src="assets/Frame%2033.png" alt="User" class="user-logo me-2 me-md-3" />
+                    <button class="btn btn-light header-btn"
+                        style="width: 175px; height: 40px; font-size: 14px;">Создать
+                        аккаунт</button>
                 </div>
-                <img src="data:image/png;base64,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" alt="User" class="user-logo me-2 me-md-3" />
-                <button class="btn btn-light header-btn"
-                    style="width: 175px; height: 40px; font-size: 14px;">Создать
-                    аккаунт</button>
-            </div>
 
-            <!-- Мобильная правая часть с флагом (dropdown) и кнопкой меню -->
-            <div class="mobile-header-right d-flex align-items-center d-lg-none">
-                <div class="flag-dropdown-wrapper me-2">
-                    <div class="flag-dropdown custom-select-wrapper">
-                        <div class="selected-flag d-flex align-items-center">
-                            <img src="data:image/png;base64,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" alt="Ru" class="selected-flag-icon mobile-flag" />
-                        </div>
-                        <ul class="dropdown-list">
+                <!-- Мобильная правая часть с флагом (dropdown) и кнопкой меню -->
+                <div class="mobile-header-right d-flex align-items-center d-lg-none">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle drop_btn_flag" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="selected-flag d-flex align-items-center">
+                                <img src="assets/Frame%2011.png" alt="Ru" class="selected-flag-icon" />
+                            </div>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li class="dropdown-item d-flex align-items-center" data-value="ru">
                                 <span>Ru</span>
-                                <img src="data:image/png;base64,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" alt="Ru" class="flag-icon me-1" />
-                                
+                                <img src="assets/Frame%2011.png" alt="Ru" class="flag-icon me-1" />
+
                             </li>
                             <li class="dropdown-item d-flex align-items-center" data-value="en">
                                 <span>En</span>
-                                <img src="data:image/png;base64,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" alt="En" class="flag-icon me-1" />
-                                
+                                <img src="assets/Frame%2011.png" alt="En" class="flag-icon me-1" />
+
                             </li>
+
                         </ul>
                     </div>
+                    <button class="navbar-toggler" type="button" id="mobile-menu-btn" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 </div>
-                <button class="navbar-toggler" type="button" id="mobile-menu-btn" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
 
-        </div>
-    </nav>
-</header>
+            </div>
+        </nav>
+    </header>
 
     <!-- Mobile Sidebar -->
     <div class="mobile-sidebar" id="mobile-sidebar">
@@ -123,7 +139,7 @@
             </div>
             <div class="sidebar-body">
                 <ul class="sidebar-nav">
-                    <li class="sidebar-nav-item">
+                    <!-- <li class="sidebar-nav-item">
                         <div class="custom-select-wrapper">
                             <select class="custom-select sidebar-nav-link">
                                 <option value="">Турниры</option>
@@ -133,7 +149,19 @@
                             </select>
                             <span class="custom-arrow">▼</span>
                         </div>
-                    </li>
+                    </li> -->
+                    
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle drop-btn" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Турниры
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Предстоящие турниры</a>
+                            <a class="dropdown-item" href="#">Прошедшие турниры</a>
+                            <a class="dropdown-item" href="#">Все турниры</a>
+                        </div>
+                    </div>
                     <li class="sidebar-nav-item">
                         <a class="sidebar-nav-link" href="#">Сообщество</a>
                     </li>
@@ -311,7 +339,7 @@
                     <!-- Клонированный последний слайд (для бесконечности) -->
                     <div class="carousel-slide">
                         <div class="footer-left">
-                            <img src="/assets/logo2025_4-DoOx84y1.png" alt="2025" class="logo-2025">
+                            <img src="assets/logo2025_4.png" alt="2025" class="logo-2025">
                             <div class="tournament-info">
                                 <div class="date">26.04.2025 10:00</div>
                                 <h2 class="tournament-title">
@@ -328,7 +356,7 @@
                     <!-- Slide 1 -->
                     <div class="carousel-slide active">
                         <div class="footer-left">
-                            <img src="/assets/logo2025-BZiHefpw.png" alt="2025" class="logo-2025">
+                            <img src="assets/logo2025.png" alt="2025" class="logo-2025">
                             <div class="tournament-info">
                                 <div class="date">26.04.2025 10:00</div>
                                 <h2 class="tournament-title">
@@ -341,12 +369,12 @@
                             </div>
                         </div>
                     </div>
-                    
+
 
                     <!-- Slide 2 -->
                     <div class="carousel-slide">
                         <div class="footer-left">
-                            <img src="/assets/logo2025_2-B02yqqel.png" alt="2025" class="logo-2025">
+                            <img src="assets/logo2025_2.png" alt="2025" class="logo-2025">
                             <div class="tournament-info">
                                 <div class="date">26.04.2025 10:00</div>
                                 <h2 class="tournament-title">
@@ -363,7 +391,7 @@
                     <!-- Slide 3 -->
                     <div class="carousel-slide">
                         <div class="footer-left">
-                            <img src="/assets/logo2025_3-DsGzYLWM.png" alt="2025" class="logo-2025">
+                            <img src="assets/logo2025_3.png" alt="2025" class="logo-2025">
                             <div class="tournament-info">
                                 <div class="date">26.04.2025 10:00</div>
                                 <h2 class="tournament-title">
@@ -380,7 +408,7 @@
                     <!-- Slide 4 -->
                     <div class="carousel-slide">
                         <div class="footer-left">
-                            <img src="/assets/logo2025_4-DoOx84y1.png" alt="2025" class="logo-2025">
+                            <img src="assets/logo2025_4.png" alt="2025" class="logo-2025">
                             <div class="tournament-info">
                                 <div class="date">26.04.2025 10:00</div>
                                 <h2 class="tournament-title">
@@ -397,7 +425,7 @@
                     <!-- Клонированный первый слайд (для бесконечности) -->
                     <div class="carousel-slide">
                         <div class="footer-left">
-                            <img src="/assets/logo2025-BZiHefpw.png" alt="2025" class="logo-2025">
+                            <img src="assets/logo2025.png" alt="2025" class="logo-2025">
                             <div class="tournament-info">
                                 <div class="date">26.04.2025 10:00</div>
                                 <h2 class="tournament-title">
@@ -433,7 +461,7 @@
                     <!-- Клонированный последний слайд -->
                     <div class="carousel-slide">
                         <div class="footer-left">
-                            <img src="/assets/logo2025_4-DoOx84y1.png" alt="2025" class="logo-2025">
+                            <img src="assets/logo2025_4.png" alt="2025" class="logo-2025">
                             <div class="tournament-info">
                                 <div class="date">26.04.2025 10:00</div>
                                 <h2 class="tournament-title">
@@ -449,7 +477,7 @@
                     <!-- Slide 1 -->
                     <div class="carousel-slide active">
                         <div class="footer-left">
-                            <img src="/assets/logo2025_mobile-BttpTr8P.png" alt="2025" class="logo-2025">
+                            <img src="assets/logo2025_mobile.png" alt="2025" class="logo-2025">
                             <div class="tournament-info">
                                 <div class="date">26.04.2025 10:00</div>
                                 <h2 class="tournament-title">
@@ -463,11 +491,11 @@
                         </div>
                     </div>
 
-                    
+
                     <!-- Slide 2 -->
                     <div class="carousel-slide">
                         <div class="footer-left">
-                            <img src="/assets/logo2025_2-B02yqqel.png" alt="2025" class="logo-2025">
+                            <img src="assets/logo2025_2.png" alt="2025" class="logo-2025">
                             <div class="tournament-info">
                                 <div class="date">26.04.2025 10:00</div>
                                 <h2 class="tournament-title">
@@ -484,7 +512,7 @@
                     <!-- Slide 3 -->
                     <div class="carousel-slide">
                         <div class="footer-left">
-                            <img src="/assets/logo2025_3-DsGzYLWM.png" alt="2025" class="logo-2025">
+                            <img src="assets/logo2025_3.png" alt="2025" class="logo-2025">
                             <div class="tournament-info">
                                 <div class="date">26.04.2025 10:00</div>
                                 <h2 class="tournament-title">
@@ -501,7 +529,7 @@
                     <!-- Slide 4 -->
                     <div class="carousel-slide">
                         <div class="footer-left">
-                            <img src="/assets/logo2025_4-DoOx84y1.png" alt="2025" class="logo-2025">
+                            <img src="assets/logo2025_4.png" alt="2025" class="logo-2025">
                             <div class="tournament-info">
                                 <div class="date">26.04.2025 10:00</div>
                                 <h2 class="tournament-title">
@@ -518,7 +546,7 @@
                     <!-- Клонированный первый слайд -->
                     <div class="carousel-slide">
                         <div class="footer-left">
-                            <img src="/assets/logo2025_mobile-BttpTr8P.png" alt="2025" class="logo-2025">
+                            <img src="assets/logo2025_mobile.png" alt="2025" class="logo-2025">
                             <div class="tournament-info">
                                 <div class="date">26.04.2025 10:00</div>
                                 <h2 class="tournament-title">
@@ -539,7 +567,7 @@
 
     <div class="content ">
         <div class="content_wostour">
-            <img src="/assets/wostour_chat-95w234Jv.png" alt="2025" class="content_wostour_chat">
+            <img src="assets/wostour_chat.png" alt="2025" class="content_wostour_chat">
 
             <div class="wostour-text">
                 <p class="" style="font-size: 32px; font-weight: 600">WOSTOUR - это программное обеспечение для турниров
@@ -560,7 +588,7 @@
                 <p style="color: rgba(165, 165, 165, 1); font-weight: 400; font-size: 16px;">Онлайн-платежи,
                     формирование сетки, планирование и взвешивание. Когда придет время турнира.</p>
                 <div class="d-flex justify-content-between align-items-center feature-card-footer">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAA1CAYAAADLVlLfAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPMSURBVHgBtVnRddMwFL1y883JCGYCwgS4E7ShhV/SCYAJQiYAJiD9pQ0pE8RMQJmgYgLCgb8Si/ekNLZs2Zbs5J5jR7blp+urp6cnRWCphrjHKUIRYY1zcWPd62PrD9IBNljhCCN0wUKlOBPHu+sNPpCtV+iCR0gjCMTojnhXWqqYbHUjYpBEUPiKrhB4tytvCuVumAv9RRnuEA5JXfRYl7rbyBHhcYSxkKROilDsWRXmEemiwgxhkETmmy719xVWZWZ+GC9EGqjOpVaUsSdVcjKMEHUiMsDYhyoZfdjO7AP81ZnvUZVUt1shw/BRZ9u/W1WeoQ8yuz2bTLs6uSqZ7p4Y3SGLqlTJMJrUyVUZ0nmCPhDVLq6SqVenqApPhjG6Q+K5uGwnwxCoVNypYjBFHwi347vJnIk5mH2OXJWFmuAAqtSTMZgVah1cFfOoCQv1i843pNTF9npC50/ojnxydWCAJmT4CFjOfDBVzGNfHFgVRpPPlHFQVRgD+OBaFePKGtx1ER33+E2NyEKDQ4pRI3r2hK4SOobbJ3nK0ZuM0gl7qqNzKYQ7cFP6iNdE5HYXGhrg5zMc/sdi7byffz18GuxPpogrldBbp3ScwBX8FKnASnCe0q5iRzJmNE0RFn2ldtyaiBtOxmT+PKQTdAc7/EVbN4oWIiMiskLRL7pDUmY4xktxW1ch2hMR6VEnpqXvCp/VKIyM6ZqlJ5EZWTmGH4ZEaKnte5MxPuJ8wWFhvl0Iejmptpu5p5UqGTNqEvghz3OOglYKiQ4RrWRC5qBinhOmDr87rd4qwrCN4Yd5Zaj2VMeem0TtrpOk45a+/Cc1eEdDlH/TSi0md6WOrQlTUVnoua06GCLtDqmbDByLsoxGSkhYz+vaW2zX6vuWVG17djcJx3ZaRJ5fMxS9sVBTp23Y93IyZgZ2IdbBryshJoJaXxq6yTQHuG6EmolUUCSzbqkbRiiQiE3GJE/thP55D/2JR521mwyDE6M2/PWoY2y15ryAbSsKNLDGhWhT78GWbK2T2du+5ekgRTOqqnAU/aKqW2nCQ8GBHYvCNosUflgkFmpFFlZ0f07lO4vUUSuZtDydVDM9biTSSVUVGd7qr2lOQ/O8d6EU6rDB03LW5047F4oTq/B/R2ywb7ljl6I1/Ll4U77tTq44efZLJZtQF0Rl3ezuJsMxx6SSEvuF1HbH7hHZtjqIt0l5jP0RkXUVmnch+MWIHC0kg3OBfYTt9Fo3FcFLlw3e0xuJ9zvKe7MgkExOKqbzCXVfQg3FpTxFggNjpGPVZZ1v1OE/H9NrsNmOpoQAAAAASUVORK5CYII=" alt="medal">
+                    <img src="assets/medal.png" alt="medal">
                     <i class="bi bi-arrow-right fs-1"></i>
                 </div>
             </div>
@@ -570,7 +598,7 @@
                 <p style="color: rgba(165, 165, 165, 1); font-weight: 400; font-size: 16px;">Возможность осуществлять
                     массовую регистрацию, создавать новых пользователей.</p>
                 <div class="d-flex justify-content-between align-items-center feature-card-footer">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAAgCAYAAACsNADrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMYSURBVHgB3ZlfdppAFMa/IXnusSsoWUHSHegKWtL2ObqC2BWIK0izAvU58ZiuoLiD7EC6A9rn4PTeGbQKgyKMkPg7h3NggIGPmftnLgKnyEy6WGJEe21IPOMMHjwROjhF4kQoI3BFxzO9a4OZbOGFOpVwqUcXTeNgkGn7i/flxbJA4Iamy2esvuJrxsHFOcowk7ck0qe9Ft4QWbFs3DH6NB0/0ZGbtEa0BfR1AjWSyzcwkga2p/FM3pGQPk6RrWk8lSMS2kVZ2MUL2pb4nXR+mTisK7wStNipZO/VNZwP6YWjnS8scU9xzKc4FhnPa7PwqY8bNIyjXgbK2WzyxMOOL+KChAQ594Z0zUd8Ff1coQwFc7qmSyPeUfc0iMCjHKe++hOJ9NSezkQWhvtYaEcJOQTd3y+ggVhMg8cZ1GWq8ft6P86MOFNOKMP3OPDQEM6WPbKT2RShw882QtlniLJ4gp3YEA2Qnxs/Ss6M0klDiGsxQVXO8QM6dtcKiw3XR5zXjqQWKI0eOIAN2KHxLKoZhx463zhu4V2SVDgpW2YEOS9bCPxEzbDYcaptQHG3T+3ZvDfGH9hC1h+GzvFNBGSfAX3p9kb7HR1HhqtD2EInK2nmyQKjGo4Kb9tEiHQGdYaeIf61DC/IUzuEDaQx1i7Ux69KevAkmV9PRNob6/i3P8OJKauyhWNwgKu8uipchpGY0BYk6WyPm7MTie0VuIU5ywkou+rABlO5yDxD0PLxWhzNceVXKh5k2zj3OWeuklTs6ptKJzzdcCTykwq2HWmIq7pqV/Wppj6CYwrVj92FORa2KaEfoCx6OekanjXGkdlfcDPZFuOoHPmwHFcL9Q1nQrWcPDL7xebZl2ZM54Z7bXizaG3Chh8oQLFS6oP0jbXY/4xJzISSjuf1Qp5LrTGJ02vlNvIrkUMaVR81ULxunF3k26A2oUzx3x+6tGJzHVqrUObwPwJT2QVg9qjFCOmj9aykhQdS7vcHO5wXqkY6alq7Be+KSOS9Wrh7ovaFO1P9x5auaPD2ISnxrBxRlCzj5ioRb2Ak0/wD2BL75CNmMwwAAAAASUVORK5CYII=" alt="medal">
+                    <img src="assets/pushka.png" alt="medal">
                     <i class="bi bi-arrow-right fs-1"></i>
                 </div>
             </div>
@@ -580,7 +608,7 @@
                 <p style="color: rgba(165, 165, 165, 1); font-weight: 400; font-size: 16px;">Редактируйте регистрации и
                     просматривайте предстоящие схватки с удобным функционалом.</p>
                 <div class="d-flex justify-content-between align-items-center feature-card-footer">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAAArCAYAAADYOsCbAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATeSURBVHgBxVlbdtNIEK2Wzd+cGc8OxAocVoCzgzCG+Y29gpAVEK8gYQWWfyE+hhXE7CCsAM0ODL9D1FR1SYoe1a2WJYV7jhJL6tftenZJwVDY6RASWOOvE7wmeO3xfgVv1B4GhoIhwITu8FcI9RkX8I/a5O1+YhsNB/hX3UNPGIbUrY5w5HPL2wME8CKV4qzwPMbnp/BKxdARw5Daat3Q4gCsklXE8AMJL9UBOiCA34OJ5XkIf8Jb6IhhSGl0Csf3PYGOGIrUyvE2hoExDCl225dQJaDhPTqIJbhXtIOOGMZRFPFRz8z/MdyjZ2MHYPOOGtu8Vi+gI/onxSRmODIt8JOj3RVKhYiFQN4wQSmO4SYn3gH9kaJA+oCqo0qGHuP9VR5snwhj6AsPuHgleC6NUvuo/yupnw20Mf8bKYcwgm/HbkY/kuK06FtjO7IZZa49pkdf8f8EyU6x7ww4u6jGrwjmamlUeoxS98w2+iG11eSxzmAIzJUypAJMqzzTqO4u/VYTmWEIlUMCJ8mkFQ3oTkrBtficVK1LoKWsJIBX6RyL9KkXsW7qt9UL/Lt2tIiM/STwHdhmpng/E9qRAyESbGtFp8JedV3p58zou5Ii5xB6tNzjTFHuzdjwp+jpvsMzfFddHBM5SQM0kfuKV1UjrMSOJ7XTFyiBG2gHjlsKPlvd+62+q0glwnk2SOBOHE8gdpxNsQs/5ohAp1xa5DV80CeVMSdGglKsGxv7PIjjCTZ2rKO4AB+108bQs8UcTI0iwZ2l2JMd34nIVq9NnGNp1M9aJFV2PBI4kymgfUbhL6XI5H5bHZoz0gj7zFOVY4mcpTYzcY6ijZMhkF3NxDYkXZJ8ulHtSXE61IwgPVPNFdsdqddOv0s3ZAJ+iHEzMrv17dOSFEvp3KPlquaVHnBxyqsvx6gRUIa/MarH87509ChVo9qRSiyBtt5OMuqps0+VCIGle5FKN3T0LtmbP6k26VCA5Ld6alQwk5hGN171bEREw5fSOYqIfMCgPkKpJnkh1I0ExyjAP075B9oiaKGr3K62mnb8JS6CsoaopKJEhjWBNs7bfgzIoxYqv36k7OlQBOyRQnCjuVDpLoC68QP+LtYKfePUO+FZbNSLFquh6TDH562tvrYmo02EuOwWC8/vq8XPZlJkqLIkNmbn6XqtFjjSc2jOyt+aDGCt/dVLm4T4FOc4BUktVT0ou0nZAy1JKSo9IXJz9dxkDXJKkyGEP/KjRDaPjeSNIfNoLxNxvArcpBKjdqHwZmO1jzfqynwAcKvkpOE+m/9z6V6u/M7yMlwKO6mdJk+0EN7UpVRFppJgCpd1qamW3i2DrfIblG1eJrXN0xkJG+/PLXMVgUzqr9L9T89QQWpok1Yh66+TIkKA+Z2MZin1CS3a5nux7cicHAzKpJoJtf8opp1Ow41nQl+u+sZC67PMqz6SGoIQo5mUbpmpJKITmmTftpgUx6IryxC9fbZsDducY3MckTbrgqQVmETVXms4PAmhUUtvSMlvItqWkVZgrds9FSFCIpJyq61dWuekfqHYiQndQ1eoox2Fux/XLSTbCgOL31/2QojxpfZE1ebcC/2kZ2WMRLOJAnyxLDCOTQWIg2Y/oLPUYz5ItnBZ+0RT/pxK7T6hplw2jk2mwRWr2NxzqXr1C17/6rjIaQraAAAAAElFTkSuQmCC" alt="medal">
+                    <img src="assets/borba.png" alt="medal">
                     <i class="bi bi-arrow-right fs-1"></i>
                 </div>
             </div>
@@ -595,12 +623,12 @@
                     <p class="card_title">Управляйте платежами,
                         <br /> регистрациями и sms
                     </p>
-                    <img src="/assets/notifications--hWWfIiY.png" alt="Уведомления" class="notification-img">
+                    <img src="assets/notifications.png" alt="Уведомления" class="notification-img">
                 </div>
 
                 <!-- Правая колонка (две карточки) -->
                 <div class="side-card card" style="border-radius: 16px">
-                    <img class="moni" src="/assets/Group%203241-Bx5n-V5D.png" alt="Личный кабинет">
+                    <img class="moni" src="assets/Group%203241.png" alt="Личный кабинет">
                     <div class="card-content">
                         <p class="card_title">Удобный личный кабинет</p>
                         <p class="card_text">Создавайте,
@@ -610,7 +638,7 @@
                 </div>
 
                 <div class="side-card card" style="border-radius: 16px">
-                    <img class="moni" src="/assets/Group%203243-Dswrwpb8.png" alt="Онлайн-трансляции">
+                    <img class="moni" src="assets/Group%203243.png" alt="Онлайн-трансляции">
                     <div class="card-content">
                         <p class="card_title2">Следите за соревнованиями из <br />любой точки мира
                         </p>
@@ -626,19 +654,21 @@
     <div class="main-footer" style="background-color: rgba(0, 0, 0, 1) !important ">
 
         <div class="footer-top d-flex flex-column flex-md-row justify-content-between align-items-center p-3">
-            <img src="/assets/layer1-h40m-oXB.png" alt="footer_logo" class="footer-logo">
+            <img src="assets/layer1.png" alt="footer_logo" class="footer-logo">
             <div
                 class="footer-nav d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 gap-md-5">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <div class="custom-select-wrapper">
-                            <select class="custom-select nav-link">
-                                <option value="">Турниры</option>
-                                <option value="tournament1">Турнир 1</option>
-                                <option value="tournament2">Турнир 2</option>
-                                <option value="tournament3">Турнир 3</option>
-                            </select>
-                            <span class="custom-arrow">▼</span>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle drop-btn" type="button"
+                                id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                Турниры
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Предстоящие турниры</a>
+                                <a class="dropdown-item" href="#">Прошедшие турниры</a>
+                                <a class="dropdown-item" href="#">Все турниры</a>
+                            </div>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -668,16 +698,18 @@
             </div>
 
             <div class="social-links d-flex justify-content-center justify-content-md-between align-items-center gap-3">
-                <img src="/assets/instagram-ByDe-cBT.png" alt="instagram">
-                <img src="data:image/png;base64,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" alt="facebook">
-                <img src="/assets/whatsapp-CpIwlmoD.png" alt="whatsapp">
-                <img src="data:image/png;base64,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" alt="youtube">
+                <img src="assets/instagram.png" alt="instagram">
+                <img src="assets/facebook.png" alt="facebook">
+                <img src="assets/whatsapp.png" alt="whatsapp">
+                <img src="assets/youtube.png" alt="youtube">
             </div>
         </div>
 
     </div>
 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/main.js"></script>
     <!-- <script type="module" src="./js/main2.js"></script>
     <script type="module" src="./js/main3.js"></script> -->
 </body>
