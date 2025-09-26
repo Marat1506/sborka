@@ -1,5 +1,4 @@
 
-
 const screenWidth = window.innerWidth;
 console.log('Ширина экрана:', screenWidth, 'px');
 
