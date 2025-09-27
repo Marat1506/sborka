@@ -1443,7 +1443,7 @@ body {
 }
 
 .tournament-footer-mobile .carousel-slide .footer-left .container-logo-2025 {
-  width: 52% !important;
+  width: 65% !important;
   height: 100%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -2069,43 +2069,108 @@ body {
   }
 }
 
-.why-choose-us .grid-container .side-card img.moni {
- 
-  width: auto;
-  height: 100%;
-  max-width: 250px;
-  flex-shrink: 0;
-  margin: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавность для трансформации и теней (если нужно менять интенсивность) */
-  box-shadow: 
-    -10px 0 15px rgba(255, 215, 0, 0.6), /* Яркая тень слева (золотистая) */
-    10px 0 15px rgba(255, 105, 180, 0.6), /* Яркая тень справа (розовая) */
-    0 -10px 15px rgba(0, 191, 255, 0.6); /* Яркая тень сверху (голубая) */
+.why-choose-us .grid-container .side-card {
+  position: relative; /* Для правильного позиционирования, если нужно */
+  overflow: visible; /* Убедимся, что овал не обрезается родительским контейнером */
 }
 
-.why-choose-us .grid-container .side-card img.moni {
+.why-choose-us .grid-container .side-card .container_moni1 {
   width: auto;
   height: 100%;
   max-width: 250px;
   flex-shrink: 0;
   margin: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавность для трансформации и теней */
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  position: relative; /* Позиционируем относительно этого контейнера */
+  margin-left: 3rem;
+  overflow: visible;
+}
+
+.why-choose-us .grid-container .side-card .container_moni1 img.moni {
   position: relative;
-  border-radius: 20px; /* Закругление краев изображения для плавных теней */
-  box-shadow: 
-    0 0 0 15px transparent, /* Отступ 15px без тени */
-    
-    5px 0 10px -5px rgba(0, 191, 255, 0.4), /* Уменьшенная дуга справа */
-    -5px 0 10px -5px rgba(0, 191, 255, 0.4), /* Уменьшенная дуга слева */
-    0 -5px 10px -5px rgba(0, 191, 255, 0.4); /* Уменьшенная дуга сверху */
+  z-index: 1; /* Убедимся, что img выше овала */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.why-choose-us .grid-container .side-card img.moni:hover {
-transform: scale(1.05); 
-cursor: pointer;
+
+.why-choose-us .grid-container .side-card .container_moni1::before {
+  content: '';
+  position: absolute;
+  z-index: 0; /* За img */
+  top: 3%; /* Больше отступов для выхода за границы */
+  left: 5%;
+  width: 90%; /* Ещё шире */
+  height: 90%; /* Для овальности */
+  background-color: #0732b1;
+  border-radius: 50%;
+  filter: blur(20px); /* Увеличили размытие */
+  opacity: 0.7; /* Повысили видимость */
 }
+
+.why-choose-us .grid-container .side-card .container_moni1 img.moni:hover {
+  transform: scale(1.05); 
+  cursor: pointer;
+}
+
+.why-choose-us .grid-container .side-card .container_moni2 {
+  width: auto;
+  height: 100%;
+  max-width: 250px;
+  flex-shrink: 0;
+  margin: 0;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  position: relative; /* Позиционируем относительно этого контейнера */
+  margin-left: 3rem;
+  overflow: visible;
+}
+
+.why-choose-us .grid-container .side-card .container_moni2 img.moni {
+  position: relative;
+  z-index: 1; /* Убедимся, что img выше овала */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-choose-us .grid-container .side-card .container_moni2::before {
+  content: '';
+  position: absolute;
+  z-index: 0; /* За img */
+  top: 3%; /* Больше отступов для выхода за границы */
+  left: 5%;
+  width: 90%; /* Ещё шире */
+  height: 90%; /* Для овальности */
+  background-color: #0732b1;
+  border-radius: 50%;
+  filter: blur(20px); /* Увеличили размытие */
+  opacity: 0.7; /* Повысили видимость */
+}
+
+.why-choose-us .grid-container .side-card .container_moni2 img.moni:hover {
+  transform: scale(1.05); 
+  cursor: pointer;
+}
+
+
 
 @media (max-width: 991px) {
-  .why-choose-us .grid-container .side-card img.moni {
+  .why-choose-us .grid-container .side-card .container_moni1{
+    margin-left: 0.5rem;
+
+  }
+  .why-choose-us .grid-container .side-card .container_moni2{
+    margin-left: 0.5rem;
+
+  }
+  .why-choose-us .grid-container .side-card .container_moni1 img.moni {
+    height: auto;
+    max-width: 240px;
+    /* Уменьшаем максимальную ширину */
+    margin-bottom: 0.5rem;
+  }
+
+  .why-choose-us .grid-container .side-card .container_moni2 img.moni {
     height: auto;
     max-width: 240px;
     /* Уменьшаем максимальную ширину */
@@ -2114,31 +2179,49 @@ cursor: pointer;
 }
 
 @media (max-width: 480px) {
-  .why-choose-us .grid-container .side-card img.moni {
-    max-width: 180px;
+  .why-choose-us .grid-container .side-card .container_moni1 img.moni {
+    max-width: 150px;
+    /* Еще меньше для очень маленьких экранов */
+  }
+  .why-choose-us .grid-container .side-card .container_moni2 img.moni {
+    max-width: 150px;
     /* Еще меньше для очень маленьких экранов */
   }
 }
 
 @media (min-width: 3840px) {
-  .why-choose-us .grid-container .side-card img.moni {
+  .why-choose-us .grid-container .side-card .container_moni1 img.moni {
+    max-width: 800px !important;
+  }
+  .why-choose-us .grid-container .side-card .container_moni2 img.moni {
     max-width: 800px !important;
   }
 }
 
 @media (min-width: 2560px) {
-  .why-choose-us .grid-container .side-card img.moni {
+  .why-choose-us .grid-container .side-card .container_moni1 img.moni {
+    max-width: 400px !important;
+  }
+   .why-choose-us .grid-container .side-card .container_moni2 img.moni {
     max-width: 400px !important;
   }
 }
 
 @media (min-width: 1080px) {
-  .why-choose-us .grid-container .side-card img.moni {
+  .why-choose-us .grid-container .side-card .container_moni1 img.moni {
+    max-width: 200px !important;
+  }
+   .why-choose-us .grid-container .side-card .container_moni2 img.moni {
     max-width: 200px !important;
   }
 }
 
-.why-choose-us .grid-container .side-card img.moni:hover {
+.why-choose-us .grid-container .side-card .container_moni1 img.moni:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.why-choose-us .grid-container .side-card .container_moni2 img.moni:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   cursor: pointer;
