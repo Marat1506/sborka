@@ -2070,8 +2070,10 @@ body {
 }
 
 .why-choose-us .grid-container .side-card {
-  position: relative; /* Для правильного позиционирования, если нужно */
-  overflow: visible; /* Убедимся, что овал не обрезается родительским контейнером */
+  position: relative;
+  /* Для правильного позиционирования, если нужно */
+  overflow: visible;
+  /* Убедимся, что овал не обрезается родительским контейнером */
 }
 
 .why-choose-us .grid-container .side-card .container_moni1 {
@@ -2083,33 +2085,43 @@ body {
   padding-top: 1rem;
   padding-right: 1rem;
   padding-left: 1rem;
-  position: relative; /* Позиционируем относительно этого контейнера */
+  position: relative;
+  /* Позиционируем относительно этого контейнера */
   margin-left: 3rem;
   overflow: visible;
 }
 
 .why-choose-us .grid-container .side-card .container_moni1 img.moni {
+  border: 1px solid white;
+  border-radius: 10px;
   position: relative;
-  z-index: 1; /* Убедимся, что img выше овала */
+  z-index: 1;
+  /* Убедимся, что img выше овала */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .why-choose-us .grid-container .side-card .container_moni1::before {
   content: '';
   position: absolute;
-  z-index: 0; /* За img */
-  top: 3%; /* Больше отступов для выхода за границы */
+  z-index: 0;
+  /* За img */
+  top: 3%;
+  /* Больше отступов для выхода за границы */
   left: 5%;
-  width: 90%; /* Ещё шире */
-  height: 90%; /* Для овальности */
+  width: 90%;
+  /* Ещё шире */
+  height: 90%;
+  /* Для овальности */
   background-color: #0732b1;
   border-radius: 50%;
-  filter: blur(20px); /* Увеличили размытие */
-  opacity: 0.7; /* Повысили видимость */
+  filter: blur(20px);
+  /* Увеличили размытие */
+  opacity: 0.7;
+  /* Повысили видимость */
 }
 
 .why-choose-us .grid-container .side-card .container_moni1 img.moni:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
   cursor: pointer;
 }
 
@@ -2122,47 +2134,59 @@ body {
   padding-top: 1rem;
   padding-right: 1rem;
   padding-left: 1rem;
-  position: relative; /* Позиционируем относительно этого контейнера */
+  position: relative;
+  /* Позиционируем относительно этого контейнера */
   margin-left: 3rem;
   overflow: visible;
 }
 
 .why-choose-us .grid-container .side-card .container_moni2 img.moni {
+  border: 1px solid white;
+  border-radius: 10px;
   position: relative;
-  z-index: 1; /* Убедимся, что img выше овала */
+  z-index: 1;
+  /* Убедимся, что img выше овала */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .why-choose-us .grid-container .side-card .container_moni2::before {
   content: '';
   position: absolute;
-  z-index: 0; /* За img */
-  top: 3%; /* Больше отступов для выхода за границы */
+  z-index: 0;
+  /* За img */
+  top: 3%;
+  /* Больше отступов для выхода за границы */
   left: 5%;
-  width: 90%; /* Ещё шире */
-  height: 90%; /* Для овальности */
+  width: 90%;
+  /* Ещё шире */
+  height: 90%;
+  /* Для овальности */
   background-color: #0732b1;
   border-radius: 50%;
-  filter: blur(20px); /* Увеличили размытие */
-  opacity: 0.7; /* Повысили видимость */
+  filter: blur(20px);
+  /* Увеличили размытие */
+  opacity: 0.7;
+  /* Повысили видимость */
 }
 
 .why-choose-us .grid-container .side-card .container_moni2 img.moni:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
   cursor: pointer;
 }
 
 
 
 @media (max-width: 991px) {
-  .why-choose-us .grid-container .side-card .container_moni1{
+  .why-choose-us .grid-container .side-card .container_moni1 {
     margin-left: 0.5rem;
 
   }
-  .why-choose-us .grid-container .side-card .container_moni2{
+
+  .why-choose-us .grid-container .side-card .container_moni2 {
     margin-left: 0.5rem;
 
   }
+
   .why-choose-us .grid-container .side-card .container_moni1 img.moni {
     height: auto;
     max-width: 240px;
@@ -2183,6 +2207,7 @@ body {
     max-width: 150px;
     /* Еще меньше для очень маленьких экранов */
   }
+
   .why-choose-us .grid-container .side-card .container_moni2 img.moni {
     max-width: 150px;
     /* Еще меньше для очень маленьких экранов */
@@ -2193,6 +2218,7 @@ body {
   .why-choose-us .grid-container .side-card .container_moni1 img.moni {
     max-width: 800px !important;
   }
+
   .why-choose-us .grid-container .side-card .container_moni2 img.moni {
     max-width: 800px !important;
   }
@@ -2202,7 +2228,8 @@ body {
   .why-choose-us .grid-container .side-card .container_moni1 img.moni {
     max-width: 400px !important;
   }
-   .why-choose-us .grid-container .side-card .container_moni2 img.moni {
+
+  .why-choose-us .grid-container .side-card .container_moni2 img.moni {
     max-width: 400px !important;
   }
 }
@@ -2211,7 +2238,8 @@ body {
   .why-choose-us .grid-container .side-card .container_moni1 img.moni {
     max-width: 200px !important;
   }
-   .why-choose-us .grid-container .side-card .container_moni2 img.moni {
+
+  .why-choose-us .grid-container .side-card .container_moni2 img.moni {
     max-width: 200px !important;
   }
 }
@@ -2221,6 +2249,7 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
+
 .why-choose-us .grid-container .side-card .container_moni2 img.moni:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
