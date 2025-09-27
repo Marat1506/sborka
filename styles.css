@@ -2896,6 +2896,8 @@ body {
 @media (max-width: 991.98px) {
   .header .navbar-nav {
     display: none !important;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .header .mobile-header-right {
@@ -2905,12 +2907,17 @@ body {
   }
 
   .header .mobile-header-right .mobile-flag {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
     transition: all 0.3s ease;
     cursor: pointer;
   }
+  .header .selected-flag .selected-flag-icon{
+    width: 50px;
+    height: 50px;
+  }
+  
 
   .header .mobile-header-right .mobile-flag:hover {
     transform: scale(1.1) translateY(-2px);
@@ -2922,8 +2929,8 @@ body {
     color: white;
     font-size: 1.5rem;
     padding: 0.5rem;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
