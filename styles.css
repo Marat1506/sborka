@@ -1454,7 +1454,7 @@ body {
   height: 100%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  object-fit: cover;
+  object-fit: fill;
   flex-shrink: 0 !important;
 }
 
@@ -2070,12 +2070,38 @@ body {
 }
 
 .why-choose-us .grid-container .side-card img.moni {
+ 
   width: auto;
   height: 100%;
   max-width: 250px;
   flex-shrink: 0;
   margin: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавность для трансформации и теней (если нужно менять интенсивность) */
+  box-shadow: 
+    -10px 0 15px rgba(255, 215, 0, 0.6), /* Яркая тень слева (золотистая) */
+    10px 0 15px rgba(255, 105, 180, 0.6), /* Яркая тень справа (розовая) */
+    0 -10px 15px rgba(0, 191, 255, 0.6); /* Яркая тень сверху (голубая) */
+}
+
+.why-choose-us .grid-container .side-card img.moni {
+  width: auto;
+  height: 100%;
+  max-width: 250px;
+  flex-shrink: 0;
+  margin: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавность для трансформации и теней */
+  position: relative;
+  border-radius: 20px; /* Закругление краев изображения для плавных теней */
+  box-shadow: 
+    0 0 0 15px transparent, /* Отступ 15px без тени */
+    
+    5px 0 10px -5px rgba(0, 191, 255, 0.4), /* Уменьшенная дуга справа */
+    -5px 0 10px -5px rgba(0, 191, 255, 0.4), /* Уменьшенная дуга слева */
+    0 -5px 10px -5px rgba(0, 191, 255, 0.4); /* Уменьшенная дуга сверху */
+}
+.why-choose-us .grid-container .side-card img.moni:hover {
+transform: scale(1.05); 
+cursor: pointer;
 }
 
 @media (max-width: 991px) {
