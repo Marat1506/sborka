@@ -1932,12 +1932,12 @@ body {
   }
 }
 
-.content .features-cards .feature-card-footer .bi-arrow-right {
+.content .features-cards .feature-card-footer a .bi-arrow-right {
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.content .features-cards .feature-card-footer .bi-arrow-right:hover {
+.content .features-cards .feature-card-footer a .bi-arrow-right:hover {
   transform: translateX(5px);
   /* Сдвиг вправо */
   color: blue !important;
@@ -2824,9 +2824,9 @@ body {
   margin-right: -15px;
 }
 
-.main-footer .footer-links-mobile {
+/* .main-footer .footer-links-mobile {
   display: none;
-}
+} */
 
 
 
@@ -2834,6 +2834,34 @@ body {
   .main-footer .footer-bottom {
     margin-top: 3rem;
   }
+
+  .main-footer .footer-links-mobile {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 2rem !important;
+
+  }
+  .main-footer .footer-links-mobile p{
+    color: rgba(94, 94, 94, 1);
+    transition: all 0.3s ease; 
+}
+
+.main-footer .footer-links-mobile .pk {
+    display: flex;
+    gap: 2rem !important;
+}
+
+.main-footer .footer-links-mobile .pk p{
+    color: rgba(94, 94, 94, 1);
+    transition: all 0.3s ease; 
+}
+
+.main-footer .footer-links-mobile p:hover {
+    transform: scale(1.05); 
+    color: white !important; 
+}
+
 }
 
 @media (min-width: 1537px) {
