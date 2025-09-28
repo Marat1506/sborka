@@ -149,6 +149,7 @@ body {
 .header .header-right {
   display: flex;
   align-items: center;
+
 }
 
 .header {
@@ -262,6 +263,7 @@ body {
   cursor: pointer;
   width: 40px;
   height: 40px;
+  margin-right: 0.5rem;
 }
 
 .header .user-logo:hover {
@@ -518,6 +520,23 @@ body {
   }
 }
 
+/* Основной контейнер с Grid */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-text-content {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-cards-content {
+  flex-shrink: 0;
+}
+
 .hero-section .card {
   width: 193px;
   height: 145px;
@@ -556,6 +575,7 @@ body {
 
 .hero-section .hero_flex {
   display: flex;
+  flex-direction: row;
   gap: 1rem;
 }
 
@@ -669,7 +689,9 @@ body {
 
 @media (max-width: 991px) {
   .hero-section .hero-btn-primary {
-    font-size: 13px !important;
+    font-size: 16px !important;
+    width: 200px !important;
+    height: 50px !important;
   }
 }
 
@@ -700,7 +722,9 @@ body {
 
 @media (max-width: 991px) {
   .hero-section .hero-btn-secondary {
-    font-size: 13px !important;
+    font-size: 16px !important;
+    width: 160px !important;
+    height: 50px !important;
   }
 }
 
@@ -751,6 +775,165 @@ body {
   padding: 1rem;
 }
 
+.hero-card-number {
+  font-size: 32px !important;
+  font-weight: 400 !important;
+  color: white !important;
+}
+
+@media (min-width: 1537px) {
+  .hero-card-number {
+    font-size: calc(32px + (100vw - 1536px) * 0.015) !important;
+  }
+}
+
+.hero-card-text {
+  color: rgb(165, 165, 165) !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+}
+
+@media (min-width: 1537px) {
+  .hero-card-text.hero-card-text {
+    font-size: calc(15px + (100vw - 1536px) * 0.008) !important;
+  }
+}
+
+/* Мобильная версия - меняем порядок */
+@media (max-width: 991px) {
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-text-content {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .hero-cards-content {
+    order: 1;
+  }
+
+  /* Переопределяем порядок внутри текстового контента */
+  .hero-text-content .hero-subtitle {
+    order: 1;
+    margin-bottom: 0 !important;
+  }
+
+  .hero-text-content .hero-title {
+    order: 2;
+    margin-bottom: 0 !important;
+  }
+
+  .hero-text-content .hero-buttons {
+    order: 3;
+    margin-top: 1rem;
+  }
+
+  /* Центрируем кнопки на мобильных */
+  .hero-buttons {
+    justify-content: center !important;
+    flex-wrap: nowrap;
+  }
+
+  /* Адаптация карточек для мобильных */
+  .hero_flex {
+    justify-content: center;
+    gap: 0.8rem !important;
+  }
+
+  .hero-section .card {
+    width: 150px !important;
+    height: 110px !important;
+  }
+
+  .hero-card-number {
+    font-size: 20px !important;
+  }
+
+  .hero-card-text {
+    font-size: 12px !important;
+    line-height: 1.2;
+  }
+
+  /* Адаптация шрифтов для мобильных */
+  .hero-section .hero-title-responsive {
+    font-size: 32px !important;
+    line-height: 1.2;
+  }
+
+  .hero-section .hero-subtitle-responsive {
+    font-size: 18px !important;
+    margin-bottom: 0rem !important;
+  }
+}
+
+/* Адаптация для очень маленьких экранов */
+@media (max-width: 576px) {
+  .hero_flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem !important;
+  }
+
+  .hero-section .card {
+    width: 140px !important;
+    height: 100px !important;
+  }
+
+  .hero-buttons {
+    align-items: stretch;
+    gap: 1rem !important;
+    width: 100%;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 100% !important;
+    font-size: 14px !important;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .hero-section .hero-title-responsive {
+    font-size: 28px !important;
+  }
+
+  .hero-section .hero-subtitle-responsive {
+    font-size: 16px !important;
+  }
+}
+
+/* Для очень больших мобильных (планшеты в портретной ориентации) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-section .card {
+    width: 170px !important;
+    height: 130px !important;
+  }
+
+  .hero-card-number {
+    font-size: 28px !important;
+  }
+
+  .hero-card-text {
+    font-size: 14px !important;
+  }
+
+  .hero-section .hero-title-responsive {
+    font-size: 40px !important;
+  }
+
+  .hero-section .hero-subtitle-responsive {
+    font-size: 22px !important;
+  }
+}
+
 .tournament-footer {
   position: relative;
   display: flex;
@@ -763,7 +946,7 @@ body {
 }
 
 @media (max-width: 991.98px) {
-  .tournament-footer {
+  .tournament-footer .footer-right {
     display: none;
   }
 }
@@ -800,13 +983,15 @@ body {
 }
 
 .tournament-footer .carousel-slide .footer-left .container-logo-2025 {
-  width: auto;
-  height: auto;
+  width: 252;
+  height: 100%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
 .tournament-footer .carousel-slide .footer-left .container-logo-2025 .logo-2025 {
+  width: 100%;
+  height: 100%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   object-fit: cover;
@@ -1359,12 +1544,46 @@ body {
 }
 
 @media (max-width: 1080px) {
+  .tournament-footer {
+    height: 120px;
+  }
+
   .tournament-footer .carousel-container {
-    width: 61%;
+    width: auto;
+    height: 100%;
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tournament-footer .carousel-container .footer-left .container-logo-2025 {
+    width: auto;
+    height: 100%;
+  }
+
+  .tournament-footer .carousel-container .footer-left .container-logo-2025 .logo-2025 {
+    width: 169px;
+    height: 100%;
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .tournament-title {
+    font-size: 13px;
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .location {
+    font-size: 8px;
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .date {
+    font-size: 8px;
   }
 
   .tournament-footer .footer-right {
-    width: 39%;
+    display: none;
   }
 }
 
@@ -2091,13 +2310,25 @@ body {
   overflow: visible;
 }
 
+
+
+.why-choose-us .grid-container .side-card .img-container:hover {
+  transform: scale(1.05);
+}
+
 .why-choose-us .grid-container .side-card .container_moni1 img.moni {
-  border: 1px solid white;
+  border: 6px solid black;
+  outline: 1px solid white;
   border-radius: 10px;
   position: relative;
   z-index: 1;
-  /* Убедимся, что img выше овала */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.why-choose-us .grid-container .side-card .container_moni1 img.moni:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .why-choose-us .grid-container .side-card .container_moni1::before {
@@ -2120,10 +2351,7 @@ body {
   /* Повысили видимость */
 }
 
-.why-choose-us .grid-container .side-card .container_moni1 img.moni:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
+
 
 .why-choose-us .grid-container .side-card .container_moni2 {
   width: auto;
@@ -2141,13 +2369,15 @@ body {
 }
 
 .why-choose-us .grid-container .side-card .container_moni2 img.moni {
-  border: 1px solid white;
+  border: 6px solid black;
+  outline: 1px solid white;
   border-radius: 10px;
   position: relative;
   z-index: 1;
   /* Убедимся, что img выше овала */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .why-choose-us .grid-container .side-card .container_moni2::before {
   content: '';
@@ -2491,6 +2721,42 @@ body {
   /* Если не хотите, чтобы hover влиял на кнопку */
 }
 
+@media (max-width: 1080px) {
+
+  .main-footer .footer-nav .navbar-nav .nav-item .dropdown {
+    top: 3px;
+
+  }
+
+  .main-footer .footer-nav .navbar-nav .nav-item .dropdown .drop-btn {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 760px) {
+
+  .main-footer .footer-nav .navbar-nav .nav-item .dropdown {
+    top: 5px;
+
+  }
+
+  .main-footer .footer-nav .navbar-nav .nav-item .dropdown .drop-btn {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 470px) {
+
+  .main-footer .footer-nav .navbar-nav .nav-item .dropdown {
+    top: 3px;
+
+  }
+
+  .main-footer .footer-nav .navbar-nav .nav-item .dropdown .drop-btn {
+    font-size: 15px;
+  }
+}
+
 /* Убираем стрелку из dropdown-toggle в футере (если нужно) */
 /* .main-footer .footer-nav .navbar-nav .nav-item .dropdown .dropdown-toggle::after {
     display: none !important;
@@ -2562,9 +2828,7 @@ body {
   display: none;
 }
 
-.main-footer {
-  /* Медиа-запросы для больших экранов */
-}
+
 
 @media (min-width: 992px) {
   .main-footer .footer-bottom {
@@ -2724,9 +2988,7 @@ body {
   }
 }
 
-.main-footer {
-  /* МОБИЛЬНАЯ ВЕРСИЯ - должен идти ПОСЛЕ десктопных стилей */
-}
+
 
 @media (max-width: 991px) {
   .main-footer {
@@ -2919,7 +3181,7 @@ body {
   }
 }
 
-.hero-cards-container {
+/* .hero-cards-container {
   width: 100%;
   margin-top: 1rem;
 }
@@ -3046,7 +3308,7 @@ body {
   .hero-cards-column {
     gap: 0.5rem;
   }
-}
+} */
 
 @media (max-width: 991.98px) {
   .header .navbar-nav {
@@ -3122,14 +3384,6 @@ body {
   .header .mobile-header-right .dropdown .dropdown-toggle::after {
     display: none !important;
   }
-
-
-
-
-
-
-
-
 
   .header .mobile-header-right .navbar-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
