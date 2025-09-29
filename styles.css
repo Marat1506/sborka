@@ -125,7 +125,7 @@ body {
 }
 
 .header .navbar .container-fluid .logo_nav .logo_two {
-  max-height: 32px;
+  max-height: 35px !important;
 }
 
 .header .navbar-nav .nav-item {
@@ -276,8 +276,8 @@ body {
 
 @media (max-width: 991px) {
   .header .selected-flag-icon {
-    width: 32px;
-    height: 32px;
+    width: 42px;
+    height: 42px;
   }
 }
 
@@ -612,7 +612,9 @@ body {
 }
 
 .hero-section .card-body {
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -711,7 +713,7 @@ body {
 }
 
 .hero-section .hero-btn-primary {
-  border: 3px solid white;
+  border: 2px solid white;
   width: 223px !important;
   height: 55px !important;
   border-radius: 20px;
@@ -723,6 +725,7 @@ body {
 
 @media (max-width: 991px) {
   .hero-section .hero-btn-primary {
+    border: 1px solid white;
     font-size: 16px !important;
     width: 200px !important;
     height: 50px !important;
@@ -744,7 +747,7 @@ body {
 }
 
 .hero-section .hero-btn-secondary {
-  border: 3px solid white;
+  border: 1px solid white;
   width: 174px !important;
   height: 55px !important;
   border-radius: 20px;
@@ -809,6 +812,8 @@ body {
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
 }
 
 .hero-card-number {
@@ -881,7 +886,7 @@ body {
   /* Адаптация карточек для мобильных */
   .hero_flex {
     justify-content: center;
-    gap: 0.8rem !important;
+    gap: 1.8rem !important;
   }
 
   .hero-section .card {
@@ -915,7 +920,7 @@ body {
   .hero_flex {
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem !important;
+    gap: 1.1rem !important;
   }
 
   .hero-section .card {
@@ -1827,13 +1832,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-@media (max-width: 991px) {
-  .content .content_wostour {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
+
 
 @media (min-width: 3840px) {
   .content .content_wostour {
@@ -1866,6 +1865,17 @@ body {
 
 @media (max-width: 991px) {
   .content .content_wostour .content_wostour_chat {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .content .content_wostour {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .content .content_wostour .container_content_wostour_chat{
     width: 100%;
   }
 }
@@ -2013,6 +2023,7 @@ body {
 .content .features-cards .feature-card-footer a .bi-arrow-right {
   transition: all 0.3s ease;
   cursor: pointer;
+  color: white;
 }
 
 .content .features-cards .feature-card-footer a .bi-arrow-right:hover {
@@ -2173,15 +2184,10 @@ body {
   color: rgb(255, 255, 255);
 }
 
-@media (min-width: 3840px) {
-  .why-choose-us .why-choose-us-title {
-    font-size: 90px;
-  }
-}
 
-@media (min-width: 2560px) {
+@media (min-width: 1080px) {
   .why-choose-us .why-choose-us-title {
-    font-size: 70px;
+    font-size: 40px;
   }
 }
 
@@ -2191,18 +2197,33 @@ body {
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 2560px) {
   .why-choose-us .why-choose-us-title {
-    font-size: 40px;
+    font-size: 70px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .why-choose-us .why-choose-us-title {
+    font-size: 90px;
   }
 }
 
 @media (max-width: 991px) {
   .why-choose-us .why-choose-us-title {
-    font-size: 25px;
+    font-size: 35px;
     text-align: center;
   }
 }
+
+
+
+
+
+
+
+
+
 
 .why-choose-us .balvanka {
   width: 200px;
@@ -2215,15 +2236,21 @@ body {
   color: rgb(255, 255, 255);
 }
 
-@media (min-width: 3840px) {
+@media (min-width: 642px) {
   .why-choose-us .card_title {
-    font-size: 90px;
+    font-size: 32px;
   }
 }
 
-@media (min-width: 2560px) {
+@media (min-width: 850px) {
   .why-choose-us .card_title {
-    font-size: 60px;
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 990px) {
+  .why-choose-us .card_title {
+    font-size: 25px;
   }
 }
 
@@ -2233,11 +2260,18 @@ body {
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 2560px) {
   .why-choose-us .card_title {
-    font-size: 25px;
+    font-size: 60px;
   }
 }
+
+@media (min-width: 3840px) {
+  .why-choose-us .card_title {
+    font-size: 90px;
+  }
+}
+
 
 .why-choose-us .card_title2 {
   font-size: 21px;
@@ -2350,7 +2384,7 @@ body {
 
 @media (max-width: 1080px) {
   .why-choose-us .grid-container .main-card .notification-img {
-    width: 80%;
+    width: 100%;
     margin-top: 1rem;
   }
 }
@@ -2401,9 +2435,8 @@ body {
 
 .why-choose-us .grid-container .side-card {
   position: relative;
-  /* Для правильного позиционирования, если нужно */
   overflow: visible;
-  /* Убедимся, что овал не обрезается родительским контейнером */
+  /* Assuming flex is applied here or higher up */
 }
 
 .why-choose-us .grid-container .side-card .container_moni1 {
@@ -2416,53 +2449,53 @@ body {
   padding-right: 1rem;
   padding-left: 1rem;
   position: relative;
-  /* Позиционируем относительно этого контейнера */
   margin-left: 3rem;
   overflow: visible;
 }
 
-
-
-.why-choose-us .grid-container .side-card .img-container:hover {
-  transform: scale(1.05);
+.why-choose-us .grid-container .side-card .container_moni1 .img-wrapper {
+  position: relative;
+  /* Pseudo-element positioned relative to this */
+  display: inline-block;
+  /* Hugs the image dimensions */
+  width: fit-content;
+  height: fit-content;
 }
 
-.why-choose-us .grid-container .side-card .container_moni1 img.moni {
+.why-choose-us .grid-container .side-card .container_moni1 .img-wrapper img.moni {
   border: 6px solid black;
   outline: 1px solid white;
   border-radius: 10px;
   position: relative;
   z-index: 1;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
 
-.why-choose-us .grid-container .side-card .container_moni1 img.moni:hover {
+.why-choose-us .grid-container .side-card .container_moni1 .img-wrapper:hover img.moni {
   transform: scale(1.05);
   cursor: pointer;
 }
 
-.why-choose-us .grid-container .side-card .container_moni1::before {
+.why-choose-us .grid-container .side-card .container_moni1 .img-wrapper::before {
   content: '';
   position: absolute;
   z-index: 0;
-  /* За img */
-  top: 3%;
-  /* Больше отступов для выхода за границы */
-  left: 5%;
-  width: 90%;
-  /* Ещё шире */
-  height: 90%;
-  /* Для овальности */
-  background-color: #0732b1;
+  /* Behind img */
+  top: -8%;
+  /* Slightly different offset for distinction */
+  left: -10%;
+  width: 120%;
+  /* Slightly different size */
+  height: 98%;
+  /* Slightly different for ovality */
+  background-color: rgba(34, 102, 246, 1);
+  /* Different color, e.g., reddish */
   border-radius: 50%;
-  filter: blur(20px);
-  /* Увеличили размытие */
-  opacity: 0.7;
-  /* Повысили видимость */
+  filter: blur(15px);
+  /* Different blur radius */
+  opacity: 0.6;
+  /* Slightly different opacity */
 }
-
-
 
 .why-choose-us .grid-container .side-card .container_moni2 {
   width: auto;
@@ -2474,47 +2507,46 @@ body {
   padding-right: 1rem;
   padding-left: 1rem;
   position: relative;
-  /* Позиционируем относительно этого контейнера */
   margin-left: 3rem;
   overflow: visible;
 }
 
-.why-choose-us .grid-container .side-card .container_moni2 img.moni {
+.why-choose-us .grid-container .side-card .container_moni2 .img-wrapper {
+  position: relative;
+  /* Pseudo-element positioned relative to this */
+  display: inline-block;
+  /* Hugs the image dimensions */
+  width: fit-content;
+  height: fit-content;
+}
+
+.why-choose-us .grid-container .side-card .container_moni2 .img-wrapper img.moni {
   border: 6px solid black;
   outline: 1px solid white;
   border-radius: 10px;
   position: relative;
   z-index: 1;
-  /* Убедимся, что img выше овала */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-.why-choose-us .grid-container .side-card .container_moni2::before {
-  content: '';
-  position: absolute;
-  z-index: 0;
-  /* За img */
-  top: 3%;
-  /* Больше отступов для выхода за границы */
-  left: 5%;
-  width: 90%;
-  /* Ещё шире */
-  height: 90%;
-  /* Для овальности */
-  background-color: #0732b1;
-  border-radius: 50%;
-  filter: blur(20px);
-  /* Увеличили размытие */
-  opacity: 0.7;
-  /* Повысили видимость */
-}
-
-.why-choose-us .grid-container .side-card .container_moni2 img.moni:hover {
+.why-choose-us .grid-container .side-card .container_moni2 .img-wrapper:hover img.moni {
   transform: scale(1.05);
   cursor: pointer;
 }
 
+.why-choose-us .grid-container .side-card .container_moni2 .img-wrapper::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: -2%;
+  left: -3%;
+  width: 108%;
+  height: 98%;
+  background-color: rgba(34, 102, 246, 1);
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0.7;
+}
 
 
 @media (max-width: 991px) {
@@ -2530,17 +2562,28 @@ body {
 
   .why-choose-us .grid-container .side-card .container_moni1 img.moni {
     height: auto;
-    max-width: 240px;
+    max-width: 200px;
     /* Уменьшаем максимальную ширину */
     margin-bottom: 0.5rem;
   }
 
   .why-choose-us .grid-container .side-card .container_moni2 img.moni {
     height: auto;
-    max-width: 240px;
+    max-width: 200px;
     /* Уменьшаем максимальную ширину */
     margin-bottom: 0.5rem;
   }
+}
+
+@media (max-width: 768px) {
+  .why-choose-us .grid-container .side-card .container_moni1 .img-wrapper img.moni {
+    max-width: 150px !important;
+  }
+
+  .why-choose-us .grid-container .side-card .container_moni2 .img-wrapper img.moni {
+    max-width: 150px !important;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -2576,6 +2619,16 @@ body {
 }
 
 @media (min-width: 1080px) {
+  .why-choose-us .grid-container .side-card .container_moni1 img.moni {
+    max-width: 200px !important;
+  }
+
+  .why-choose-us .grid-container .side-card .container_moni2 img.moni {
+    max-width: 200px !important;
+  }
+}
+
+@media (max-width: 1080px) {
   .why-choose-us .grid-container .side-card .container_moni1 img.moni {
     max-width: 200px !important;
   }
@@ -2620,10 +2673,17 @@ body {
 
 @media (max-width: 991px) {
   .why-choose-us .grid-container .side-card .card-content .card_title {
-    font-size: 18px;
+    font-size: 28px;
     /* Немного уменьшаем заголовки */
     margin-bottom: 0.5rem;
   }
+  
+}
+@media (max-width: 676px) {
+  .why-choose-us .grid-container .side-card .card-content .card_title {
+    font-size: 22px;
+  }
+  
 }
 
 @media (max-width: 480px) {
@@ -2659,7 +2719,15 @@ body {
 
 @media (max-width: 991px) {
   .why-choose-us .grid-container .side-card .card-content .card_title2 {
-    font-size: 18px;
+    font-size: 24px;
+    /* Немного уменьшаем заголовки */
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 676px) {
+  .why-choose-us .grid-container .side-card .card-content .card_title2 {
+    font-size: 20px;
     /* Немного уменьшаем заголовки */
     margin-bottom: 0.5rem;
   }
@@ -2697,6 +2765,11 @@ body {
 }
 
 @media (max-width: 991px) {
+  .why-choose-us .grid-container .side-card .card-content .card_text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 676px) {
   .why-choose-us .grid-container .side-card .card-content .card_text {
     font-size: 14px;
   }
