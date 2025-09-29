@@ -106,9 +106,28 @@ body {
     padding-bottom: 0.5rem !important;
   }
 }
+
 .header .navbar {
   padding: 0 !important;
 }
+
+.header .navbar .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.header .navbar .container-fluid .logo_nav {
+  gap: 7rem;
+}
+
+.header .navbar .container-fluid .logo_nav .logo_one {
+  max-height: 36px;
+}
+
+.header .navbar .container-fluid .logo_nav .logo_two {
+  max-height: 32px;
+}
+
 .header .navbar-nav .nav-item {
   position: relative;
   transition: all 0.3s ease;
@@ -168,6 +187,12 @@ body {
   /* Убираем фон */
   border: none !important;
   /* Убираем границу */
+}
+
+
+.header-right .dropdown a {
+  text-decoration: none;
+  color: black;
 }
 
 .header-right .dropdown .drop_btn_flag:hover,
@@ -461,6 +486,7 @@ body {
   height: 40px !important;
   border-radius: 20px;
   font-size: 14px !important;
+  padding-top: 0.5rem;
 }
 
 @media (min-width: 1537px) {
@@ -691,6 +717,8 @@ body {
   border-radius: 20px;
   font-size: 19px !important;
   font-weight: 600 !important;
+  text-decoration: none;
+  padding-top: 0.6rem;
 }
 
 @media (max-width: 991px) {
@@ -724,6 +752,8 @@ body {
   font-weight: 600 !important;
   background-color: rgba(255, 255, 255, 0.1) !important;
   backdrop-filter: blur(2px) !important;
+  text-decoration: none;
+  padding-top: 0.6rem;
 }
 
 @media (max-width: 991px) {
@@ -1058,6 +1088,7 @@ body {
   font-weight: 700;
   margin-bottom: 5px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
 }
 
 @media (min-width: 1537px) {
@@ -1854,6 +1885,27 @@ body {
   /* Центрируем содержимое по вертикали */
 }
 
+.content .content_wostour .wostour-text .p_one {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.content .content_wostour .wostour-text .p_two {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.content .content_wostour .wostour-text a {
+  width: 251px;
+  height: 55px;
+  border-radius: 20px;
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+
+
 @media (max-width: 991px) {
   .content .content_wostour .wostour-text {
     width: 100%;
@@ -1996,7 +2048,28 @@ body {
   min-height: 300px;
   display: flex;
   flex-direction: column;
+  background-color: rgba(0, 0, 0, 1) !important;
+  border-radius: 16px;
+
 }
+
+.content .features-cards .feature-card .p_one {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.content .features-cards .feature-card .p_two {
+  color: rgba(165, 165, 165, 1);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.content .features-cards .feature-card .p_two a {
+  text-decoration: none;
+  color: white;
+}
+
+
 
 @media (min-width: 1537px) {
   .content .features-cards .feature-card {
@@ -2197,6 +2270,18 @@ body {
   height: 100%;
   text-align: center;
   padding: 2rem;
+}
+
+.why-choose-us .grid-container .main-card .card {
+  border-radius: 16px;
+}
+
+.why-choose-us .grid-container .side-card .card {
+  border-radius: 16px;
+}
+
+.why-choose-us .grid-container .side-card a {
+  text-decoration: none;
 }
 
 @media (min-width: 3840px) {
@@ -2522,6 +2607,10 @@ body {
   margin: 0;
 }
 
+.why-choose-us .grid-container .side-card .card-content a {
+  text-decoration: none;
+}
+
 .why-choose-us .grid-container .side-card .card-content .card_title {
   margin: 0 0 0.5rem 0;
   font-weight: 600;
@@ -2650,7 +2739,15 @@ body {
   padding-left: 3.5rem;
   padding-right: 3.5rem;
   margin-top: 3.5rem;
+  background-color: rgba(0, 0, 0, 1) !important
 }
+
+.main-footer .footer-divider {
+  height: 1px;
+  background-color: rgba(30, 30, 30, 1);
+  margin-top: 3rem;
+}
+
 
 .main-footer .footer-bottom {
   margin-top: 3rem;
@@ -2665,6 +2762,11 @@ body {
   width: 24px;
   height: 24px;
 }
+
+.main-footer .social-links a {
+  text-decoration: none;
+}
+
 
 .main-footer .footer-links p {
   color: rgb(94, 94, 94);
@@ -2850,9 +2952,9 @@ body {
   margin-right: -15px;
 }
 
-/* .main-footer .footer-links-mobile {
-  display: none;
-} */
+.main-footer .footer-links-mobile a {
+  text-decoration: none;
+}
 
 
 
@@ -3633,6 +3735,7 @@ body {
   color: black;
   border: none;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .mobile-sidebar .sidebar-footer .sidebar-btn:hover {
