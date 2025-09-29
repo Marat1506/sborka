@@ -106,7 +106,9 @@ body {
     padding-bottom: 0.5rem !important;
   }
 }
-
+.header .navbar {
+  padding: 0 !important;
+}
 .header .navbar-nav .nav-item {
   position: relative;
   transition: all 0.3s ease;
@@ -192,12 +194,12 @@ body {
   transition: all 0.3s ease;
 }
 
-.header .selected-flag {
+.header .selected-flag-icon {
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.header .selected-flag:hover {
+.header .selected-flag-icon:hover {
   transform: scale(1.1) translateY(-2px);
 }
 
