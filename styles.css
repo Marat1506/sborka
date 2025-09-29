@@ -413,6 +413,10 @@ body {
   .header .navbar .navbar-nav .nav-link {
     font-size: calc(16px + (100vw - 1536px) * 0.01);
   }
+
+  .header .navbar-nav .nav-item .dropdown .drop-btn {
+    font-size: calc(16px + (100vw - 1536px) * 0.01);
+  }
 }
 
 @media (min-width: 3840px) {
@@ -1005,11 +1009,25 @@ body {
   .tournament-footer .carousel-slide .footer-left .tournament-info {
     margin-top: calc(2rem + (100vw - 1536px) * 0.02);
   }
+
 }
 
 @media (min-width: 3840px) {
   .tournament-footer .carousel-slide .footer-left .tournament-info {
     margin-left: 5rem;
+  }
+
+  .tournament-footer .carousel-slide .footer-left .container-logo-2025 .logo-2025 {
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+  }
+}
+
+@media (min-width: 2500px) {
+
+  .tournament-footer .carousel-slide .footer-left .container-logo-2025 .logo-2025 {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
 }
 
@@ -1024,6 +1042,11 @@ body {
   .tournament-footer .carousel-slide .footer-left .tournament-info .date {
     font-size: calc(15px + (100vw - 1536px) * 0.005);
     margin-bottom: calc(15px + (100vw - 1536px) * 0.005);
+  }
+
+  .tournament-footer .carousel-slide .footer-left .container-logo-2025 .logo-2025 {
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
   }
 }
 
@@ -1885,8 +1908,9 @@ body {
   }
 }
 
-.content .content_wostour button {
+.content .content_wostour a {
   align-self: flex-start;
+  padding-top: 0.6rem;
   /* Выравниваем кнопку по левому краю */
   width: auto;
   /* Отменяем растягивание на всю ширину */
@@ -1894,7 +1918,7 @@ body {
 }
 
 @media (max-width: 991px) {
-  .content .content_wostour button {
+  .content .content_wostour a {
     width: 100% !important;
     /* Кнопка на всю ширину */
     align-self: center;
@@ -1904,19 +1928,19 @@ body {
   }
 }
 
-.content .content_wostour button:hover {
+.content .content_wostour a:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
 }
 
 @media (min-width: 1537px) {
-  .content .content_wostour button {
+  .content .content_wostour a {
     align-self: center;
   }
 }
 
 @media (min-width: 1537px) {
-  .content .content_wostour button {
+  .content .content_wostour a {
     width: calc(251px + (100vw - 1536px) * 0.1) !important;
     height: calc(55px + (100vw - 1536px) * 0.03) !important;
     font-size: calc(19px + (100vw - 1536px) * 0.01) !important;
@@ -1924,7 +1948,7 @@ body {
 }
 
 @media (min-width: 3840px) {
-  .content .content_wostour button {
+  .content .content_wostour a {
     width: calc(251px + (100vw - 1536px) * 0.12) !important;
     height: calc(55px + (100vw - 1536px) * 0.04) !important;
     font-size: calc(19px + (100vw - 1536px) * 0.015) !important;
@@ -2842,25 +2866,26 @@ body {
     gap: 2rem !important;
 
   }
-  .main-footer .footer-links-mobile p{
-    color: rgba(94, 94, 94, 1);
-    transition: all 0.3s ease; 
-}
 
-.main-footer .footer-links-mobile .pk {
+  .main-footer .footer-links-mobile a {
+    color: rgba(94, 94, 94, 1);
+    transition: all 0.3s ease;
+  }
+
+  .main-footer .footer-links-mobile .pk {
     display: flex;
     gap: 2rem !important;
-}
+  }
 
-.main-footer .footer-links-mobile .pk p{
+  .main-footer .footer-links-mobile .pk a {
     color: rgba(94, 94, 94, 1);
-    transition: all 0.3s ease; 
-}
+    transition: all 0.3s ease;
+  }
 
-.main-footer .footer-links-mobile p:hover {
-    transform: scale(1.05); 
-    color: white !important; 
-}
+  .main-footer .footer-links-mobile a:hover {
+    transform: scale(1.05);
+    color: white !important;
+  }
 
 }
 
@@ -3068,8 +3093,8 @@ body {
     justify-content: center !important;
   }
 
-  .main-footer .footer-links-mobile p {
-    font-size: 24px !important;
+  .main-footer .footer-links-mobile a {
+    font-size: 15px !important;
     color: rgb(94, 94, 94) !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -3077,7 +3102,7 @@ body {
     white-space: nowrap !important;
   }
 
-  .main-footer .footer-links-mobile>p {
+  .main-footer .footer-links-mobile>a {
     text-align: center !important;
   }
 
@@ -3189,7 +3214,7 @@ body {
     gap: 1.5rem !important;
   }
 
-  .main-footer .footer-links-mobile p {
+  .main-footer .footer-links-mobile a {
     font-size: 14px !important;
   }
 
@@ -3599,8 +3624,9 @@ body {
   width: 100%;
   height: 50px;
   border-radius: 25px;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 600;
+  padding-top: 0.5rem;
   background: white;
   color: black;
   border: none;
