@@ -120,6 +120,24 @@ body {
   gap: 7rem;
 }
 
+@media(max-width: 1300px) {
+  .header .navbar .container-fluid .logo_nav {
+    gap: 5rem;
+  }
+}
+
+@media(max-width: 1200px) {
+  .header .navbar .container-fluid .logo_nav {
+    gap: 4rem;
+  }
+}
+
+@media(max-width: 1200px) {
+  .header .navbar .container-fluid .logo_nav {
+    gap: 3rem;
+  }
+}
+
 .header .navbar .container-fluid .logo_nav .logo_one {
   max-height: 36px;
 }
@@ -263,8 +281,8 @@ body {
 }
 
 .header .selected-flag-icon {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
 @media (min-width: 1537px) {
@@ -276,8 +294,8 @@ body {
 
 @media (max-width: 991px) {
   .header .selected-flag-icon {
-    width: 42px;
-    height: 42px;
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -450,6 +468,12 @@ body {
   .header .navbar .navbar-nav .nav-link {
     font-size: calc(16px + (100vw - 1536px) * 0.007);
     margin-top: 15px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .header .navbar .navbar-nav {
+    gap: 0 !important;
   }
 }
 
@@ -1032,10 +1056,18 @@ body {
 
 .tournament-footer .carousel-slide .footer-left .container-logo-2025 .logo-2025 {
   width: 100%;
+  min-width: 240px;
   height: 100%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  object-fit: cover;
+}
+
+@media(max-width: 1200px) {
+  .tournament-footer .carousel-slide .footer-left .container-logo-2025 .logo-2025 {
+    width: 200px;
+    min-width: 150px;
+    height: 100%;
+  }
 }
 
 .tournament-footer .carousel-slide .footer-left .tournament-info {
@@ -1150,6 +1182,37 @@ body {
     font-size: clamp(14px, 1.6vw, 16px);
   }
 }
+
+@media (max-width: 1304px) {
+  .tournament-footer .carousel-slide .footer-left .tournament-info {
+    margin-top: 0.5rem;
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .tournament-title {
+    font-size: clamp(18px, 1.9vw, 20px);
+    margin-bottom: clamp(3px, 0.6vw, 4px);
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .location {
+    font-size: clamp(12px, 1.6vw, 16px);
+  }
+}
+
+@media (max-width: 1204px) {
+  .tournament-footer .carousel-slide .footer-left .tournament-info {
+    margin-top: 0.5rem;
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .tournament-title {
+    font-size: clamp(16px, 1.9vw, 18px);
+    margin-bottom: clamp(2px, 0.6vw, 3px);
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .location {
+    font-size: clamp(10px, 1.6vw, 14px);
+  }
+}
+
 
 .tournament-footer .footer-right {
   position: relative;
@@ -1604,7 +1667,7 @@ body {
   }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 991px) {
   .tournament-footer {
     height: 120px;
   }
@@ -1875,7 +1938,8 @@ body {
     align-items: center;
     justify-content: center;
   }
-  .content .content_wostour .container_content_wostour_chat{
+
+  .content .content_wostour .container_content_wostour_chat {
     width: 100%;
   }
 }
@@ -2541,7 +2605,7 @@ body {
   top: -2%;
   left: -3%;
   width: 108%;
-  height: 98%;
+  height: 90%;
   background-color: rgba(34, 102, 246, 1);
   border-radius: 50%;
   filter: blur(20px);
@@ -2677,13 +2741,14 @@ body {
     /* Немного уменьшаем заголовки */
     margin-bottom: 0.5rem;
   }
-  
+
 }
+
 @media (max-width: 676px) {
   .why-choose-us .grid-container .side-card .card-content .card_title {
     font-size: 22px;
   }
-  
+
 }
 
 @media (max-width: 480px) {
@@ -2769,6 +2834,7 @@ body {
     font-size: 18px;
   }
 }
+
 @media (max-width: 676px) {
   .why-choose-us .grid-container .side-card .card-content .card_text {
     font-size: 14px;
@@ -3540,6 +3606,33 @@ body {
   }
 } */
 
+/* Базовые стили для кнопки и иконки */
+.header .header-right .mobile-menu-btn {
+  border: none;
+  background: rgba(255, 255, 255, 0.1); /* Полупрозрачный округлый фон */
+  border-radius: 50%;
+  padding: 0.5rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+.header .header-right .mobile-menu-btn:focus {
+  outline: none; /* Убираем обводку при фокусе */
+  box-shadow: none;
+}
+
+.header .header-right .mobile-menu-btn .menu-icon {
+  width: 24px; /* Фиксированный размер иконки */
+  height: 24px;
+  object-fit: contain; /* Сохраняем пропорции без искажений */
+}
+
+/* Мобильные стили */
 @media (max-width: 991.98px) {
   .header .navbar-nav {
     display: none !important;
@@ -3553,7 +3646,7 @@ body {
     gap: 0;
   }
 
-  .header .mobile-header-right .mobile-flag {
+  .header .header-right .mobile-flag {
     width: 50px;
     height: 50px;
     object-fit: contain;
@@ -3561,71 +3654,39 @@ body {
     cursor: pointer;
   }
 
-  .header .selected-flag .selected-flag-icon {
+  .header .header-right .selected-flag .selected-flag-icon {
     width: 50px;
     height: 50px;
   }
 
-
-  .header .mobile-header-right .mobile-flag:hover {
+  .header .header-right .mobile-flag:hover {
     transform: scale(1.1) translateY(-2px);
   }
 
-  .header .mobile-header-right .navbar-toggler {
-    border: none;
-    background: none;
-    color: white;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .header .mobile-header-right .navbar-toggler:focus {
-    box-shadow: none;
-  }
-
-
-
-  .header .mobile-header-right .dropdown .drop_btn_flag {
-    background: none !important;
-    /* Убираем фон */
-    border: none !important;
-    /* Убираем границу */
-  }
-
-  .header .mobile-header-right .dropdown .drop_btn_flag:hover,
-  .header .mobile-header-right .dropdown .drop_btn_flag:focus,
-  .header .mobile-header-right .dropdown .drop_btn_flag:active {
-    background: none !important;
-    /* Убираем белый фон при наведении, фокусе и активации */
-    color: inherit !important;
-    /* Сохраняем цвет текста */
-    box-shadow: none !important;
-    /* Убираем тень */
-    transform: none !important;
-    /* Убираем трансформации */
-  }
-
-  /* Убираем стрелку */
-  .header .mobile-header-right .dropdown .dropdown-toggle::after {
-    display: none !important;
-  }
-
-  .header .mobile-header-right .navbar-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    width: 1.5em;
-    height: 1.5em;
-  }
-
-  .header .mobile-header-right .navbar-toggler:hover {
+  .header .header-right .mobile-menu-btn:hover {
     transform: scale(1.05);
+  }
+
+  .header .header-right .dropdown .drop_btn_flag {
+    background: none !important;
+    border: none !important;
+  }
+
+  .header .header-right .dropdown .drop_btn_flag:hover,
+  .header .header-right .dropdown .drop_btn_flag:focus,
+  .header .header-right .dropdown .drop_btn_flag:active {
+    background: none !important;
+    color: inherit !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  .header .header-right .dropdown .dropdown-toggle::after {
+    display: none !important;
   }
 }
 
+/* Стили боковой панели (без изменений) */
 .mobile-sidebar {
   position: fixed;
   top: 0;
