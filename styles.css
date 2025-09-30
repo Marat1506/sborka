@@ -2288,6 +2288,12 @@ body {
     text-align: center;
   }
 }
+@media (max-width: 768px) {
+  .why-choose-us .why-choose-us-title {
+    font-size: 25px;
+    text-align: center;
+  }
+}
 
 
 
