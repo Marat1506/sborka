@@ -24,8 +24,7 @@ body {
 .main-with-bg {
   position: relative;
   min-height: 100dvh;
-  max-height: 100dvh;
-  overflow: hidden;
+  overflow: visible;
   background-image: url("../assets/main_background.png");
   background-size: cover;
   background-position: center top;
