@@ -21,114 +21,75 @@
     <!-- Header Placeholder - будет вставлен динамически -->
     <!--    <div id="header-placeholder"></div>-->
 
-    <header class="header header-responsive">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid d-flex justify-content-between">
+   <header class="header header-responsive">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="#">
+                    <img src="assets/_105553233322080.png?sdswedsd" alt="Logo" class="header-logo logo_one" />
+                </a>
+            </div>
 
-                <div class="d-flex justify-content-between logo_nav">
-                    <div>
-                        <img src="assets/_105553233322080.png?sdswedsd" alt="Logo"
-                            class="header-logo  logo_one" />
-                        <!-- <img src="assets/logo-mobile.png?sdswedsd" alt="Logo"
-                            class="header-logo-mobile d-block d-sm-none logo_two" /> -->
-                    </div>
-
-                    <ul class="navbar-nav mx-auto gap-4">
-                        <li class="nav-item">
-
-
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle drop-btn" type="button"
-                                    id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Турниры
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Предстоящие турниры</a>
-                                    <a class="dropdown-item" href="#">Прошедшие турниры</a>
-                                    <a class="dropdown-item" href="#">Все турниры</a>
-                                </div>
+            <!-- Collapsible Navbar Content (Sidebar on mobile) -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="sidebar-header d-lg-none">
+                    <button class="sidebar-close" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Close sidebar">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle drop-btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                Турниры
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Предстоящие турниры</a>
+                                <a class="dropdown-item" href="#">Прошедшие турниры</a>
+                                <a class="dropdown-item" href="#">Все турниры</a>
                             </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Сообщество</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Membership</a>
+                    </li>
+                </ul>
+                <div class="right-actions d-flex align-items-center gap-3 d-lg-none">
+                    <a class="btn btn-light header-btn" href="#">Создать аккаунт</a>
+                </div>
+            </div>
+
+            <!-- Right Side: Flag, User Logo (desktop), Create Account (desktop), Hamburger (mobile) -->
+            <div class="d-flex align-items-center gap-3 right-actions">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle drop_btn_flag" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="assets/Frame%2011.png" alt="Ru" class="selected-flag-icon" />
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li class="dropdown-item d-flex align-items-center" data-value="ru">
+                            <a href="#"><span>Ru</span><img src="assets/Frame%2011.png" alt="Ru" class="flag-icon me-1" /></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Сообщество</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Membership</a>
+                        <li class="dropdown-item d-flex align-items-center" data-value="en">
+                            <a href="#"><span>En</span><img src="assets/Frame%2011.png" alt="En" class="flag-icon me-1" /></a>
                         </li>
                     </ul>
                 </div>
-
-                <!-- Правая часть с флагом (dropdown), пользователем и кнопкой -->
-                <div class="header-right d-flex align-items-center ">
-
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle drop_btn_flag" type="button"
-                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <!-- <div class="selected-flag d-flex align-items-center"> -->
-                            <img src="assets/Frame%2011.png" alt="Ru" class="selected-flag-icon" />
-                            <!-- </div> -->
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-
-                            <li class="dropdown-item d-flex align-items-center" data-value="ru">
-                                <a href="#">
-                                    <span>Ru</span>
-                                    <img src="assets/Frame%2011.png" alt="Ru" class="flag-icon me-1" />
-                                </a>
-                            </li>
-
-
-                            <li class="dropdown-item d-flex align-items-center" data-value="en">
-                                <a href="#">
-                                    <span>En</span>
-                                    <img src="assets/Frame%2011.png" alt="En" class="flag-icon me-1" />
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <img src="assets/Frame%2033.png?sdswedsd" alt="User" class="user-logo d-none d-lg-block" />
-
-                    <a class="btn btn-light d-none d-lg-block header-btn">
-                        Создать аккаунт
-                    </a>
-
-
-                    <button class="d-lg-none mobile-menu-btn" type="button" id="mobile-menu-btn"
-                        aria-label="Toggle navigation">
-                        <img src="/assets/buterbrod.png" alt="Меню" class="menu-icon">
-                    </button>
-                </div>
-                <!-- Мобильная правая часть с флагом (dropdown) и кнопкой меню -->
-                <!-- <div class="mobile-header-right d-flex align-items-center d-lg-none">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle drop_btn_flag" type="button"
-                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <div class="selected-flag d-flex align-items-center">
-                                <img src="assets/Frame%2011.png" alt="Ru" class="selected-flag-icon" />
-                            </div>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li class="dropdown-item d-flex align-items-center" data-value="ru">
-                                <span>Ru</span>
-                                <img src="assets/Frame%2011.png" alt="Ru" class="flag-icon me-1" />
-                            </li>
-                            <li class="dropdown-item d-flex align-items-center" data-value="en">
-                                <span>En</span>
-                                <img src="assets/Frame%2011.png" alt="En" class="flag-icon me-1" />
-                            </li>
-                        </ul>
-                    </div>
-                    <button class="navbar-toggler" type="button" id="mobile-menu-btn" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div> -->
-
+                <img src="assets/Frame%2033.png?sdswedsd" alt="User" class="user-logo d-none d-lg-block" />
+                <a class="btn btn-light header-btn d-none d-lg-block" href="#">Создать аккаунт</a>
+                <button class="navbar-toggler mobile-menu-btn d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="/assets/buterbrod.png" alt="Меню" class="menu-icon">
+                </button>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
 
     <!-- Mobile Sidebar -->
-    <div class="mobile-sidebar" id="mobile-sidebar">
+    <!-- <div class="mobile-sidebar" id="mobile-sidebar">
         <div class="sidebar-overlay" id="sidebar-overlay"></div>
         <div class="sidebar-content">
             <div class="sidebar-header">
@@ -138,17 +99,7 @@
             </div>
             <div class="sidebar-body">
                 <ul class="sidebar-nav">
-                    <!-- <li class="sidebar-nav-item">
-                        <div class="custom-select-wrapper">
-                            <select class="custom-select sidebar-nav-link">
-                                <option value="">Турниры</option>
-                                <option value="tournament1">Турнир 1</option>
-                                <option value="tournament2">Турнир 2</option>
-                                <option value="tournament3">Турнир 3</option>
-                            </select>
-                            <span class="custom-arrow">▼</span>
-                        </div>
-                    </li> -->
+                   
                     <li>
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle drop-btn" type="button"
@@ -180,7 +131,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Main Content with background -->
     <main class="main-with-bg">
@@ -253,40 +204,13 @@
         <footer class="tournament-footer">
             <div class="carousel-container">
                 <div class="carousel-track">
-
-                    <!-- Клонированный последний слайд (для бесконечности) -->
+                    <!-- Slide 1 -->
                     <div class="carousel-slide">
                         <div class="footer-left">
                             <div class="container-logo-2025">
                                 <a href="#">
                                     <img src="assets/logo2025_nekachest.png?sdswedsd"
-                                        srcset="assets/logo2025_mobile.png?sdswedsd 179w, assets/logo2025.png?sdswedsd 250w"
-                                        sizes="(max-width: 768px) 179px, 250px" alt="logoooo" class="logo-2025">
-                                </a>
-
-                            </div>
-
-                            <div class="tournament-info">
-                                <div class="date">26.04.2025 10:00</div>
-
-                                <a class="tournament-title" href="#">
-                                    WAYBJJ RUSSIA CHAMPIONSHIP JIU-JITSU 2025 DAY-2
-                                </a>
-
-                                <div class="location">
-                                    Чеченская Республика Грозный Ул. Ахмеда Арслана Аллауадина, Д. 5А, СК «Олимпийск»
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 1 -->
-                    <div class="carousel-slide active">
-                        <div class="footer-left">
-                            <div class="container-logo-2025">
-                                <a href="#">
-                                    <img src="assets/logo2025_nekachest.png?sdswedsd"
-                                        srcset="assets/logo2025_mobile.png?sdswedsd 179w, assets/logo2025.png?sdswedsd 250w"
+                                        srcset="assets/wostour_chat.png?sdswedsd 179w, assets/logo2025.png?sdswedsd 250w"
                                         sizes="(max-width: 768px) 179px, 250px" alt="logoooo2" class="logo-2025">
                                 </a>
                             </div>
@@ -296,21 +220,18 @@
                                     WAYBJJ RUSSIA CHAMPIONSHIP JIU-JITSU 2025 DAY-2
                                 </a>
                                 <div class="location">
-                                    Чеченская Республика Грозный Ул. Ахмеда Арслана Аллауадина, Д. 5А, СК
-                                    «Олимпийск»
+                                    Чеченская Республика Грозный Ул. Ахмеда Арслана Аллауадина, Д. 5А, СК «Олимпийск»
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
                     <!-- Slide 2 -->
                     <div class="carousel-slide">
                         <div class="footer-left">
                             <div class="container-logo-2025">
                                 <a href="#">
                                     <img src="assets/logo2025_nekachest.png?sdswedsd"
-                                        srcset="assets/logo2025_mobile.png?sdswedsd 179w, assets/logo2025.png?sdswedsd 250w"
+                                        srcset="assets/wostour_chat.png?sdswedsd 179w, assets/500px-JPEG_example_down.jpg?sdswedsd 250w"
                                         sizes="(max-width: 768px) 179px, 250px" alt="logoooo3" class="logo-2025">
                                 </a>
                             </div>
@@ -320,20 +241,18 @@
                                     WAYBJJ RUSSIA CHAMPIONSHIP JIU-JITSU 2025 DAY-2
                                 </a>
                                 <div class="location">
-                                    Чеченская Республика Грозный Ул. Ахмеда Арслана Аллауадина, Д. 5А, СК
-                                    «Олимпийск»
+                                    Чеченская Республика Грозный Ул. Ахмеда Арслана Аллауадина, Д. 5А, СК «Олимпийск»
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <!-- Slide 3 -->
                     <div class="carousel-slide">
                         <div class="footer-left">
                             <div class="container-logo-2025">
                                 <a href="#">
                                     <img src="assets/logo2025_nekachest.png?sdswedsd"
-                                        srcset="assets/logo2025_mobile.png?sdswedsd 179w, assets/logo2025.png?sdswedsd 250w"
+                                        srcset="assets/wostour_chat.png?sdswedsd 179w, assets/main_background.png?sdswedsd 250w"
                                         sizes="(max-width: 768px) 179px, 250px" alt="logoooo4" class="logo-2025">
                                 </a>
                             </div>
@@ -342,22 +261,19 @@
                                 <a class="tournament-title" href="#">
                                     WAYBJJ RUSSIA CHAMPIONSHIP JIU-JITSU 2025 DAY-2
                                 </a>
-
                                 <div class="location">
-                                    Чеченская Республика Грозный Ул. Ахмеда Арслана Аллауадина, Д. 5А, СК
-                                    «Олимпийск»
+                                    Чеченская Республика Грозный Ул. Ахмеда Арслана Аллауадина, Д. 5А, СК «Олимпийск»
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <!-- Slide 4 -->
                     <div class="carousel-slide">
                         <div class="footer-left">
                             <div class="container-logo-2025">
                                 <a href="#">
                                     <img src="assets/logo2025_nekachest.png?sdswedsd"
-                                        srcset="assets/logo2025_mobile.png?sdswedsd 179w, assets/logo2025.png?sdswedsd 250w"
+                                        srcset="assets/wostour_chat.png?sdswedsd 179w, assets/main_background.png?sdswedsd 250w"
                                         sizes="(max-width: 768px) 179px, 250px" alt="logoooo5" class="logo-2025">
                                 </a>
                             </div>
@@ -367,39 +283,13 @@
                                     WAYBJJ RUSSIA CHAMPIONSHIP JIU-JITSU 2025 DAY-2
                                 </a>
                                 <div class="location">
-                                    Чеченская Республика Грозный Ул. Ахмеда Арслана Аллауадина, Д. 5А, СК
-                                    «Олимпийск»
+                                    Чеченская Республика Грозный Ул. Ахмеда Арслана Аллауадина, Д. 5А, СК «Олимпийск»
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Клонированный первый слайд (для бесконечности) -->
-                    <div class="carousel-slide">
-                        <div class="footer-left">
-                            <div class="container-logo-2025">
-                                <a href="#">
-                                    <img src="assets/logo2025_nekachest.png?sdswedsd"
-                                        srcset="assets/logo2025_mobile.png?sdswedsd 179w, assets/logo2025.png?sdswedsd 250w"
-                                        sizes="(max-width: 768px) 179px, 250px" alt="logoooo6" class="logo-2025">
-                                </a>
-                            </div>
-                            <div class="tournament-info">
-                                <div class="date">26.04.2025 10:00</div>
-                                <a class="tournament-title" href="#">
-                                    WAYBJJ RUSSIA CHAMPIONSHIP JIU-JITSU 2025 DAY-2
-                                </a>
-                                <div class="location">
-                                    Чеченская Республика Грозный Ул. Ахмеда Арслана Аллауадина, Д. 5А, СК
-                                    «Олимпийск»
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-
             <div class="footer-right">
                 <div class="scooped-box"></div>
                 <div class="controls-container">
@@ -407,7 +297,6 @@
                         <a href="#" class="arrow-btn" id="prev-btn"><i class="bi bi-chevron-left"></i></a>
                         <a href="#" class="arrow-btn" id="next-btn"><i class="bi bi-chevron-right"></i></a>
                     </div>
-
                     <span class="divider"></span>
                     <span class="slide-number">01</span>
                 </div>
@@ -521,7 +410,7 @@
                         <a href="#">
                             <p class="card_title2">Следите за соревнованиями из <br />любой точки мира</p>
                         </a>
-                        <p class="card_text">Поддерживайте спортсменов и узнавайте о <br /> результаты в режиме онлайн
+                        <p class="card_text">Поддерживайте спортсменов и узнавайте о  результаты в режиме онлайн
                         </p>
                     </div>
                 </div>
