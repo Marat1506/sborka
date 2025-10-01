@@ -36,7 +36,7 @@ body {
 @media (max-width: 991px) {
   .main-with-bg {
     /* min-height: 100vh; */
-    height: 100dvh;
+    height: 100svh;
     background-image: url("../assets/main_background_mobile.png");
   }
 }
