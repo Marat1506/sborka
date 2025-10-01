@@ -983,6 +983,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(2px);
   z-index: 2;
+  box-sizing: border-box;
 }
 
 @media (max-width: 991.98px) {
@@ -2266,7 +2267,7 @@ body {
 
 @media (max-width: 768px) {
   .why-choose-us .why-choose-us-title {
-    font-size: 5px;
+    font-size: 22px;
     text-align: center;
   }
 }
