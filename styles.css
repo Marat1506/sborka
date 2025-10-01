@@ -23,7 +23,7 @@ body {
 
 .main-with-bg {
   position: relative;
-  min-height: 100vh;
+  height: 100dvh;
   overflow: visible;
   background-image: url("../assets/main_background.png");
   background-size: cover;
@@ -35,7 +35,8 @@ body {
 
 @media (max-width: 991px) {
   .main-with-bg {
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    height: 100dvh;
     background-image: url("../assets/main_background_mobile.png");
   }
 }
