@@ -337,6 +337,13 @@ body {
   transition: all 0.3s ease;
   border: 2px solid transparent;
 }
+.mobile-header-btn-container{
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 
 @media (min-width: 1537px) {
   .header .header-btn {
@@ -349,6 +356,13 @@ body {
 @media (min-width: 3840px) {
   .header .header-btn {
     border-radius: 56px;
+  }
+}
+
+@media (max-width: 991px) {
+  .header .header-btn {
+    margin-bottom: 10rem;
+    
   }
 }
 
