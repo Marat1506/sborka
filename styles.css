@@ -1980,9 +1980,13 @@ body {
   padding: 3rem 2rem;
   gap: 2rem;
   transition: all 0.3s ease;
+  /* Добавляем плавный переход */
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  overflow: hidden; /* Добавляем для предотвращения выхода содержимого */
+  max-width: 100%;
+  overflow: hidden;
 }
+
+
 
 @media (min-width: 3840px) {
   .content .content_wostour {
@@ -1991,19 +1995,25 @@ body {
 }
 
 .content .content_wostour:hover {
-  transform: translateY(-5px);
-  /* Эффект поднятия при наведении (оставляем для десктопа) */
+  transform: scale(1.2);
+  /* Эффект поднятия при наведении */
+  /* box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
+  border-color: rgba(0, 123, 255, 0.3) !important; */
+  /* Подсветка границы */
 }
 
 .content .content_wostour .container_content_wostour_chat {
   width: 50%;
+  /* Занимает 50% ширины родителя */
   height: auto;
 }
 
 .content .content_wostour .content_wostour_chat {
   width: 100%;
   object-fit: cover;
+  /* Чтобы изображение сохраняло пропорции */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 @media (max-width: 991px) {
@@ -2017,29 +2027,26 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    will-change: transform; /* Оптимизация рендеринга */
   }
 
   .content .content_wostour .container_content_wostour_chat {
     width: 100%;
   }
+}
 
-  /* Отключаем transform на мобильных, чтобы избежать артефактов */
-  .content .content_wostour:hover {
-    transform: none;
-  }
-
-  .content .content_wostour .content_wostour_chat:hover {
-    transform: none;
-    box-shadow: none; /* Убираем тень, чтобы снизить нагрузку на рендеринг */
-  }
+.content .content_wostour .content_wostour_chat:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
+  cursor: pointer;
 }
 
 .content .content_wostour .wostour-text {
   width: 50%;
+  /* Занимает оставшиеся 50% */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* Центрируем содержимое по вертикали */
 }
 
 .content .content_wostour .wostour-text .p_one {
@@ -2059,10 +2066,9 @@ body {
   font-size: 19px;
   font-weight: 600;
   margin-top: 2rem;
-  align-self: flex-start;
-  padding-top: 0.6rem;
-  transition: all 0.3s ease;
 }
+
+
 
 @media (max-width: 991px) {
   .content .content_wostour .wostour-text {
@@ -2070,20 +2076,11 @@ body {
     align-items: center;
     text-align: center;
   }
+}
 
+@media (max-width: 991px) {
   .content .content_wostour .wostour-text p {
     font-size: 17px !important;
-  }
-
-  .content .content_wostour .wostour-text a {
-    width: 100% !important;
-    align-self: center;
-    max-width: 300px;
-  }
-
-  .content .content_wostour .wostour-text a:hover {
-    transform: none; /* Отключаем transform для кнопки на мобильных */
-    box-shadow: none; /* Убираем тень на мобильных */
   }
 }
 
@@ -2126,29 +2123,6 @@ body {
 @media (min-width: 3840px) {
   .content .content_wostour .wostour-text p:nth-child(2) {
     font-size: calc(18px + (100vw - 1536px) * 0.015) !important;
-  }
-}
-
-.content .content_wostour a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
-}
-
-@media (min-width: 1537px) {
-  .content .content_wostour a {
-    align-self: center;
-    width: calc(251px + (100vw - 1536px) * 0.1) !important;
-    height: calc(55px + (100vw - 1536px) * 0.03) !important;
-    font-size: calc(19px + (100vw - 1536px) * 0.01) !important;
-  }
-}
-
-@media (min-width: 3840px) {
-  .content .content_wostour a {
-    width: calc(251px + (100vw - 1536px) * 0.12) !important;
-    height: calc(55px + (100vw - 1536px) * 0.04) !important;
-    font-size: calc(19px + (100vw - 1536px) * 0.015) !important;
-    border-radius: calc(20px + (100vw - 1536px) * 0.01) !important;
   }
 }
 
