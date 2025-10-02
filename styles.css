@@ -41,7 +41,7 @@ body {
   .main-with-bg {
     height: 100dvh;
     background-image: url("../assets/main_background_mobile.png");
-    transition: height 0.1s ease-out;
+    transition: height 0.3s ease-out;
   }
 }
 
