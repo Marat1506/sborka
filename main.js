@@ -225,3 +225,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initCarousel();
 });
+
+let isScrolling;
+
+window.addEventListener('scroll', () => {
+  // При прокрутке добавляем класс, убирающий анимации
+  document.querySelector('.content_wostour').classList.add('no-transitions');
+  
+  // Очищаем предыдущий таймер
+  clearTimeout(isScrolling);
+  
+  // Устанавливаем таймер, чтобы восстановить анимации после остановки прокрутки
+  isScrolling = setTimeout(() => {
+    document.querySelector('.content_wostour').classList.remove('no-transitions');
+  }, 150);
+});

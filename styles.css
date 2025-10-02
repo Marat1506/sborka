@@ -1992,7 +1992,12 @@ body {
   will-change: transform, box-shadow;
 }
 
-
+.no-transitions {
+  transition: none !important;
+}
+.no-transitions .content_wostour_chat {
+  transition: none !important;
+}
 @media (min-width: 3840px) {
   .content .content_wostour {
     border-radius: 80px;
