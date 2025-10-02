@@ -38,8 +38,9 @@ body {
 @media (max-width: 991px) {
   .main-with-bg {
     height: 100dvh;
+    min-height: 100dvh;
+    height: auto !important;
     background-image: url("../assets/main_background_mobile.png");
-    min-height: -webkit-fill-available;
   }
 }
 

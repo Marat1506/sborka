@@ -1,41 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Функция для стабилизации высоты на мобильных устройствах
-    function stabilizeViewportHeight() {
-        if (window.innerWidth > 991) return; // Только для мобильных
-        
-        const mainElement = document.querySelector('.main-with-bg');
-        if (!mainElement) return;
-        
-        // Сохраняем начальную высоту
-        const initialHeight = window.innerHeight;
-        mainElement.style.height = `${initialHeight}px`;
-        
-        let timeout;
-        function handleResize() {
-            clearTimeout(timeout);
-            timeout = setTimeout(() => {
-                const currentHeight = window.innerHeight;
-                // Обновляем высоту только если изменение значительное
-                if (Math.abs(currentHeight - initialHeight) > 50) {
-                    mainElement.style.height = `${currentHeight}px`;
-                }
-            }, 150);
-        }
-        
-        // Дебаунс ресайза
-        window.addEventListener('resize', handleResize);
-        
-        // Восстанавливаем при изменении ориентации
-        window.addEventListener('orientationchange', function() {
-            setTimeout(() => {
-                mainElement.style.height = `${window.innerHeight}px`;
-            }, 300);
-        });
-    }
-
-    // Инициализируем стабилизацию высоты
-    stabilizeViewportHeight();
-
     // Перемещение кнопки "Создать аккаунт" между десктопом и мобильной боковой панелью
     const headerBtn = document.querySelector('.header-btn');
     const desktopRightActions = document.querySelector('.right-actions:not(.d-lg-none)');
@@ -66,18 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     moveHeaderButton();
 
     // Отслеживаем изменения размера окна
-    window.addEventListener('resize', function() {
-        stabilizeViewportHeight(); // Обновляем высоту при ресайзе
-        moveHeaderButton(); // Перемещаем кнопку
-    });
-
-    // Обработчик изменения ориентации
-    window.addEventListener('orientationchange', function() {
-        setTimeout(() => {
-            stabilizeViewportHeight();
-            moveHeaderButton();
-        }, 500);
-    });
+    window.addEventListener('resize', moveHeaderButton);
 
     // Существующий код для карусели (не изменяется)
     const footer = document.querySelector('.tournament-footer');
@@ -198,4 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
     footer.addEventListener('mouseleave', startAutoSlide);
 
     initCarousel();
+
+    
 });
