@@ -24,8 +24,6 @@ body {
 .main-with-bg {
   position: relative;
   height: 100dvh;
-  min-height: -webkit-fill-available; /* Для Safari */
-  min-height: 100dvh;
   overflow: visible;
   background-image: url("../assets/main_background.png");
   background-size: cover;
@@ -36,17 +34,9 @@ body {
 }
 
 @media (max-width: 991px) {
-   .main-with-bg {
+  .main-with-bg {
     height: 100dvh;
-    height: -webkit-fill-available;
-    min-height: -webkit-fill-available;
     background-image: url("../assets/main_background_mobile.png");
-  }
-  
-  /* Фиксируем высоту после загрузки */
-  .main-with-bg.height-stabilized {
-    height: 100dvh !important;
-    transition: height 0.3s ease;
   }
 }
 
@@ -1086,6 +1076,7 @@ body {
   backdrop-filter: blur(2px);
   z-index: 2;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 @media (max-width: 991.98px) {

@@ -150,4 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
     footer.addEventListener('mouseleave', startAutoSlide);
 
     initCarousel();
+
+    
 });
