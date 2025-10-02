@@ -1985,19 +1985,7 @@ body {
 }
 
 
-.content .content_wostour {
-  will-change: transform;
-}
-.content .content_wostour .content_wostour_chat {
-  will-change: transform, box-shadow;
-}
 
-.no-transitions {
-  transition: none !important;
-}
-.no-transitions .content_wostour_chat {
-  transition: none !important;
-}
 @media (min-width: 3840px) {
   .content .content_wostour {
     border-radius: 80px;
@@ -2008,6 +1996,7 @@ body {
   transform: translateY(-5px);
   /* Эффект поднятия при наведении */
   box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
+  /* Тень как у карточек */
   border-color: rgba(0, 123, 255, 0.3) !important;
   /* Подсветка границы */
 }
@@ -2033,32 +2022,6 @@ body {
 }
 
 @media (max-width: 991px) {
-  .content .content_wostour {
-    transition: none;
-  }
-
-  .content .content_wostour .content_wostour_chat {
-    transition: none;
-  }
-}
-
-
-
-@media (max-width: 991px) {
-  @media (max-width: 991px) {
-    .content .content_wostour:hover {
-      transform: none;
-      /* Убираем эффект поднятия */
-    }
-
-    .content .content_wostour .content_wostour_chat:hover {
-      transform: none;
-      /* Убираем масштабирование */
-      box-shadow: none;
-      /* Убираем тень */
-    }
-  }
-
   .content .content_wostour {
     flex-direction: column;
     align-items: center;
@@ -4136,6 +4099,12 @@ body {
 .cards3-container {
   width: 100%;
   margin-top: 1.5rem;
+}
+
+@media(max-width:991px) {
+  .cards3-container {
+    margin-top: 0.5rem;
+  }
 }
 
 .cards3 {
