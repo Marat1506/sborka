@@ -39,6 +39,7 @@ body {
   .main-with-bg {
     height: 100dvh;
     background-image: url("../assets/main_background_mobile.png");
+    min-height: -webkit-fill-available;
   }
 }
 
