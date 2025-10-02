@@ -1979,7 +1979,7 @@ body {
   justify-content: space-between;
   padding: 3rem 2rem;
   gap: 2rem;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
   /* Добавляем плавный переход */
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   max-width: 100%;
@@ -1995,7 +1995,7 @@ body {
 }
 
 .content .content_wostour:hover {
-  transform: translateY(-5px);
+  /* transform: translateY(-5px); */
   /* Эффект поднятия при наведении */
   /* box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
   border-color: rgba(0, 123, 255, 0.3) !important; */
