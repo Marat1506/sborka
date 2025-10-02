@@ -230,13 +230,13 @@ let isScrolling;
 
 window.addEventListener('scroll', () => {
   // При прокрутке добавляем класс, убирающий анимации
-  document.querySelectorAll('.content_wostour, .features-cards .feature-card, .container-cards .card, .why-choose-us .grid-container .main-card .card, .why-choose-us .grid-container .side-card .card').forEach(el => el.classList.add('no-transitions'));
+  document.querySelector('.content_wostour').classList.add('no-transitions');
   
   // Очищаем предыдущий таймер
   clearTimeout(isScrolling);
   
   // Устанавливаем таймер, чтобы восстановить анимации после остановки прокрутки
   isScrolling = setTimeout(() => {
-    document.querySelectorAll(".content_wostour, .features-cards .feature-card, .container-cards .card, .why-choose-us .grid-container .main-card .card, .why-choose-us .grid-container .side-card .card").forEach(el => el.classList.remove("no-transitions"));
+    document.querySelector('.content_wostour').classList.remove('no-transitions');
   }, 150);
 });
