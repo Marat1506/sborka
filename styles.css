@@ -31,6 +31,8 @@ body {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 @media (max-width: 991px) {
