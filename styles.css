@@ -32,15 +32,16 @@ body {
   display: flex;
   flex-direction: column;
   transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
   will-change: transform;
 }
 
 @media (max-width: 991px) {
   .main-with-bg {
     height: 100dvh;
-    min-height: 100dvh;
-    height: auto !important;
     background-image: url("../assets/main_background_mobile.png");
+    transition: height 0.1s ease-out;
   }
 }
 
@@ -341,7 +342,8 @@ body {
   transition: all 0.3s ease;
   border: 2px solid transparent;
 }
-.mobile-header-btn-container{
+
+.mobile-header-btn-container {
   width: 100dvw;
   display: flex;
   justify-content: center;
@@ -366,7 +368,7 @@ body {
 @media (max-width: 991px) {
   .header .header-btn {
     margin-bottom: 10rem;
-    
+
   }
 }
 

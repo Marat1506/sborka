@@ -1,4 +1,68 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Функция для стабилизации высоты с использованием VisualViewport API
+    function useVisualViewport() {
+        if (window.innerWidth > 991 || !window.visualViewport) return;
+        
+        const mainElement = document.querySelector('.main-with-bg');
+        if (!mainElement) return;
+        
+        let isAdjusting = false;
+        let lastHeight = window.visualViewport.height;
+        
+        function updateHeight() {
+            if (isAdjusting) return;
+            
+            isAdjusting = true;
+            requestAnimationFrame(() => {
+                const currentHeight = window.visualViewport.height;
+                
+                // Обновляем только если изменение значительное (больше 10px)
+                if (Math.abs(currentHeight - lastHeight) > 10) {
+                    mainElement.style.height = `${currentHeight}px`;
+                    lastHeight = currentHeight;
+                }
+                
+                isAdjusting = false;
+            });
+        }
+        
+        // Обработчик изменения visualViewport
+        window.visualViewport.addEventListener('resize', updateHeight);
+        window.visualViewport.addEventListener('scroll', updateHeight);
+        
+        // Инициализация начальной высоты
+        mainElement.style.height = `${window.visualViewport.height}px`;
+        
+        // Также обрабатываем обычный resize для совместимости
+        window.addEventListener('resize', function() {
+            if (window.visualViewport) {
+                updateHeight();
+            }
+        });
+        
+        // Обработчик изменения ориентации
+        window.addEventListener('orientationchange', function() {
+            setTimeout(() => {
+                if (window.visualViewport) {
+                    mainElement.style.height = `${window.visualViewport.height}px`;
+                    lastHeight = window.visualViewport.height;
+                }
+            }, 500);
+        });
+    }
+    
+    // Инициализируем VisualViewport если доступен
+    if ('visualViewport' in window) {
+        useVisualViewport();
+    } else {
+        // Fallback для браузеров без поддержки VisualViewport
+        console.log('VisualViewport not supported, using fallback');
+        const mainElement = document.querySelector('.main-with-bg');
+        if (mainElement && window.innerWidth <= 991) {
+            mainElement.style.height = `${window.innerHeight}px`;
+        }
+    }
+
     // Перемещение кнопки "Создать аккаунт" между десктопом и мобильной боковой панелью
     const headerBtn = document.querySelector('.header-btn');
     const desktopRightActions = document.querySelector('.right-actions:not(.d-lg-none)');
@@ -29,7 +93,17 @@ document.addEventListener('DOMContentLoaded', () => {
     moveHeaderButton();
 
     // Отслеживаем изменения размера окна
-    window.addEventListener('resize', moveHeaderButton);
+    window.addEventListener('resize', function() {
+        moveHeaderButton();
+        
+        // Обновляем высоту при ресайзе (fallback)
+        if (window.innerWidth <= 991 && !window.visualViewport) {
+            const mainElement = document.querySelector('.main-with-bg');
+            if (mainElement) {
+                mainElement.style.height = `${window.innerHeight}px`;
+            }
+        }
+    });
 
     // Существующий код для карусели (не изменяется)
     const footer = document.querySelector('.tournament-footer');
@@ -150,6 +224,4 @@ document.addEventListener('DOMContentLoaded', () => {
     footer.addEventListener('mouseleave', startAutoSlide);
 
     initCarousel();
-
-    
 });
