@@ -1,37 +1,17 @@
+const screenWidth = window.innerWidth;
+console.log('Ширина экрана:', screenWidth, 'px');
+
+// Для отслеживания изменений размера окна
+window.addEventListener('resize', function() {
+    const currentWidth = window.innerWidth;
+    console.log('Текущая ширина:', currentWidth, 'px');
+});
+
+
+
+
+// Tournament footer carousel with horizontal sliding
 document.addEventListener('DOMContentLoaded', () => {
-    // Перемещение кнопки "Создать аккаунт" между десктопом и мобильной боковой панелью
-    const headerBtn = document.querySelector('.header-btn');
-    const desktopRightActions = document.querySelector('.right-actions:not(.d-lg-none)');
-    const mobileBtnContainer = document.querySelector('.mobile-header-btn-container');
-
-    if (!headerBtn || !desktopRightActions || !mobileBtnContainer) {
-        console.error('Required elements for header button not found');
-        return;
-    }
-
-    function moveHeaderButton() {
-        const isMobile = window.innerWidth <= 991.98;
-
-        if (isMobile) {
-            // Перемещаем кнопку в мобильную боковую панель
-            mobileBtnContainer.appendChild(headerBtn);
-            headerBtn.classList.remove('d-none', 'd-lg-block'); // Показываем кнопку на мобильных
-            headerBtn.classList.add('d-block'); // Обеспечиваем видимость
-        } else {
-            // Возвращаем кнопку в десктопный .right-actions
-            desktopRightActions.appendChild(headerBtn);
-            headerBtn.classList.remove('d-block');
-            headerBtn.classList.add('d-none', 'd-lg-block'); // Скрываем на мобильных, показываем на десктопе
-        }
-    }
-
-    // Выполняем при загрузке страницы
-    moveHeaderButton();
-
-    // Отслеживаем изменения размера окна
-    window.addEventListener('resize', moveHeaderButton);
-
-    // Существующий код для карусели (не изменяется)
     const footer = document.querySelector('.tournament-footer');
     if (!footer) return;
 
@@ -43,32 +23,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!carouselTrack || !slides.length || !slideNumberEl || !prevBtn || !nextBtn) return;
 
+    // Dynamically clone first and last slides for infinite effect
     const totalOriginalSlides = slides.length;
-    if (totalOriginalSlides < 2) return;
+    if (totalOriginalSlides < 2) return; // No need for carousel if less than 2 slides
 
     const firstClone = slides[0].cloneNode(true);
     const lastClone = slides[totalOriginalSlides - 1].cloneNode(true);
+
     carouselTrack.prepend(lastClone);
     carouselTrack.appendChild(firstClone);
+
+    // Re-query slides after cloning
     slides = footer.querySelectorAll('.carousel-slide');
     const totalSlides = slides.length;
 
-    let currentSlide = 1;
+    let currentSlide = 1; // Start at first original slide
     let isAnimating = false;
+    
+    // Auto-slide variables
     let autoSlideInterval = null;
     const autoSlideDelay = 5000;
 
+    // Function to set carousel styles based on number of slides
     function setCarouselStyles() {
         const slideWidthPercentage = 100 / totalSlides;
+        
+        // Set track width
         carouselTrack.style.width = `${totalSlides * 100}%`;
+        
+        // Set each slide width
         slides.forEach(slide => {
             slide.style.width = `${slideWidthPercentage}%`;
         });
+        
+        // Set initial position
         const initialTranslateX = -currentSlide * slideWidthPercentage;
         carouselTrack.style.transform = `translateX(${initialTranslateX}%)`;
     }
 
     function formatSlideNumber(index) {
+        // Safe modulo for display index (1 to totalOriginalSlides)
         const displayIndex = ((index - 1) % totalOriginalSlides + totalOriginalSlides) % totalOriginalSlides + 1;
         return displayIndex < 10 ? `0${displayIndex}` : `${displayIndex}`;
     }
@@ -107,11 +101,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const slideWidthPercentage = 100 / totalSlides;
         const translateX = -index * slideWidthPercentage;
         carouselTrack.style.transform = `translateX(${translateX}%)`;
+        
         currentSlide = index;
         updateSlideNumber();
-
+        
         setTimeout(() => {
             isAnimating = false;
+            
+            // Check boundaries for infinite carousel
             if (index === 0) {
                 goToSlide(totalSlides - 2, true);
             } else if (index === totalSlides - 1) {
@@ -131,11 +128,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function initCarousel() {
+        // Set carousel styles
         setCarouselStyles();
+        
+        // Start at first original slide (index 1)
         goToSlide(1, true);
         startAutoSlide();
     }
 
+    // Event listeners
     nextBtn.addEventListener('click', (e) => {
         e.preventDefault();
         nextSlide();
@@ -149,5 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
     footer.addEventListener('mouseenter', stopAutoSlide);
     footer.addEventListener('mouseleave', startAutoSlide);
 
+    // Initialization
     initCarousel();
 });
