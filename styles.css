@@ -218,7 +218,10 @@ body {
   display: flex;
   align-items: center;
   margin-left: auto;
+  gap: 1rem;
 }
+
+
 
 .header .right-actions .dropdown .drop_btn_flag {
   margin: 0;
@@ -251,15 +254,33 @@ body {
   transform: scale(1.1) translateY(-2px);
 }
 
-.header .user-logo {
+.header .settings_container {
   cursor: pointer;
   transition: all 0.3s ease;
   width: 50px;
   height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* прозрачный белый фон */
+  border-radius: 50%;
+  /* округлый фон */
+  overflow: hidden;
+  /* предотвращает выход иконки за границы */
 }
 
-.header .user-logo:hover {
+.header .settings_container:hover {
   transform: scale(1.1) translateY(-2px);
+}
+
+.header .settings_container .settings {
+  max-width: 60%;
+  /* ограничиваем размер иконки */
+  max-height: 60%;
+  /* ограничиваем размер иконки */
+  object-fit: contain;
+  /* сохраняет пропорции иконки */
 }
 
 .header .right-actions .dropdown-menu {
@@ -331,6 +352,117 @@ body {
   height: 45px;
   flex-shrink: 0;
 
+}
+
+.header .user-logo {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 50px;
+  height: 50px;
+}
+
+.header .user-logo:hover {
+  transform: scale(1.1) translateY(-2px);
+}
+
+.header .ruka-logo {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 50px;
+  height: 50px;
+}
+
+.header .ruka-logo:hover {
+  transform: scale(1.1) translateY(-2px);
+}
+
+
+/* Специфичные стили для dropdown настроек */
+
+.header .settings_container {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none !important;
+  /* прозрачный белый фон */
+  border-radius: 50%;
+  /* округлый фон */
+  overflow: hidden;
+  /* предотвращает выход иконки за границы */
+}
+
+.header .settings_container:hover {
+  transform: scale(1.1) translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header .settings_container .settings {
+  max-width: 100%;
+  /* ограничиваем размер иконки */
+}
+
+.header .right-actions .settings-dropdown {
+  background: #000 !important;
+  /* Черный фон */
+  min-width: 270px !important;
+  max-width: 250px;
+  border: 1px solid #333 !important;
+  border-radius: 19px !important;
+  transform: translateX(-215px) !important;
+  padding: 1rem 1.2rem;
+}
+
+.header .right-actions .settings-dropdown .dropdown-item {
+  color: rgba(165, 165, 165, 1) !important;
+  /* Белый текст */
+  display: flex;
+  justify-content: flex-start;
+  /* Текст слева */
+  align-items: center;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s ease;
+  padding: 0.8rem 0;
+}
+
+.header .right-actions .settings-dropdown .dropdown-item a {
+  color: rgba(165, 165, 165, 1) !important;
+  /* Белый текст в ссылках */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* Текст слева */
+  width: 100%;
+}
+
+.header .right-actions .settings-dropdown .dropdown-item a .btn {
+  border: 1px solid white;
+  margin-top: 1rem;
+  color: white;
+  background: transparent;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.header .right-actions .settings-dropdown .dropdown-item:hover {
+  background: #333 !important;
+  /* Темно-серый фон при наведении */
+}
+
+.header .right-actions .settings-dropdown .dropdown-item:first-child::after {
+  display: none;
+  /* Убираем разделитель для первого элемента */
+}
+
+/* Убираем стандартные разделители Bootstrap */
+.header .right-actions .settings-dropdown .dropdown-item:not(:last-child) {
+  border-bottom: 1px solid #333 !important;
 }
 
 .header .header-btn {
@@ -497,7 +629,7 @@ body {
   .header .right-actions {
     flex-direction: row;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 0.4rem;
     /* margin-top: 2rem;
     padding: 2rem 1.5rem; */
   }
@@ -4131,6 +4263,13 @@ body {
   transition: all 0.3s ease;
 }
 
+.cards3 .card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .cards3 .card .card-body .card-title {
   color: white;
   font-size: clamp(20px, 1.5vw, 32px);
@@ -4138,6 +4277,18 @@ body {
   letter-spacing: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
+
+   display: -webkit-box;
+  -webkit-line-clamp: 3; /* Ограничение в 3 строки */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  /* Важные дополнительные свойства */
+  white-space: normal; /* Разрешить переносы строк */
+  line-height: 1.2; /* Межстрочный интервал */
+  max-height: calc(1.2em * 3); /* Фиксированная высота для 3 строк */
+  min-height: calc(1.2em * 2);
 }
 
 .cards3 .card .card-body .card-text {
@@ -4216,6 +4367,9 @@ body {
   }
 
   .cards3 .card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 0.7rem;
   }
 
