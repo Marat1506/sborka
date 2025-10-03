@@ -678,24 +678,24 @@ body {
 }
 
 .hero-section {
-  margin-top: 8rem;
+  margin-top: 10rem;
 }
 
-@media (max-height: 780px) {
+@media (max-width: 991px) and (max-height: 780px) {
   .hero-section {
     margin-top: 7rem;
   }
 
 }
 
-@media (max-height: 770px) {
+@media (max-width: 991px) and (max-height: 770px) {
   .hero-section {
     margin-top: 6.5rem;
   }
 
 }
 
-@media (max-height: 760px) {
+@media (max-width: 991px) and (max-height: 760px) {
   .hero-section {
     margin-top: 6rem;
   }
