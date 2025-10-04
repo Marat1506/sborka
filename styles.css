@@ -178,7 +178,7 @@ body {
 .header .navbar-nav .nav-item .dropdown .drop-btn {
   background: none;
   border: none;
-  color: gray;
+  color: white;
   font-size: 16px;
 }
 
@@ -189,7 +189,7 @@ body {
 }
 
 .header .navbar-nav .nav-link {
-  color: gray !important;
+  color: white !important;
   text-decoration: none;
   background: none !important;
   border: none !important;
@@ -284,7 +284,7 @@ body {
 }
 
 .header .right-actions .dropdown-menu {
-  background: gray;
+  background: white;
   min-width: 100px !important;
   /* Переопределяем min-width Bootstrap */
   max-width: 100px;
@@ -444,7 +444,7 @@ body {
 .header .right-actions .settings-dropdown .dropdown-item a .btn {
   border: 1px solid white;
   margin-top: 1rem;
-  color: gray;
+  color: white;
   background: transparent;
   border-radius: 20px;
   width: 100%;
@@ -679,7 +679,6 @@ body {
 
 .hero-section {
   margin-top: 10rem;
-  color: gray !important;
 }
 
 @media (max-width: 991px) and (max-height: 780px) {
@@ -897,12 +896,11 @@ body {
   font-size: 19px !important;
   font-weight: 600 !important;
   text-decoration: none;
-  color: gray;
 }
 
 @media (max-width: 991px) {
   .hero-section .hero-btn-primary {
-    border: 1px solid gray;
+    border: 1px solid white;
     font-size: 16px !important;
     width: 200px !important;
     height: 50px !important;
@@ -911,7 +909,7 @@ body {
 
 @media (max-width: 768px) {
   .hero-section .hero-btn-primary {
-    border: 1px solid gray;
+    border: 1px solid white;
     font-size: 15px !important;
     width: 190px !important;
     height: 50px !important;
@@ -920,7 +918,7 @@ body {
 
 @media (max-width: 400px) {
   .hero-section .hero-btn-primary {
-    border: 1px solid gray;
+    border: 1px solid white;
     font-size: 14px !important;
     width: 180px !important;
     height: 50px !important;
@@ -942,7 +940,7 @@ body {
 }
 
 .hero-section .hero-btn-secondary {
-  border: 1px solid gray;
+  border: 1px solid white;
   width: 174px !important;
   height: 55px !important;
   border-radius: 20px;
@@ -951,7 +949,6 @@ body {
   background-color: rgba(255, 255, 255, 0.1) !important;
   backdrop-filter: blur(2px) !important;
   text-decoration: none;
-  color: gray;
 }
 
 @media (max-width: 991px) {
@@ -1030,7 +1027,7 @@ body {
 .hero-card-number {
   font-size: 32px !important;
   font-weight: 400 !important;
-  color: gray !important;
+  color: white !important;
 }
 
 @media (min-width: 1537px) {
@@ -1285,7 +1282,6 @@ body {
 
 .tournament-footer .carousel-slide .footer-left .tournament-info {
   margin-top: 2rem;
-  color: gray;
 }
 
 @media (min-width: 1537px) {
@@ -1315,7 +1311,7 @@ body {
 }
 
 .tournament-footer .carousel-slide .footer-left .tournament-info .date {
-  color: gray;
+  color: rgb(255, 255, 255);
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 15px;
@@ -1340,13 +1336,12 @@ body {
 }
 
 .tournament-footer .carousel-slide .footer-left .tournament-info .tournament-title {
-  color: gray;
+  color: #fff;
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 5px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   text-decoration: none;
-
 }
 
 @media (min-width: 1537px) {
@@ -1360,7 +1355,6 @@ body {
   color: rgba(255, 255, 255, 0.8);
   font-size: 16px;
   font-weight: 400;
-  color: gray;
 }
 
 @media (min-width: 1537px) {
@@ -1459,7 +1453,7 @@ body {
 .tournament-footer .footer-right .arrow-btn {
   width: 60px;
   height: 60px;
-  border: 2px solid gray;
+  border: 2px solid white;
   background: transparent;
   color: #fff;
   border-radius: 50%;
@@ -1491,7 +1485,7 @@ body {
   display: block;
   width: 86px;
   height: 2px;
-  background: gray;
+  background: white;
   margin: 0 5px;
 }
 
@@ -1512,7 +1506,7 @@ body {
 .tournament-footer .footer-right .slide-number {
   font-size: 49px;
   font-weight: 300;
-  color: gray;
+  color: #fff;
   text-align: center;
 }
 
@@ -2314,7 +2308,7 @@ body {
 .content .features-cards .feature-card-footer a .bi-arrow-right {
   transition: all 0.3s ease;
   cursor: pointer;
-  color: gray;
+  color: white;
 }
 
 .content .features-cards .feature-card-footer a .bi-arrow-right:hover {
@@ -3975,13 +3969,13 @@ body {
 
   .hero-section .hero-btn-primary {
     background-color: transparent !important;
-    color: gray !important;
+    color: white !important;
   }
 
   .hero-section .hero-btn-secondary {
     background-color: rgba(255, 255, 255, 0.1) !important;
     backdrop-filter: blur(2px) !important;
-    color: gray !important;
+    color: white !important;
   }
 }
 
