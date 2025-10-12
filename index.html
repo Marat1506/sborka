@@ -33,11 +33,25 @@
 
                 <!-- Collapsible Navbar Content (Sidebar on mobile) -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <div class="sidebar-header d-lg-none">
+                    <!-- <div class="sidebar-header d-lg-none">
                         <button class="sidebar-close" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                             aria-label="Close sidebar">
                             <i class="bi bi-x"></i>
                         </button>
+                    </div> -->
+                    <div class="info_main">
+                        <p>Аккаунт</p>
+                        <div class="info_main_block_one">
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <div class="info_main_block_one_profile">
+                                    <span>МС</span>
+                                    <p class="info_main_block_one_profile_text">Магомед-Салах Эдисултанов</p>
+                                </div>
+                                <img src="/assets/settings.png" width="18px" height="18px" />
+                            </div>
+
+
+                        </div>
                     </div>
                     <ul class="navbar-nav gap-4">
                         <li class="nav-item">
@@ -60,9 +74,23 @@
                             <a class="nav-link" href="#">Membership</a>
                         </li>
                     </ul>
-                    <div class="right-actions d-flex align-items-center gap-3 d-lg-none">
-                        <!-- Контейнер для кнопки "Создать аккаунт" на мобильных -->
+                    <!-- <div class="right-actions d-flex align-items-center gap-3 d-lg-none">
+                        
                         <div class="mobile-header-btn-container"></div>
+                    </div> -->
+                    <div class="sidebar_footer d-lg-none">
+                        <p class="sidebar_footer_title">Связаться с нами</p>
+                        <div class="sidebar_footer_main">
+                            <a href="#">
+                                <button class="btn btn-light btn-lg  text-white hero-btn-secondary">E-mail</button>
+                            </a>
+                            <a href="#">
+                                <button class="btn btn-light btn-lg  text-white hero-btn-secondary">Telegram</button>
+                            </a>
+                            <a href="#">
+                                <button class="btn btn-light btn-lg  text-white hero-btn-secondary">WhatsApp</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -89,7 +117,8 @@
                     <div class="dropdown">
                         <button class="btn btn-secondary settings_container dropdown-toggle d-none d-lg-block"
                             type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="assets/settings.png?sdse" alt="Settings" class="settings " />
+                            <!-- <img src="assets/settings.png?sdse" alt="Settings" class="settings " /> -->
+                            <span>МС</span>
                         </button>
                         <ul class="dropdown-menu settings-dropdown" aria-labelledby="dropdownMenuButton2">
                             <li class="dropdown-item d-flex align-items-center">
@@ -105,13 +134,26 @@
                                 <a href="#"><span>Регистрация</span></a>
                             </li>
                             <li class="dropdown-item d-flex align-items-center">
-                                <a href="#"><button class="btn">Выйти</button></a>
+                                <a href="#"><span>Оператор табло</span></a>
                             </li>
+                            <li class="dropdown-item d-flex align-items-center">
+                                <a href="#"><span>Контролер взвешивания</span></a>
+                            </li>
+                            <li class="dropdown-item d-flex align-items-center">
+                                <a href="#" class="dropdown-item_exit">
+                                    <img src="/assets/exit.png" />
+                                    <span>Выйти</span>
+                                </a>
+                            </li>
+                            <!-- <li class="dropdown-item d-flex align-items-center">
+                                <a href="#"><button class="btn">Выйти</button></a>
+                            </li> -->
 
                         </ul>
                     </div>
-                    <img src="assets/Frame%2033.png?sdswedsd" alt="User" class="user-logo d-none d-lg-block" />
-                    <img src="assets/ruka.png?sdswedsd" alt="User" class="ruka-logo " />
+                    <!-- <img src="assets/Frame%2033.png?sdswedsd" alt="User" class="user-logo d-none d-lg-block" />
+                    <img src="assets/ruka.png?sdswedsd" alt="User" class="ruka-logo d-none d-lg-block" /> -->
+                    <button class="btn btn-light header-btn d-none d-lg-block">Войти</button>
 
 
                     <!-- <a class="btn btn-light header-btn d-none d-lg-block" href="#">Создать аккаунт</a> -->
@@ -303,6 +345,9 @@
 
     </main>
 
+    <!-- Буферный блок для компенсации изменений размеров main-with-bg -->
+    <div class="buffer-block"></div>
+
     <div class="content ">
         <div class="content_wostour">
             <div class="container_content_wostour_chat">
@@ -371,7 +416,7 @@
             </div>
 
             <div class="cards3-container">
-              <div class="cards3">
+                <div class="cards3">
                     <div class="card">
                         <!-- <source media="(max-width: 768px)" srcset="assets/card-mobile.png"> -->
                         <img src="assets/card_real.png" class="card-img-top" alt="...">
