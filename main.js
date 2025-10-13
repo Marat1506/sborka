@@ -234,54 +234,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.width = '';
             }, 150);
         });
-    }
+    } 
 
-    // Управление буферным блоком для компенсации изменений размеров main-with-bg
-    function initBufferBlock() {
-        const bufferBlock = document.querySelector('.buffer-block');
-        const mainWithBg = document.querySelector('.main-with-bg');
-        
-        if (!bufferBlock || !mainWithBg) return;
 
-        let lastViewportHeight = window.innerHeight;
-        let isTransitioning = false;
-
-        function updateBufferHeight() {
-            if (isTransitioning) return;
-            
-            const currentViewportHeight = window.innerHeight;
-            const heightDifference = currentViewportHeight - lastViewportHeight;
-            
-            // Если высота viewport изменилась (например, скрылась адресная строка)
-            if (Math.abs(heightDifference) > 10) {
-                isTransitioning = true;
-                
-                // Устанавливаем отрицательную высоту буферного блока для компенсации
-                bufferBlock.style.height = `${-heightDifference}px`;
-                
-                // Обновляем последнюю известную высоту
-                lastViewportHeight = currentViewportHeight;
-                
-                // Сбрасываем флаг через время анимации
-                setTimeout(() => {
-                    isTransitioning = false;
-                }, 300);
-            }
-        }
-
-        // Отслеживаем изменения размеров окна
-        window.addEventListener('resize', updateBufferHeight);
-        
-        // Отслеживаем изменения ориентации устройства
-        window.addEventListener('orientationchange', () => {
-            setTimeout(updateBufferHeight, 100);
-        });
-
-        // Инициализация
-        updateBufferHeight();
-    }
-
-    // Инициализируем буферный блок
-    initBufferBlock();
-
+    
 });

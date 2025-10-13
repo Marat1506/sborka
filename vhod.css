@@ -1,0 +1,134 @@
+body {
+  background-color: #0f1010;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Шапка */
+header {
+  width: 100%;
+  background-color: transparent;
+  flex-shrink: 0;
+}
+
+/* Центрирование формы */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* по вертикали */
+  align-items: center;     /* по горизонтали */
+  overflow: hidden;        /* убирает прокрутку */
+  padding: 0 1rem;
+}
+
+
+/* Контейнер с двумя кнопками */
+.auth-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 640px;
+  margin-bottom: -20px;
+  z-index: 2;
+  position: relative;
+}
+
+/* Кнопки */
+.toggle-btn {
+  flex: 1;
+  padding: 14px 0;
+  border: none;
+  background-color: rgba(39, 40, 40, 1);
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 22px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  height: 55px;
+}
+
+/* правая немного заходит на левую */
+.toggle-btn + .toggle-btn {
+  margin-left: -3rem;
+}
+
+/* активная кнопка сверху */
+.toggle-btn.active {
+  background-color: #fff;
+  color: #000;
+  z-index: 3;
+}
+
+/* Блок с формой */
+.auth-box {
+  background-color: rgba(39, 40, 40, 1);
+  width: 100%;
+  max-width: 640px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 16px 16px;
+  padding: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Поля формы */
+.form-control {
+  background-color: transparent;
+  border: 1px solid #555;
+  border-radius: 20px;
+  color: #fff;
+  padding: 12px 16px;
+  font-size: 15px;
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+.form-control:focus {
+  background-color: transparent !important;
+  color: #fff !important;
+  border-color: #1e63ff !important;
+  box-shadow: none !important;
+}
+
+/* Кнопка отправки */
+.btn-primary {
+  background-color: #1e63ff;
+  border: none;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 12px;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.btn-primary:hover {
+  background-color: #3773ff;
+}
+
+.vhod_info {
+  gap: 0;
+  margin-top: 2rem;
+}
+.vhod_info p {
+  margin-bottom: 0 !important;
+}
+.vhod_info a {
+  text-decoration: none;
+  color: #3773ff;
+}
+
+/* Убираем прокрутку */
+html, body {
+  overflow: hidden;
+}
