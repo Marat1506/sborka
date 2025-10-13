@@ -57,8 +57,14 @@ main {
 }
 
 /* правая немного заходит на левую */
-.toggle-btn + .toggle-btn {
-  margin-left: -3rem;
+.toggle-btn+.toggle-btn {
+    margin-left: -3rem;
+}
+
+@media(max-width: 768px) {
+    .toggle-btn+.toggle-btn {
+        margin-left: -1.5rem;
+    }
 }
 
 /* активная кнопка сверху */
