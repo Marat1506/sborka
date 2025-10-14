@@ -631,13 +631,13 @@ body {
     top: 0;
     right: -100%;
     width: 320px;
-    height: 100vh;
+    height: 100dvh;
     background: rgb(15, 16, 16) !important;
     color: white;
     backdrop-filter: blur(20px);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     padding: 0;
-    padding-bottom: 4rem;
+    /* padding-bottom: 4rem; */
     z-index: 9999;
     transition: right 0.3s ease-in-out;
     display: flex;
@@ -654,7 +654,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    height: 100dvh;
+    /* height: 100dvh; */
     padding-bottom: 2rem;
     /* чтобы заняло весь экран */
     overflow-y: auto;
