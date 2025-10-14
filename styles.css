@@ -598,6 +598,7 @@ body {
 
 /* Mobile-specific styles */
 @media (max-width: 991.98px) {
+  
   .header .info_main {
     display: block;
     width: 100%;

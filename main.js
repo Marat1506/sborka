@@ -217,19 +217,42 @@ document.addEventListener('DOMContentLoaded', () => {
         navbarNav.addEventListener('hide.bs.collapse', moveSettingsMenuAlternative);
     }
 
-    
-     const navbarCollapse = document.getElementById('navbarNav');
-    
-    if (navbarCollapse) {
-        navbarCollapse.addEventListener('show.bs.collapse', function() {
-            document.body.style.overflow = 'hidden';
-        });
-        
-        navbarCollapse.addEventListener('hide.bs.collapse', function() {
-            document.body.style.overflow = '';
-        });
-    }
+
+    const navbarCollapse = document.getElementById('navbarNav');
+let scrollPosition = 0;
+
+if (navbarCollapse) {
+  navbarCollapse.addEventListener('show.bs.collapse', function () {
+    // Сохраняем текущую позицию скролла
+    scrollPosition = window.pageYOffset;
+
+    // Фиксируем body
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = '100%';
+    document.body.style.overflowY = 'scroll'; // предотвращает смещение из-за исчезновения скроллбара
+  });
+
+  navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+    // Получаем значение top
+    const top = document.body.style.top;
+
+    // Сбрасываем стили
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    document.body.style.overflowY = '';
+
+    // ВОЗВРАЩАЕМ положение без "прокрутки"
+    window.scrollTo({
+      top: -parseInt(top || '0'),
+      behavior: 'instant' // мгновенно, без анимации
+    });
+  });
+}
 
 
-    
+
+
+
 });
