@@ -637,7 +637,7 @@ body {
     backdrop-filter: blur(20px);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     padding: 0;
-    /* padding-bottom: 2rem; */
+    padding-bottom: 4rem;
     z-index: 9999;
     transition: right 0.3s ease-in-out;
     display: flex;
