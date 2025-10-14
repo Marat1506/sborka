@@ -655,7 +655,7 @@ body {
     right: 0;
     height: 100dvh;
     /* чтобы заняло весь экран */
-    overflow-y: auto;
+    overflow-y: scroll;
     /* включаем прокрутку внутри */
     -webkit-overflow-scrolling: touch;
     /* плавная прокрутка на iOS */
