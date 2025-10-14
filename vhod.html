@@ -27,8 +27,12 @@
 
         <!-- Две кнопки -->
         <div class="auth-toggle">
-            <button class="toggle-btn active" data-target="login">Вход</button>
-            <button class="toggle-btn" data-target="register">Создать аккаунт</button>
+            <a href="#" class="toggle-btn active" data-target="login">
+                <button class="btn-inner">Вход</button>
+            </a>
+            <a href="#" class="toggle-btn" data-target="register">
+                <button class="btn-inner">Создать аккаунт</button>
+            </a>
         </div>
 
         <!-- Форма -->
@@ -42,7 +46,9 @@
                     <div class="mb-3">
                         <input type="password" class="form-control" placeholder="Пароль">
                     </div>
-                    <button type="submit" class="btn btn-primary w-100 rounded-pill">Войти</button>
+                    <a href="#">
+                        <button type="submit" class="btn btn-primary w-100 rounded-pill submit-btn">Войти</button>
+                    </a>
                 </form>
                 <div class="d-flex flex-column align-items-center  vhod_info">
                     <div class="d-flex gap-1">
@@ -71,7 +77,9 @@
                     <div class="mb-3">
                         <input type="password" class="form-control" placeholder="Повторить пароль">
                     </div>
-                    <button type="submit" class="btn btn-primary w-100 rounded-pill">Зарегистрироваться</button>
+                    <a href="#">
+                        <button type="submit" class="btn btn-primary w-100 rounded-pill submit-btn">Зарегистрироваться</button>
+                    </a>
                 </form>
                 <div class="d-flex flex-column align-items-center  vhod_info">
                     <div class="d-flex gap-1">
@@ -79,8 +87,6 @@
                         <a href="#">Войти</a>
                     </div>
                 </div>
-
-
             </div>
         </div>
 
@@ -92,7 +98,9 @@
         const forms = document.querySelectorAll('.form-block');
 
         buttons.forEach(btn => {
-            btn.addEventListener('click', () => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                
                 buttons.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 

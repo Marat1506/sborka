@@ -217,24 +217,18 @@ document.addEventListener('DOMContentLoaded', () => {
         navbarNav.addEventListener('hide.bs.collapse', moveSettingsMenuAlternative);
     }
 
-    if (navbarNav) {
-        navbarNav.addEventListener('show.bs.collapse', function () {
-            // Задержка для применения стиля после анимации
-            setTimeout(() => {
-                document.body.style.overflow = 'hidden';
-                document.body.style.position = 'fixed';
-                document.body.style.width = '100%';
-            }, 150);
+    
+     const navbarCollapse = document.getElementById('navbarNav');
+    
+    if (navbarCollapse) {
+        navbarCollapse.addEventListener('show.bs.collapse', function() {
+            document.body.style.overflow = 'hidden';
         });
-
-        navbarNav.addEventListener('hide.bs.collapse', function () {
-            setTimeout(() => {
-                document.body.style.overflow = '';
-                document.body.style.position = '';
-                document.body.style.width = '';
-            }, 150);
+        
+        navbarCollapse.addEventListener('hide.bs.collapse', function() {
+            document.body.style.overflow = '';
         });
-    } 
+    }
 
 
     

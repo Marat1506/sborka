@@ -90,6 +90,7 @@ body {
   padding: 1rem 0;
 }
 
+
 @media (min-width: 3840px) {
   .header {
     padding: 3rem;
@@ -602,7 +603,7 @@ body {
     width: 100%;
   }
 
-  .header .navbar-collapse {
+  /* .header .navbar-collapse {
     display: block;
     margin-top: 4rem;
     position: fixed;
@@ -622,11 +623,53 @@ body {
     align-items: start;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+  } */
+  .header .navbar-collapse {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 100vh;
+    background: rgb(15, 16, 16) !important;
+    color: white;
+    backdrop-filter: blur(20px);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0;
+    z-index: 9999;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    overflow-y: auto; /* Разрешаем прокрутку */
+    -webkit-overflow-scrolling: touch;
+    /* Убираем margin-top чтобы избежать прокрутки страницы */
+    margin-top: 4rem;
+  }
+
+  .header .navbar-collapse::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .header .navbar-collapse.show::before {
+    left: 0;
+  }
+  .header .navbar-collapse.show {
+    right: 0;
   }
 
   .header .navbar-collapse.show {
     right: 0;
   }
+  
 
   .header .navbar-collapse .info_main {
     margin-top: 2rem;
