@@ -219,37 +219,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const navbarCollapse = document.getElementById('navbarNav');
-let scrollPosition = 0;
+    let scrollPosition = 0;
 
-if (navbarCollapse) {
-  navbarCollapse.addEventListener('show.bs.collapse', function () {
-    // Сохраняем текущую позицию скролла
-    scrollPosition = window.pageYOffset;
+    if (navbarCollapse) {
+        navbarCollapse.addEventListener('show.bs.collapse', function () {
+            // Сохраняем текущую позицию скролла
+            scrollPosition = window.pageYOffset;
 
-    // Фиксируем body
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollPosition}px`;
-    document.body.style.width = '100%';
-    document.body.style.overflowY = 'scroll'; // предотвращает смещение из-за исчезновения скроллбара
-  });
+            // Фиксируем body
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollPosition}px`;
+            document.body.style.width = '100%';
+            document.body.style.overflow = 'hidden';
+        });
 
-  navbarCollapse.addEventListener('hidden.bs.collapse', function () {
-    // Получаем значение top
-    const top = document.body.style.top;
+        navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+            // Получаем top
+            const top = document.body.style.top;
 
-    // Сбрасываем стили
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.width = '';
-    document.body.style.overflowY = '';
+            // Сбрасываем стили
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            document.body.style.overflow = '';
 
-    // ВОЗВРАЩАЕМ положение без "прокрутки"
-    window.scrollTo({
-      top: -parseInt(top || '0'),
-      behavior: 'instant' // мгновенно, без анимации
-    });
-  });
-}
+            // Возвращаем страницу на то же место без скачков
+            window.scrollTo({
+                top: -parseInt(top || '0'),
+                behavior: 'instant'
+            });
+        });
+    }
+
+
 
 
 
