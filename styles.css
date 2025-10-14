@@ -630,7 +630,7 @@ body {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 320px;
+    width: 100dvw;
     height: 100dvh;
     background: rgb(15, 16, 16) !important;
     color: white;
