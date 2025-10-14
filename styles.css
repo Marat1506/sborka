@@ -653,7 +653,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 100dvh;
     /* чтобы заняло весь экран */
     overflow-y: auto;
     /* включаем прокрутку внутри */
