@@ -975,8 +975,18 @@ body {
   .header .navbar-nav .nav-item .nav-link:first-child {
     color: rgba(165, 165, 165, 1) !important;
   }
+  .header .navbar-nav .main-footer .nav-item .nav-link:first-child {
+    color: white !important;
+  }
+
+   .header .navbar-nav .main-footer .nav-item .nav-link{
+    color: white !important;
+  }
 
   .header .navbar-nav .nav-group .nav-item .nav-link:first-child {
+    color: white !important;
+  }
+  .header .navbar-nav .main-footer .nav-group .nav-item .nav-link:first-child {
     color: white !important;
   }
 
@@ -4558,6 +4568,7 @@ body {
   .main-footer .navbar-nav .nav-item {
     text-align: center !important;
   }
+
 
   .main-footer .navbar-nav .nav-link:not(.custom-select) {
     font-size: 20px !important;
