@@ -45,7 +45,7 @@
                         </div>
                     </div>
                     <!-- Зареган -->
-                    <div class="info_main d-lg-none ">
+                    <div class="info_main d-lg-none d-none">
                         <p>Аккаунт</p>
                         <div class="info_main_block_one">
                             <div class="d-flex justify-content-between align-items-center mt-3 pb-2">
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <!-- Форма авторизации -->
-                    <div class="autorization d-none">
+                    <div class="autorization">
                         <!-- Две кнопки -->
                         <div class="auth-toggle">
                             <a href="#" class="toggle-btn active" data-target="login">
@@ -129,7 +129,7 @@
                         </div>
 
                     </div>
-                    <ul class="navbar-nav gap-4 ">
+                    <ul class="navbar-nav gap-4 d-none">
                         <li class="nav-item">
                             <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle drop-btn" type="button"
@@ -154,7 +154,7 @@
                         
                         <div class="mobile-header-btn-container"></div>
                     </div> -->
-                    <div class="sidebar_footer  d-lg-none ">
+                    <div class="sidebar_footer  d-lg-none d-none">
                         <p class="sidebar_footer_title">Связаться с нами</p>
                         <div class="sidebar_footer_main">
                             <a href="#">
@@ -169,87 +169,8 @@
                         </div>
                     </div>
 
-
-                    <div class="main-footer d-lg-none " style="margin-bottom: 3rem;">
-
-                        <div
-                            class="footer-top d-flex flex-column flex-md-row justify-content-between align-items-center p-3">
-                            <img src="assets/_105553233322080.png" alt="footer_logo" class="footer-logo">
-                            <div
-                                class="footer-nav d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 gap-md-5">
-                                <ul class="navbar-nav mx-auto">
-                                    <li class="nav-item">
-                                        <div class="dropdown" style="position: relative; top: -5px;">
-                                            <button class="btn btn-secondary dropdown-toggle drop-btn" type="button"
-                                                id="dropdownMenuButton3" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                Турниры
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
-                                                style="position: absolute; top: 100%; left: 0; z-index: 1000;">
-                                                <a class="dropdown-item" href="#">Предстоящие турниры</a>
-                                                <a class="dropdown-item" href="#">Прошедшие турниры</a>
-                                                <a class="dropdown-item" href="#">Все турниры</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#" style="color: white !important;">Сообщество</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#" style="color: white !important;">Membership</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="footer-divider"></div>
-
-                        <div class="footer-bottom d-flex  justify-content-between align-items-center p-3">
-                            <!-- <div class="footer-links d-flex  flex-md-row justify-content-between align-items-center gap-3 gap-md-5"
-                style="color: rgba(94, 94, 94, 1)">
-                <p>Публичная оферта</p>
-                <p>Условия пользования</p>
-                <p>Политика конфедициальности</p>
-            </div> -->
-                            <div class="footer-links-mobile">
-                                <div class="pk">
-                                    <a href="#">
-                                        Публичная оферта
-                                    </a>
-                                    <a href="#">
-                                        Условия пользования
-                                    </a>
-
-
-                                </div>
-                                <a href="#">
-                                    Политика конфедициальности
-                                </a>
-
-                            </div>
-
-                            <div
-                                class="social-links d-flex justify-content-center justify-content-md-between align-items-center gap-3">
-                                <a href="#">
-                                    <img src="assets/instagram.png" alt="instagram">
-                                </a>
-                                <a href="#">
-                                    <img src="assets/facebook.png" alt="facebook">
-                                </a>
-                                <a href="#">
-                                    <img src="assets/whatsapp.png" alt="whatsapp">
-                                </a>
-                                <a href="#">
-                                    <img src="assets/youtube.png" alt="youtube">
-                                </a>
-
-
-
-
-                            </div>
-                        </div>
-
-                    </div>
+                    <!-- дублируем footer сюда -->
+                  
 
                 </div>
 
@@ -527,8 +448,11 @@
                     организовывать и следить за соревнованиями.
                     Увидимся на татами!</p>
 
-                <a href="#" class="btn btn-dark border border-white   bg-transparent ">Создать
-                    событие</a>
+                <div class="w-100">
+                    <a href="#" class="btn btn-dark border border-white   bg-transparent ">Создать
+                        событие</a>
+                </div>
+
             </div>
         </div>
 
@@ -538,9 +462,9 @@
                 <p class="p_two">Онлайн-платежи,
                     формирование сетки, планирование и взвешивание. Когда придет время турнира.</p>
                 <div class="d-flex justify-content-between align-items-center feature-card-footer">
-                    <img src="assets/medal.png?sdswedsd" alt="medal">
+                    <img src="assets/medal.png?sdswedsd" alt="medal" class="medal">
                     <a href="#">
-                        <i class="bi bi-arrow-right fs-1"></i>
+                        <img src="/assets/strelka.png" class="bi bi-arrow-right fs-1"></img>
                     </a>
 
                 </div>
@@ -550,9 +474,9 @@
                 <p class="p_two">Возможность осуществлять
                     массовую регистрацию, создавать новых пользователей.</p>
                 <div class="d-flex justify-content-between align-items-center feature-card-footer">
-                    <img src="assets/pushka.png?sdswedsd" alt="medal">
+                    <img src="assets/pushka.png?sdswedsd" alt="medal" class="pushka">
                     <a href="#">
-                        <i class="bi bi-arrow-right fs-1"></i>
+                        <img src="/assets/strelka.png" class="bi bi-arrow-right fs-1"></img>
                     </a>
                 </div>
             </div>
@@ -561,9 +485,9 @@
                 <p class="p_two">Редактируйте регистрации и
                     просматривайте предстоящие схватки с удобным функционалом.</p>
                 <div class="d-flex justify-content-between align-items-center feature-card-footer">
-                    <img src="assets/borba.png?sdswedsd" alt="medal">
+                    <img src="assets/borba.png?sdswedsd" alt="medal" class="borba">
                     <a href="#">
-                        <i class="bi bi-arrow-right fs-1"></i>
+                        <img src="/assets/strelka.png" class="bi bi-arrow-right fs-1"></img>
                     </a>
                 </div>
             </div>
@@ -750,7 +674,7 @@
                         <a href="#">
                             <p class="card_title">Удобный личный кабинет</p>
                         </a>
-                        <p class="card_text">Создавайте, изменяйте и отслеживайте <br /> события в личном кабинете</p>
+                        <p class="card_text">Создавайте, изменяйте и отслеживайте события в личном кабинете</p>
                     </div>
                 </div>
 
@@ -766,7 +690,7 @@
                     </div>
                     <div class="card-content">
                         <a href="#">
-                            <p class="card_title2">Следите за соревнованиями из <br />любой точки мира</p>
+                            <p class="card_title2">Следите за соревнованиями из любой точки мира</p>
                         </a>
                         <p class="card_text">Поддерживайте спортсменов и узнавайте о результаты в режиме онлайн
                         </p>
