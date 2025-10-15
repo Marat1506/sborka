@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 menuIcon.src = closeSrc;
                 menuIcon.alt = 'Закрыть';
-            }, 500); 
+            }, 300); 
         });
 
         navbarNav.addEventListener('hide.bs.collapse', function () {
