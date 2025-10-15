@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-
     // Существующий код для карусели (не изменяется)
     const footer = document.querySelector('.tournament-footer');
     if (!footer) return;
@@ -121,21 +120,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initCarousel();
 
-
-
-
-
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarNav = document.getElementById('navbarNav');
     const menuIcon = navbarToggler.querySelector('.menu-icon');
 
     if (navbarToggler && navbarNav && menuIcon) {
         const originalSrc = menuIcon.src;
-        const closeSrc = '/assets/close.png'; // путь к иконке крестика
+        const closeSrc = '/assets/close.png'; 
 
         navbarNav.addEventListener('show.bs.collapse', function () {
-            menuIcon.src = closeSrc;
-            menuIcon.alt = 'Закрыть';
+        
+            setTimeout(() => {
+                menuIcon.src = closeSrc;
+                menuIcon.alt = 'Закрыть';
+            }, 500); 
         });
 
         navbarNav.addEventListener('hide.bs.collapse', function () {
@@ -144,12 +142,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Функция для переупорядочивания элементов навигации в мобильной версии
+
     function reorderNavItems(isMobile) {
         const ul = navbarNav ? navbarNav.querySelector('.navbar-nav') : null;
         if (!ul) return;
 
-        // Находим элементы по их содержимому (до очистки)
         const tournamentsLi = ul.querySelector('.dropdown').closest('li'); // li с Турниры (dropdown)
         const communityLi = Array.from(ul.querySelectorAll('.nav-link')).find(link => link.textContent.trim() === 'Сообщество').closest('li');
         const membershipLi = Array.from(ul.querySelectorAll('.nav-link')).find(link => link.textContent.trim() === 'Membership').closest('li');
@@ -177,6 +174,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Переменная для обработчика клика (чтобы удалять при необходимости)
+    let settingsToggleHandler = null;
+
+    // Инициализация toggle для мобильных настроек
+    function initMobileSettingsToggle() {
+        const settingsImg = document.querySelector('.info_main_block_one img[src*="/assets/settings.png"]');
+        const settingsDropdown = document.querySelector('.settings-dropdown');
+
+        if (settingsImg && settingsDropdown) {
+            // Удаляем старый обработчик, если есть
+            if (settingsToggleHandler) {
+                settingsImg.removeEventListener('click', settingsToggleHandler);
+            }
+
+            // Новый обработчик
+            settingsToggleHandler = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (settingsDropdown.classList.contains('mobile-version')) {
+                    settingsDropdown.classList.toggle('show');
+                }
+            };
+
+            settingsImg.addEventListener('click', settingsToggleHandler);
+        }
+    }
+
     // Альтернативный вариант - просто перемещаем элемент (без клонирования)
     function moveSettingsMenuAlternative() {
         const settingsMenu = document.querySelector('.settings-dropdown');
@@ -190,6 +214,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Перемещаем оригинальный элемент в сайдбар
                 targetBlock.appendChild(settingsMenu);
                 settingsMenu.classList.add('mobile-version');
+                // Инициализируем toggle только в мобильном режиме
+                initMobileSettingsToggle();
 
             } else if (!isMobile && isInSidebar) {
                 // Возвращаем на место в десктопной версии
@@ -197,6 +223,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (settingsContainer && settingsMenu.classList.contains('mobile-version')) {
                     settingsContainer.appendChild(settingsMenu);
                     settingsMenu.classList.remove('mobile-version');
+                    // Снимаем класс show при возврате
+                    settingsMenu.classList.remove('show');
+                    // Удаляем обработчик
+                    const settingsImg = document.querySelector('.info_main_block_one img[src*="/assets/settings.png"]');
+                    if (settingsImg && settingsToggleHandler) {
+                        settingsImg.removeEventListener('click', settingsToggleHandler);
+                        settingsToggleHandler = null;
+                    }
                 }
             }
         }
@@ -214,9 +248,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Также обновляем при открытии/закрытии сайдбара (на всякий случай)
     if (navbarNav) {
         navbarNav.addEventListener('show.bs.collapse', moveSettingsMenuAlternative);
-        navbarNav.addEventListener('hide.bs.collapse', moveSettingsMenuAlternative);
+        navbarNav.addEventListener('hide.bs.collapse', () => {
+            // Снимаем класс show при закрытии сайдбара
+            const settingsDropdown = document.querySelector('.settings-dropdown.mobile-version');
+            if (settingsDropdown) {
+                settingsDropdown.classList.remove('show');
+            }
+            moveSettingsMenuAlternative();
+        });
     }
-
 
     const navbarCollapse = document.getElementById('navbarNav');
     let scrollPosition = 0;
@@ -251,8 +291,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const buttons = document.querySelectorAll('.toggle-btn');
+    const forms = document.querySelectorAll('.form-block');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const target = btn.getAttribute('data-target');
+            forms.forEach(f => f.style.display = 'none');
+            document.getElementById(target).style.display = 'block';
+        });
+    });
 
 
+     const buttons2 = document.querySelectorAll('.dark-toggle-btn');
+    const forms2 = document.querySelectorAll('.form-block');
+
+    buttons2.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            buttons2.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const target = btn.getAttribute('data-target');
+            forms2.forEach(f => f.style.display = 'none');
+            document.getElementById(target).style.display = 'block';
+        });
+    });
 
 
 

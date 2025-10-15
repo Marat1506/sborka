@@ -32,7 +32,20 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <div class="info_main">
+
+                    <!-- Не Зареган -->
+                    <div class="sidebar-auth-container  d-lg-none d-none">
+                        <div class="dark-auth-toggle">
+                            <a href="#" class="dark-toggle-btn active" data-target="login">
+                                <button class="dark-btn-inner">Вход</button>
+                            </a>
+                            <a href="#" class="dark-toggle-btn" data-target="register">
+                                <button class="dark-btn-inner">Создать аккаунт</button>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Зареган -->
+                    <div class="info_main d-lg-none ">
                         <p>Аккаунт</p>
                         <div class="info_main_block_one">
                             <div class="d-flex justify-content-between align-items-center mt-3">
@@ -46,7 +59,77 @@
 
                         </div>
                     </div>
-                    <ul class="navbar-nav gap-4">
+                    <!-- Форма авторизации -->
+                    <div class="autorization d-none">
+                        <!-- Две кнопки -->
+                        <div class="auth-toggle">
+                            <a href="#" class="toggle-btn active" data-target="login">
+                                <button class="btn-inner">Вход</button>
+                            </a>
+                            <a href="#" class="toggle-btn" data-target="register">
+                                <button class="btn-inner">Создать аккаунт</button>
+                            </a>
+                        </div>
+
+                        <!-- Форма -->
+                        <div class="auth-box p-4 rounded-4">
+                            <!-- Вход -->
+                            <div class="form-block" id="login" style="display: block;">
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Логин">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="password" class="form-control" placeholder="Пароль">
+                                    </div>
+                                    <a href="#">
+                                        <button type="submit"
+                                            class="btn btn-primary w-100 rounded-pill submit-btn">Войти</button>
+                                    </a>
+                                </form>
+                                <div class="d-flex flex-column align-items-center  vhod_info">
+                                    <div class="d-flex gap-1">
+                                        <p>Не можете войти? </p>
+                                        <a href="#"> Восстановить пароль!</a>
+                                    </div>
+                                    <a href="#">Зарегистрируйтесь!</a>
+                                </div>
+                            </div>
+
+                            <!-- Регистрация -->
+                            <div class="form-block" id="register" style="display: none;">
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Имя">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Фамилия">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control" placeholder="E-mail">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="password" class="form-control" placeholder="Пароль">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="password" class="form-control" placeholder="Повторить пароль">
+                                    </div>
+                                    <a href="#">
+                                        <button type="submit"
+                                            class="btn btn-primary w-100 rounded-pill submit-btn">Зарегистрироваться</button>
+                                    </a>
+                                </form>
+                                <div class="d-flex flex-column align-items-center  vhod_info">
+                                    <div class="d-flex gap-1">
+                                        <p>Уже есть аккаунт?</p>
+                                        <a href="#">Войти</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <ul class="navbar-nav gap-4 ">
                         <li class="nav-item">
                             <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle drop-btn" type="button"
@@ -71,7 +154,7 @@
                         
                         <div class="mobile-header-btn-container"></div>
                     </div> -->
-                    <div class="sidebar_footer d-lg-none">
+                    <div class="sidebar_footer  d-lg-none ">
                         <p class="sidebar_footer_title">Связаться с нами</p>
                         <div class="sidebar_footer_main">
                             <a href="#">
@@ -85,7 +168,7 @@
                             </a>
                         </div>
                     </div>
-                    
+
                 </div>
 
                 <!-- Right Side: Flag, User Logo (desktop), Create Account (desktop), Hamburger (mobile) -->
@@ -114,7 +197,7 @@
                             <!-- <img src="assets/settings.png?sdse" alt="Settings" class="settings " /> -->
                             <span>МС</span>
                         </button>
-                        <ul class="dropdown-menu settings-dropdown" aria-labelledby="dropdownMenuButton2">
+                        <ul class="dropdown-menu settings-dropdown " aria-labelledby="dropdownMenuButton2">
                             <li class="dropdown-item d-flex align-items-center">
                                 <a href="#"><span>Профиль</span></a>
                             </li>
@@ -404,9 +487,9 @@
         </div>
 
         <div class="container-cards">
-            <div class="d-flex justify-content-between">
-                <p class="container-cards-title">Предстоящие турниры</p>
-                <a href="#" class="d-none d-lg-block">
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="container-cards-title">Предстоящие <br /> турниры</p>
+                <a href="#" >
                     <button class="btn btn-light btn-lg bg-transparent text-white hero-btn-secondary">
                         Все турниры
                     </button>

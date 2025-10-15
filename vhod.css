@@ -4,27 +4,61 @@ body {
     font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh; /* Изменено с height:100vh на min-height для лучшей адаптации */
     display: flex;
     flex-direction: column;
 }
 
-/* Шапка */
-header {
-    width: 100%;
-    background-color: transparent;
-    flex-shrink: 0;
+/* Шапка - переопределяем Bootstrap полностью */
+.header {
+    display: flex ;
+    justify-content: space-between ;
+    align-items: center ;
+    width: 100% ;
+    
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    padding-top: 1rem;
+    background-color: transparent !important;
+    flex-shrink: 0 !important;
+    z-index: 1030 !important; /* Выше, чтобы не перекрываться */
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: auto !important;
+}
+
+@media (max-width: 991px) {
+    .header {
+        display: none !important;
+    }
+}
+
+/* Логотип слева - прижимаем к левому краю */
+.header .header-logo {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Флаг справа - прижимаем к правому краю */
+.header .selected-flag-icon {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
 }
 
 /* Центрирование формы */
-main {
+.autorization {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: auto; /* Разрешаем прокрутку если контент длинный */
     padding: 0 1rem;
+    padding-top: 80px; /* Отступ сверху для fixed header (высота header ~60px + margin) */
+    padding-bottom: 80px; /* Отступ снизу для симметрии */
+    min-height: calc(100vh - 160px); /* Обеспечиваем минимальную высоту */
 }
 
 /* Контейнер с двумя кнопками */
@@ -89,6 +123,10 @@ main {
     }
 }
 
+.form-block{
+    margin-top: 2rem;
+}
+
 /* активная кнопка сверху */
 .toggle-btn.active {
     background-color: #fff;
@@ -107,9 +145,11 @@ main {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     border-radius: 0 0 16px 16px;
     padding: 40px;
+    padding-top: 4rem;
     position: relative;
     z-index: 1;
 }
+
 
 /* Поля формы */
 .form-control {
@@ -140,7 +180,7 @@ main {
     border-radius: 20px;
     padding: 12px;
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 3.2rem;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -154,8 +194,8 @@ main {
 }
 
 .vhod_info {
-    gap: 0;
-    margin-top: 2rem;
+    gap: 1rem;
+    margin-top: 3rem;
 }
 
 .vhod_info p {
@@ -171,4 +211,22 @@ main {
 html,
 body {
     overflow: hidden;
+}
+
+/* Мобильные стили для .auth-toggle: без центрирования и отступов, но с шириной формы */
+@media (max-width: 768px) {
+    .autorization {
+        align-items: flex-start !important; /* Слева, без центрирования */
+        padding: 0 1rem; /* Сохраняем боковые отступы, но без лишних */
+        padding-top: 20px !important; /* Меньше отступ сверху на мобильных */
+        padding-bottom: 20px !important;
+    }
+
+    .auth-toggle {
+        justify-content: flex-start !important; /* Кнопки слева */
+        width: 100% !important; /* Ширина по форме */
+        max-width: 640px !important;
+        margin-bottom: 0 !important; /* Убираем нижний отступ */
+        padding: 0 !important; /* Убираем padding */
+    }
 }

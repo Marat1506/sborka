@@ -153,7 +153,7 @@ body {
 }
 
 .header .navbar-nav {
-  display: flex !important;
+  display: flex;
   align-items: center;
 }
 
@@ -632,7 +632,7 @@ body {
     right: -100%;
     width: 100dvw;
     height: 100dvh;
-    background: rgb(15, 16, 16) !important;
+    background-color: rgb(15, 16, 16, 1) !important;
     color: white;
     backdrop-filter: blur(20px);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
@@ -672,21 +672,7 @@ body {
     overscroll-behavior: contain;
   }
 
-  .header .navbar-collapse::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-    transition: left 0.3s ease-in-out;
-  }
 
-  .header .navbar-collapse.show::before {
-    left: 0;
-  }
 
   .header .navbar-collapse.show {
     right: 0;
@@ -763,6 +749,8 @@ body {
     background: transparent;
   }
 
+
+
   .info_main_block_one .dropdown-item {
     padding: 12px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -794,7 +782,7 @@ body {
   }
 
   .info_main_block_one .settings-dropdown.mobile-version {
-    display: block !important;
+    /* display: block !important; */
     position: static !important;
     transform: none !important;
     width: 100%;
@@ -802,6 +790,16 @@ body {
     box-shadow: none;
     background: transparent;
     /* margin-top: 1rem; */
+  }
+
+  .info_main_block_one .settings-dropdown.mobile-version {
+    display: none;
+    /* Скрываем по умолчанию */
+  }
+
+  .info_main_block_one .settings-dropdown.mobile-version.show {
+    display: block;
+    /* Показываем при добавлении класса show */
   }
 
   .info_main_block_one .settings-dropdown.mobile-version .dropdown-item {
@@ -859,6 +857,83 @@ body {
 
   }
 
+  .dark-auth-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    box-sizing: border-box;
+    z-index: 2;
+    position: relative;
+    margin-top: 2rem;
+    overflow: hidden;
+    /* Клиппинг перекрывающейся части */
+  }
+
+  /* Кнопки как ссылки с кнопками внутри (уникальные классы) */
+  .dark-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    /* Полная ширина контейнера */
+    border: none !important;
+    background-color: rgba(39, 40, 40, 1);
+    border-radius: 22px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    height: 42px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Внутренние кнопки (уникальные классы) */
+  .dark-btn-inner {
+    width: 9%;
+    height: 100%;
+    border: none !important;
+    background: transparent;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* правая немного заходит на левую - negative margin для overlap без расширения */
+  .dark-toggle-btn+.dark-toggle-btn {
+    margin-left: -3rem;
+    /* Перекрытие, layout не расширяется */
+  }
+
+  /* активная кнопка сверху (инвертированные цвета: чёрный фон, белый текст) */
+  .dark-toggle-btn.active {
+    background-color: #000 !important;
+    z-index: 3;
+  }
+
+  .dark-toggle-btn.active .dark-btn-inner {
+    color: #fff !important;
+  }
+
+  /* Для узких экранов (sidebar): уменьшаем overlap */
+
+
+  /* Для узких экранов (sidebar): уменьшаем overlap и ширину */
+
+
   .header .navbar-nav .nav-item .dropdown {
     /* left: -12px; */
     margin-bottom: 0;
@@ -907,13 +982,18 @@ body {
 
 
   .header .navbar-nav .nav-group {
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 1) !important;
     border-radius: 8px;
     width: 100%;
     /* padding: 0.6rem 1.5rem 1rem 1.5rem; */
     margin-top: 0;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .header .navbar-nav .dropdown-menu {
+    background-color: #000 !important;
+    color: white !important;
   }
 
   .header .navbar-nav .nav-group .nav-item {
@@ -956,6 +1036,7 @@ body {
   .header .navbar-nav .nav-item:hover {
     transform: none;
   }
+
 
   .header .navbar-nav .nav-group .nav-item:last-child {
     padding-bottom: 12px;
@@ -1037,6 +1118,345 @@ body {
 
 }
 
+@media (max-width: 480px) {
+  .dark-toggle-btn+.dark-toggle-btn {
+    transform: translateX(-2rem);
+    /* Перекрытие визуально, без расширения ширины */
+  }
+
+  .dark-btn-inner {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 410px) {
+  .dark-toggle-btn+.dark-toggle-btn {
+    transform: translateX(-1rem);
+    /* Перекрытие визуально, без расширения ширины */
+  }
+
+  .dark-btn-inner {
+    font-size: 12px;
+  }
+}
+
+/* Новый контейнер для всего компонента с отступами слева/справа */
+.sidebar-auth-container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Контейнер с двумя кнопками для sidebar (уникальные классы) */
+.dark-auth-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  /* Как в примере для точного выравнивания */
+  width: 100%;
+  max-width: 640px;
+  /* Как в примере */
+  margin-bottom: -20px;
+  /* Как в примере */
+  z-index: 2;
+  position: relative;
+  margin-top: 2rem;
+  overflow: hidden;
+  /* Обрезает перекрытие, предотвращает overflow */
+}
+
+/* Кнопки как ссылки с кнопками внутри (уникальные классы для sidebar) */
+.dark-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  /* Как в примере */
+  border: none !important;
+  background-color: rgba(39, 40, 40, 1);
+  /* Тёмный фон для неактивной */
+  border-radius: 22px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  height: 42px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Внутренние кнопки (уникальные классы для sidebar) */
+.dark-btn-inner {
+  width: 100%;
+  height: 100%;
+  border: none !important;
+  background: transparent;
+  color: #fff;
+  /* Белый текст */
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Правая немного заходит на левую (как в примере, но меньше для sidebar) */
+.dark-toggle-btn+.dark-toggle-btn {
+  margin-left: -1.5rem;
+  /* Чутье перекрытие, как просили; меньше чем -3rem в примере, чтобы не выходить за границу */
+}
+
+@media (max-width: 768px) {
+  .dark-toggle-btn+.dark-toggle-btn {
+    margin-left: -1rem;
+    /* Ещё меньше на мобильных */
+  }
+
+  .dark-btn-inner {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dark-toggle-btn+.dark-toggle-btn {
+    margin-left: -0.5rem;
+    /* Минимальное для узких экранов */
+  }
+
+  .dark-auth-toggle {
+    margin-left: 0;
+    /* Убираем дополнительные margins, т.к. контейнер уже имеет padding */
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 410px) {
+  .dark-toggle-btn+.dark-toggle-btn {
+    margin-left: -1rem;
+    /* Без перекрытия на очень узких */
+  }
+
+  .dark-btn-inner {
+    font-size: 12px;
+  }
+}
+
+/* Активная кнопка сверху (чёрный фон, белый текст, как просили) */
+.dark-toggle-btn.active {
+  background-color: #000 !important;
+  z-index: 3;
+}
+
+.dark-toggle-btn.active .dark-btn-inner {
+  color: #fff !important;
+}
+
+/* Глобально для sidebar: предотвращаем горизонтальный скролл */
+@media (max-width: 991px) {
+
+  .navbar-collapse,
+  body {
+    overflow-x: hidden !important;
+  }
+}
+
+.autorization {
+  display: none;
+
+  overflow: auto;
+
+  padding: 0 1.5rem;
+  padding-top: 2rem;
+
+  /* Отступ снизу для симметрии */
+
+  /* Обеспечиваем минимальную высоту */
+}
+
+@media(max-width: 991px) {
+  .autorization {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+}
+
+/* Контейнер с двумя кнопками */
+.auth-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 640px;
+  margin-bottom: -20px;
+  z-index: 2;
+  position: relative;
+}
+
+/* Кнопки как ссылки с кнопками внутри */
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  border: none;
+  background-color: rgba(39, 40, 40, 1);
+  border-radius: 22px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  height: 42px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Внутренние кнопки */
+.btn-inner {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* правая немного заходит на левую */
+.toggle-btn+.toggle-btn {
+  margin-left: -3rem;
+}
+
+@media(max-width: 768px) {
+  .toggle-btn+.toggle-btn {
+    margin-left: -1.9rem;
+  }
+
+  .btn-inner {
+    font-size: 13px;
+  }
+}
+
+.form-block {
+  margin-top: 2rem;
+}
+
+/* активная кнопка сверху */
+.toggle-btn.active {
+  background-color: #fff;
+  z-index: 3;
+}
+
+.toggle-btn.active .btn-inner {
+  color: #000;
+}
+
+/* Блок с формой */
+.auth-box {
+  background-color: rgba(39, 40, 40, 1);
+  width: 100%;
+  max-width: 640px;
+  border-radius: 0 0 16px 16px;
+  padding: 40px;
+  padding-top: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Поля формы */
+.form-control {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  color: #fff;
+  padding: 12px 16px;
+  font-size: 15px;
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+.form-control:focus {
+  background-color: transparent !important;
+  color: #fff !important;
+  border-color: #1e63ff !important;
+  box-shadow: none !important;
+}
+
+/* Кнопки отправки формы */
+.submit-btn {
+  background-color: #1e63ff;
+  border: none;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 12px;
+  width: 100%;
+  margin-top: 3.2rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-btn:hover {
+  background-color: #3773ff;
+}
+
+.vhod_info {
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.vhod_info p {
+  margin-bottom: 0 !important;
+}
+
+.vhod_info a {
+  text-decoration: none;
+  color: #3773ff;
+}
+
+
+
+/* Мобильные стили для .auth-toggle: без центрирования и отступов, но с шириной формы */
+@media (max-width: 768px) {
+
+
+  .auth-toggle {
+    justify-content: flex-start !important;
+    /* Кнопки слева */
+    width: 100% !important;
+    /* Ширина по форме */
+    max-width: 640px !important;
+    margin-bottom: 0 !important;
+    /* Убираем нижний отступ */
+    padding: 0 !important;
+    /* Убираем padding */
+  }
+}
+
 /* Стили для мобильного меню настроек */
 
 
@@ -1076,6 +1496,14 @@ body {
     gap: 0.8rem;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+  }
+
+  .vhod_info p {
+    font-size: 13px;
+  }
+
+  .vhod_info a {
+    font-size: 14px;
   }
 
 
@@ -1130,6 +1558,30 @@ body {
 
   .header .navbar-collapse .info_main .info_main_block_one_profile .info_main_block_one_profile_text {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 395px) {
+
+
+  .vhod_info p {
+    font-size: 12px;
+  }
+
+  .vhod_info a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 365px) {
+
+
+  .vhod_info p {
+    font-size: 10px;
+  }
+
+  .vhod_info a {
+    font-size: 10px;
   }
 }
 
@@ -4608,6 +5060,7 @@ body {
 @media(max-width:991px) {
   .container-cards {
     margin-top: 1rem !important;
+    margin-bottom: 1rem;
   }
 }
 
@@ -4616,6 +5069,8 @@ body {
   font-size: 43px;
   font-weight: 400;
   color: rgb(255, 255, 255);
+  text-align: left;
+
 }
 
 
@@ -4647,14 +5102,17 @@ body {
 @media (max-width: 991px) {
   .container-cards .container-cards-title {
     font-size: 35px;
-    text-align: center;
+    text-align: left;
   }
 }
 
 @media (max-width: 768px) {
   .container-cards .container-cards-title {
-    font-size: 22px;
-    text-align: center;
+    font-size: 19px;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
   }
 }
 
@@ -4663,12 +5121,13 @@ body {
 
 .container-cards .hero-btn-secondary {
   border: 1px solid white;
-  width: 174px !important;
-  height: 55px !important;
+  width: 144px !important;
+  height: 42px !important;
   border-radius: 20px;
   font-size: 19px !important;
   font-weight: 600 !important;
-  background: transparent;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(2px) !important;
 
   text-decoration: none;
   transition: all 0.3s ease;

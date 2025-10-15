@@ -13,18 +13,13 @@
 <body>
 
     <!-- Шапка -->
-    <header class="d-flex justify-content-between align-items-center px-4 py-3 d-none d-lg-block fixed-top">
-        <a href="#">
-            <img src="assets/_105553233322080.png" alt="Logo" width="123px" class="header-logo logo_one" />
-        </a>
-        <div class="lang">
-            <img src="assets/Frame%2011.png" alt="Ru" width="55px" class="selected-flag-icon" />
-        </div>
+    <header class=" d-flex justify-content-between fixed-top  header">
+        <img src="assets/_105553233322080.png" alt="Logo" width="123px" class="header-logo logo_one" />
+        <img src="assets/Frame%2011.png" alt="Ru" width="55px" class="selected-flag-icon" />
     </header>
 
     <!-- Основной блок -->
-    <main class="d-flex flex-column gap-5 justify-content-center align-items-center vh-100">
-
+    <div class="d-flex flex-column gap-5 justify-content-center align-items-center autorization">
         <!-- Две кнопки -->
         <div class="auth-toggle">
             <a href="#" class="toggle-btn active" data-target="login">
@@ -78,7 +73,8 @@
                         <input type="password" class="form-control" placeholder="Повторить пароль">
                     </div>
                     <a href="#">
-                        <button type="submit" class="btn btn-primary w-100 rounded-pill submit-btn">Зарегистрироваться</button>
+                        <button type="submit"
+                            class="btn btn-primary w-100 rounded-pill submit-btn">Зарегистрироваться</button>
                     </a>
                 </form>
                 <div class="d-flex flex-column align-items-center  vhod_info">
@@ -90,7 +86,7 @@
             </div>
         </div>
 
-    </main>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -100,7 +96,7 @@
         buttons.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
-                
+
                 buttons.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
