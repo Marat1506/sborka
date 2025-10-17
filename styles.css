@@ -1301,9 +1301,9 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1.5rem;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: -0.5rem;
   }
 
 }
@@ -1372,9 +1372,9 @@ body {
   }
 }
 
-.form-block {
+/* .form-block {
   margin-top: 2rem;
-}
+} */
 
 /* активная кнопка сверху */
 .toggle-btn.active {
@@ -1398,12 +1398,12 @@ body {
   z-index: 1;
 }
 
-@media (max-width: 770px) {
+/* @media (max-width: 770px) {
   .auth-box {
     padding-top: 2rem;
     max-height: 520px;
   }
-}
+} */
 
 
 /* Поля формы */
