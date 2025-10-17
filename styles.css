@@ -3385,7 +3385,7 @@ body {
 .content .features-cards .card:hover {
   transform: none;
   box-shadow: none;
-  border-color: black;
+  border-color: black !important;
 }
 
 .content .features-cards>.feature-card:nth-child(n+4) {
