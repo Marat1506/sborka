@@ -21,7 +21,290 @@
     <!-- Header Placeholder - будет вставлен динамически -->
     <!--    <div id="header-placeholder"></div>-->
 
-   
+    <header class="header header-responsive">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <a href="#">
+                        <img src="assets/_105553233322080.png" alt="Logo" class="header-logo logo_one" />
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="header_sidebar">
+                        <div class="logo-container">
+                            <a href="#">
+                                <img src="assets/_105553233322080.png" alt="Logo" class="header-logo logo_one" />
+                            </a>
+                        </div>
+
+                        <div>
+                            <div class="d-flex align-items-center right-actions">
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle drop_btn_flag" type="button"
+                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="assets/Frame%2011.png" alt="Ru" class="selected-flag-icon" />
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li class="dropdown-item d-flex align-items-center" data-value="ru">
+                                            <a href="#"><span>Ru</span><img src="assets/Frame%2011.png" alt="Ru"
+                                                    class="flag-icon me-1" /></a>
+                                        </li>
+                                        <li class="dropdown-item d-flex align-items-center" data-value="en">
+                                            <a href="#"><span>Eng</span><img src="assets/Frame%2011.png" alt="En"
+                                                    class="flag-icon me-1" /></a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Кнопка settings с dropdown -->
+                                
+                                <!-- <img src="assets/Frame%2033.png?sdswedsd" alt="User" class="user-logo d-none d-lg-block" />
+                    <img src="assets/ruka.png?sdswedsd" alt="User" class="ruka-logo d-none d-lg-block" /> -->
+                                <a href="/vhod.html" style="text-decoration: none;">
+                                    <button class="btn btn-light header-btn d-none d-lg-block">Войти</button>
+                                </a>
+
+
+
+                                <!-- <a class="btn btn-light header-btn d-none d-lg-block" href="#">Создать аккаунт</a> -->
+                                <!-- <button class="navbar-toggler mobile-menu-btn d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <img src="/assets/buterbrod.png" alt="Меню" class="menu-icon">
+                    </button> -->
+                                <button class="navbar-toggler mobile-menu-btn d-lg-none" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#navbarNav" data-bs-backdrop="false"
+                                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <img src="/assets/buterbrod.png" alt="Меню" class="menu-icon">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Не Зареган -->
+                    <div class="sidebar-auth-container  d-lg-none d-none">
+                        <div class="dark-auth-toggle">
+                            <a href="#" class="dark-toggle-btn active" data-target="login">
+                                <button class="dark-btn-inner">Вход</button>
+                            </a>
+                            <a href="#" class="dark-toggle-btn" data-target="register">
+                                <button class="dark-btn-inner">Создать аккаунт</button>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Зареган -->
+                    <div class="info_main d-lg-none d-none">
+                        <p>Аккаунт</p>
+                        <div class="info_main_block_one">
+                            <div class="d-flex justify-content-between align-items-center mt-3 pb-2">
+                                <div class="info_main_block_one_profile">
+                                    <span>МС</span>
+                                    <p class="info_main_block_one_profile_text">Магомед-Салах Эдисултанов</p>
+                                </div>
+                                <img src="/assets/settings.png" width="18px" height="18px" />
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- Форма авторизации -->
+                    <div class="autorization">
+                        <!-- Две кнопки -->
+                        <div class="auth-toggle">
+                            <a href="#" class="toggle-btn active" data-target="login">
+                                <button class="btn-inner">Вход</button>
+                            </a>
+                            <a href="#" class="toggle-btn" data-target="register">
+                                <button class="btn-inner">Создать аккаунт</button>
+                            </a>
+                        </div>
+
+                        <!-- Форма -->
+                        <div class="auth-box p-4 rounded-4">
+                            <!-- Вход -->
+                            <div class="form-block" id="login" style="display: block;">
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Логин">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="password" class="form-control" placeholder="Пароль">
+                                    </div>
+                                    <a href="#">
+                                        <button type="submit"
+                                            class="btn btn-primary w-100 rounded-pill submit-btn">Войти</button>
+                                    </a>
+                                </form>
+                                <div class="d-flex flex-column align-items-center  vhod_info">
+                                    <div class="d-flex gap-1">
+                                        <p>Не можете войти? </p>
+                                        <a href="#"> Восстановить пароль!</a>
+                                    </div>
+                                    <a href="#">Зарегистрируйтесь!</a>
+                                </div>
+                            </div>
+
+                            <!-- Регистрация -->
+                            <div class="form-block" id="register" style="display: none;">
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Имя">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Фамилия">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control" placeholder="E-mail">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="password" class="form-control" placeholder="Пароль">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="password" class="form-control" placeholder="Повторить пароль">
+                                    </div>
+                                    <a href="#">
+                                        <button type="submit"
+                                            class="btn btn-primary w-100 rounded-pill submit-btn">Зарегистрироваться</button>
+                                    </a>
+                                </form>
+                                <div class="d-flex flex-column align-items-center  vhod_info">
+                                    <div class="d-flex gap-1">
+                                        <p>Уже есть аккаунт?</p>
+                                        <a href="#">Войти</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <ul class="navbar-nav gap-4 d-none">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle drop-btn" type="button"
+                                    id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Турниры
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Предстоящие турниры</a>
+                                    <a class="dropdown-item" href="#">Прошедшие турниры</a>
+                                    <a class="dropdown-item" href="#">Все турниры</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Сообщество</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Membership</a>
+                        </li>
+                    </ul>
+                    <!-- <div class="right-actions d-flex align-items-center gap-3 d-lg-none">
+                        
+                        <div class="mobile-header-btn-container"></div>
+                    </div> -->
+                    <div class="sidebar_footer  d-lg-none d-none">
+                        <p class="sidebar_footer_title">Связаться с нами</p>
+                        <div class="sidebar_footer_main">
+                            <a href="#">
+                                <button class="btn btn-light btn-lg  text-white hero-btn-secondary">E-mail</button>
+                            </a>
+                            <a href="#">
+                                <button class="btn btn-light btn-lg  text-white hero-btn-secondary">Telegram</button>
+                            </a>
+                            <a href="#">
+                                <button class="btn btn-light btn-lg  text-white hero-btn-secondary">WhatsApp</button>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <!-- Right Side: Flag, User Logo (desktop), Create Account (desktop), Hamburger (mobile) -->
+                <div class="d-flex align-items-center right-actions">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle drop_btn_flag" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/Frame%2011.png" alt="Ru" class="selected-flag-icon" />
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li class="dropdown-item d-flex align-items-center" data-value="ru">
+                                <a href="#"><span>Ru</span><img src="assets/Frame%2011.png" alt="Ru"
+                                        class="flag-icon me-1" /></a>
+                            </li>
+                            <li class="dropdown-item d-flex align-items-center" data-value="en">
+                                <a href="#"><span>Eng</span><img src="assets/Frame%2011.png" alt="En"
+                                        class="flag-icon me-1" /></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Кнопка settings с dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-secondary settings_container dropdown-toggle d-none d-lg-block"
+                            type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <!-- <img src="assets/settings.png?sdse" alt="Settings" class="settings " /> -->
+                            <span>МС</span>
+                        </button>
+                        <ul class="dropdown-menu settings-dropdown " aria-labelledby="dropdownMenuButton2">
+                            <li class="dropdown-item d-flex align-items-center">
+                                <a href="#"><span>Профиль</span></a>
+                            </li>
+                            <li class="dropdown-item d-flex align-items-center">
+                                <a href="#"><span>Тренер</span></a>
+                            </li>
+                            <li class="dropdown-item d-flex align-items-center">
+                                <a href="#"><span>Менеджер</span></a>
+                            </li>
+                            <li class="dropdown-item d-flex align-items-center">
+                                <a href="#"><span>Регистрация</span></a>
+                            </li>
+                            <li class="dropdown-item d-flex align-items-center">
+                                <a href="#"><span>Оператор табло</span></a>
+                            </li>
+                            <li class="dropdown-item d-flex align-items-center">
+                                <a href="#"><span>Контролер взвешивания</span></a>
+                            </li>
+                            <li class="dropdown-item d-flex align-items-center">
+                                <a href="#" class="dropdown-item_exit">
+                                    <img src="/assets/exit.png" />
+                                    <span>Выйти</span>
+                                </a>
+                            </li>
+                            <!-- <li class="dropdown-item d-flex align-items-center">
+                                <a href="#"><button class="btn">Выйти</button></a>
+                            </li> -->
+
+                        </ul>
+                    </div>
+                    <!-- <img src="assets/Frame%2033.png?sdswedsd" alt="User" class="user-logo d-none d-lg-block" />
+                    <img src="assets/ruka.png?sdswedsd" alt="User" class="ruka-logo d-none d-lg-block" /> -->
+                    <a href="/vhod.html" style="text-decoration: none;">
+                        <button class="btn btn-light header-btn d-none d-lg-block">Войти</button>
+                    </a>
+
+
+
+                    <!-- <a class="btn btn-light header-btn d-none d-lg-block" href="#">Создать аккаунт</a> -->
+                    <!-- <button class="navbar-toggler mobile-menu-btn d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <img src="/assets/buterbrod.png" alt="Меню" class="menu-icon">
+                    </button> -->
+                    <button class="navbar-toggler mobile-menu-btn d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" data-bs-backdrop="false" aria-controls="navbarNav"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <img src="/assets/buterbrod.png" alt="Меню" class="menu-icon">
+                    </button>
+                </div>
+
+            </div>
+        </nav>
+    </header>
 
 
 
@@ -260,6 +543,30 @@
             </div>
 
             <div class="feature-card2">
+                <p class="p_one">Для бойцов</p>
+                <p class="p_two">Редактируйте регистрации и
+                    просматривайте предстоящие схватки с удобным функционалом.</p>
+                <div class="d-flex justify-content-between align-items-center feature-card-footer">
+                    <img src="assets/borba.png?sdswedsd" alt="medal" class="borba">
+                    <a href="#">
+                        <img src="/assets/strelka.png" class="bi bi-arrow-right fs-1"></img>
+                    </a>
+                </div>
+            </div> 
+
+             <div class="feature-card2">
+                <p class="p_one">Для бойцов</p>
+                <p class="p_two">Редактируйте регистрации и
+                    просматривайте предстоящие схватки с удобным функционалом.</p>
+                <div class="d-flex justify-content-between align-items-center feature-card-footer">
+                    <img src="assets/borba.png?sdswedsd" alt="medal" class="borba">
+                    <a href="#">
+                        <img src="/assets/strelka.png" class="bi bi-arrow-right fs-1"></img>
+                    </a>
+                </div>
+            </div> 
+
+             <div class="feature-card2">
                 <p class="p_one">Для бойцов</p>
                 <p class="p_two">Редактируйте регистрации и
                     просматривайте предстоящие схватки с удобным функционалом.</p>

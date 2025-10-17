@@ -85,7 +85,17 @@ body {
 
 }
 
-
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
+}
 
 .header_sidebar {
   /* position: fixed; */
@@ -96,7 +106,7 @@ body {
   width: 100%;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.1);
-  /* backdrop-filter: blur(10px); */
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1rem 0;
   padding-left: 1.5rem;
@@ -627,7 +637,7 @@ body {
     height: 100dvh;
     background-color: rgb(15, 16, 16, 1) !important;
     color: white;
-    /* backdrop-filter: blur(20px); */
+    backdrop-filter: blur(20px);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     padding: 0;
     /* padding-bottom: 4rem; */
@@ -1100,7 +1110,7 @@ body {
   .sidebar_footer .sidebar_footer_main .hero-btn-secondary {
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.1);
-    /* backdrop-filter: blur(10px); */
+    backdrop-filter: blur(10px);
     white-space: nowrap;
     font-size: 12px;
   }
@@ -1479,7 +1489,7 @@ body {
   .sidebar_footer .sidebar_footer_main .hero-btn-secondary {
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.1);
-    /* backdrop-filter: blur(10px); */
+    backdrop-filter: blur(10px);
     white-space: nowrap;
     font-size: 12px !important;
   }
@@ -1890,7 +1900,7 @@ body {
   font-size: 19px !important;
   font-weight: 600 !important;
   background-color: rgba(255, 255, 255, 0.1) !important;
-  /* backdrop-filter: blur(2px) !important; */
+  backdrop-filter: blur(2px) !important;
   text-decoration: none;
 }
 
@@ -1942,7 +1952,7 @@ body {
   transition: all 0.3s ease;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.05) !important;
-  /* backdrop-filter: blur(4px); */
+  backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
@@ -2154,7 +2164,7 @@ body {
   height: 169px;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
-  /* backdrop-filter: blur(2px); */
+  backdrop-filter: blur(2px);
   z-index: 2;
   box-sizing: border-box;
   flex-shrink: 0;
@@ -2915,7 +2925,7 @@ body {
   height: 120px;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
-  /* backdrop-filter: blur(2px); */
+  backdrop-filter: blur(2px);
   z-index: 2;
   overflow: hidden;
   max-width: 100vw;
@@ -3375,7 +3385,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: #246bfd;
   border-radius: 0;
   /* Уберите */
   clip-path: inset(0 round 16px);
@@ -3830,7 +3840,7 @@ body {
   background-color: rgba(34, 102, 246, 1);
   /* Different color, e.g., reddish */
   border-radius: 50%;
-  /* filter: blur(15px); */
+  filter: blur(15px);
   /* Different blur radius */
   opacity: 0.6;
   /* Slightly different opacity */
@@ -3883,7 +3893,7 @@ body {
   height: 90%;
   background-color: rgba(34, 102, 246, 1);
   border-radius: 50%;
-  /* filter: blur(20px); */
+  filter: blur(20px);
   opacity: 0.7;
 }
 
@@ -5042,7 +5052,7 @@ body {
 
   .hero-section .hero-btn-secondary {
     background-color: rgba(255, 255, 255, 0.1) !important;
-    /* backdrop-filter: blur(2px) !important; */
+    backdrop-filter: blur(2px) !important;
     color: white !important;
   }
 }
@@ -5262,7 +5272,7 @@ body {
   font-size: 19px !important;
   font-weight: 600 !important;
   background-color: rgba(255, 255, 255, 0.1) !important;
-  /* backdrop-filter: blur(2px) !important; */
+  backdrop-filter: blur(2px) !important;
 
   text-decoration: none;
   transition: all 0.3s ease;
