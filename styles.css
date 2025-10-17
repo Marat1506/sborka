@@ -3392,7 +3392,7 @@ body {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   max-height: 250px;
-  margin-bottom: 300px;
+
   padding-bottom: 6rem;
   -webkit-backface-visibility: hidden;
   /* Убирает мерцание/bleed в WebKit при scroll/transform */
