@@ -3393,6 +3393,8 @@ body {
   max-height: 250px;
   margin-bottom: 300px;
   padding-bottom: 6rem;
+  -webkit-backface-visibility: hidden; /* Убирает мерцание/bleed в WebKit при scroll/transform */
+  perspective: 1px;
   
 }
 
