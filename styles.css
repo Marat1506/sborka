@@ -97,6 +97,22 @@ body {
   padding: 1rem 0;
 }
 
+.header_sidebar {
+  /* position: fixed; */
+  /* top: 0;
+  left: 0; */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 
 @media (min-width: 3840px) {
   .header {
@@ -611,27 +627,7 @@ body {
     width: 100%;
   }
 
-  /* .header .navbar-collapse {
-    display: block;
-    margin-top: 4rem;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 320px;
-    height: 100vh;
-    background: rgb(15, 16, 16) !important;
-    color: white;
-    backdrop-filter: blur(20px);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 0;
-    z-index: 9999;
-    transition: right 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  } */
+
   .header .navbar-collapse {
     display: block;
     position: fixed;
@@ -654,7 +650,7 @@ body {
     /* Разрешаем прокрутку */
     -webkit-overflow-scrolling: touch;
     /* Убираем margin-top чтобы избежать прокрутки страницы */
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
   }
 
   .navbar-collapse {
@@ -1294,6 +1290,7 @@ body {
   padding: 0 1.5rem;
   padding-top: 2rem;
 
+
   /* Отступ снизу для симметрии */
 
   /* Обеспечиваем минимальную высоту */
@@ -1399,6 +1396,13 @@ body {
   padding-top: 4rem;
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 770px) {
+  .auth-box {
+    padding-top: 2rem;
+    max-height: 520px;
+  }
 }
 
 
@@ -3376,6 +3380,19 @@ body {
   border-radius: 16px;
 
 }
+.content .features-cards .feature-card2 {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 1) ;
+  border-radius: 16px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  max-height: 200px;
+  margin-bottom: 300px;
+  padding-bottom: 6rem;
+}
+
 
 .content .features-cards .feature-card .p_one {
   font-size: 28px;
@@ -3993,7 +4010,7 @@ body {
   margin: 0 0 0.5rem 0;
   font-weight: 600;
   font-size: 23px;
-  
+
   color: white;
 }
 
@@ -4004,7 +4021,8 @@ body {
     margin-bottom: 0.5rem;
     line-height: 1.2;
   }
-  .why-choose-us .grid-container .side-card .card-content .card_text{
+
+  .why-choose-us .grid-container .side-card .card-content .card_text {
     line-height: 1.4;
   }
 
@@ -4054,10 +4072,10 @@ body {
     /* Немного уменьшаем заголовки */
     margin-bottom: 0.5rem;
   }
-  .why-choose-us .grid-container .side-card .card-content {
-    
-  }
-  .why-choose-us .grid-container .main-card{
+
+  .why-choose-us .grid-container .side-card .card-content {}
+
+  .why-choose-us .grid-container .main-card {
     padding: 0.5rem;
   }
 
