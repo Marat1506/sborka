@@ -3385,21 +3385,13 @@ body {
   display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 1) ;
-  border-radius: 16px;
+  /* border-radius: 16px; */
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   max-height: 200px;
   margin-bottom: 300px;
-  /* padding-bottom: 6rem; */
-
-  -webkit-mask: -webkit-radial-gradient(white, black calc(16px - 1px)); /* Маска для чётких углов в WebKit */
-  mask: radial-gradient(white, black calc(16px - 1px)); /* Кросс-браузерная маска */
-  background-clip: content-box; /* Обрезает фон по контенту, убирая bleed на радиусе */
-  -webkit-background-clip: content-box; /* Для Safari */
-  overflow: hidden; /* Скрывает артефакты за пределами карточки */
-  contain: paint; /* Ограничивает рендеринг внутри, ускоряет GPU */
-  will-change: transform; /* Намекает браузеру на layer (используйте осторожно, только если скролл критичный) */
-  transform: translateZ(0);
+  padding-bottom: 6rem;
+  
 }
 
 
