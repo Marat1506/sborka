@@ -1435,7 +1435,7 @@ body {
   border-radius: 20px;
   padding: 12px;
   width: 100%;
-  margin-top: 3.2rem;
+  margin-top: 1.2rem;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -1451,7 +1451,7 @@ body {
 
 .vhod_info {
   gap: 1rem;
-  margin-top: 3rem;
+  margin-top: 1.2rem;
 }
 
 .vhod_info p {
