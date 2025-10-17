@@ -3380,25 +3380,34 @@ body {
   border-radius: 16px;
 
 }
+
 .content .features-cards .feature-card2 {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 1) ;
+  background-color: rgba(0, 0, 0, 1);
   border-radius: 16px;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   max-height: 200px;
   margin-bottom: 300px;
-  padding-bottom: 6rem;
+  /* padding-bottom: 6rem; */
 
-  -webkit-mask: -webkit-radial-gradient(white, black calc(16px - 1px)); /* Маска для чётких углов в WebKit */
-  mask: radial-gradient(white, black calc(16px - 1px)); /* Кросс-браузерная маска */
-  background-clip: content-box; /* Обрезает фон по контенту, убирая bleed на радиусе */
-  -webkit-background-clip: content-box; /* Для Safari */
-  overflow: hidden; /* Скрывает артефакты за пределами карточки */
-  contain: paint; /* Ограничивает рендеринг внутри, ускоряет GPU */
-  will-change: transform; /* Намекает браузеру на layer (используйте осторожно, только если скролл критичный) */
+  /* Фиксы для чётких краёв без обрезки фона и размера */
+  -webkit-mask: -webkit-radial-gradient(circle, white 0%, black calc(16px - 1px)) content-box,
+    linear-gradient(white, white) content-box;
+  -webkit-mask-composite: xor;
+  mask: radial-gradient(circle, white 0%, black calc(16px - 1px)) content-box,
+    linear-gradient(white, white) content-box;
+  mask-composite: xor;
+
+  /* Альтернатива, если маска не сработает (раскомментируйте clip-path и закомментируйте mask выше) */
+  /* clip-path: inset(0 round 16px); */
+
+  overflow: hidden;
+  contain: paint;
+  isolation: isolate;
+  will-change: transform;
   transform: translateZ(0);
 }
 
