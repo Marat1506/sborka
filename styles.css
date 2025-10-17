@@ -3385,17 +3385,19 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  border: 26px solid rgba(0, 0, 0, 1);
-  background-color: rgba(0, 0, 0, 1) ;
-  /* border-radius: 16px; */
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 0;
+  /* Уберите */
+  clip-path: inset(0 round 16px);
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   max-height: 250px;
   margin-bottom: 300px;
   padding-bottom: 6rem;
-  -webkit-backface-visibility: hidden; /* Убирает мерцание/bleed в WebKit при scroll/transform */
+  -webkit-backface-visibility: hidden;
+  /* Убирает мерцание/bleed в WebKit при scroll/transform */
   perspective: 1px;
-  
+
 }
 
 
