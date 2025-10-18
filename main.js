@@ -258,38 +258,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // const navbarCollapse = document.getElementById('navbarNav');
-    // let scrollPosition = 0;
+    const navbarCollapse = document.getElementById('navbarNav');
+    let scrollPosition = 0;
 
-    // if (navbarCollapse) {
-    //     navbarCollapse.addEventListener('show.bs.collapse', function () {
-    //         // Сохраняем текущую позицию скролла
-    //         scrollPosition = window.pageYOffset;
+    if (navbarCollapse) {
+        navbarCollapse.addEventListener('show.bs.collapse', function () {
+            // Сохраняем текущую позицию скролла
+            scrollPosition = window.pageYOffset;
 
-    //         // Фиксируем body
-    //         document.body.style.position = 'fixed';
-    //         document.body.style.top = `-${scrollPosition}px`;
-    //         document.body.style.width = '100%';
-    //         document.body.style.overflow = 'hidden';
-    //     });
+            // Фиксируем body
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollPosition}px`;
+            document.body.style.width = '100%';
+            document.body.style.overflow = 'hidden';
+        });
 
-    //     navbarCollapse.addEventListener('hidden.bs.collapse', function () {
-    //         // Получаем top
-    //         const top = document.body.style.top;
+        navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+            // Получаем top
+            const top = document.body.style.top;
 
-    //         // Сбрасываем стили
-    //         document.body.style.position = '';
-    //         document.body.style.top = '';
-    //         document.body.style.width = '';
-    //         document.body.style.overflow = '';
+            // Сбрасываем стили
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            document.body.style.overflow = '';
 
-    //         // Возвращаем страницу на то же место без скачков
-    //         window.scrollTo({
-    //             top: -parseInt(top || '0'),
-    //             behavior: 'instant'
-    //         });
-    //     });
-    // }
+            // Возвращаем страницу на то же место без скачков
+            window.scrollTo({
+                top: -parseInt(top || '0'),
+                behavior: 'instant'
+            });
+        });
+    }
 
     const buttons = document.querySelectorAll('.toggle-btn');
     const forms = document.querySelectorAll('.form-block');
