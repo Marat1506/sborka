@@ -684,12 +684,6 @@ body {
     flex: 1;
     overflow-y: visible;
   }
-
-  .autorization {
-    flex-shrink: 0;
-    margin-bottom: 1rem;
-  }
-
   .sidebar_footer,
   .main-footer {
     flex-shrink: 0;
@@ -697,6 +691,13 @@ body {
     width: 100%;
     padding-bottom: 1rem;
   }
+
+  .autorization {
+    flex-shrink: 0;
+    margin-bottom: 1rem;
+  }
+
+  
 
   /* Чтобы не прыгал контент при открытии */
   body {
@@ -1364,6 +1365,16 @@ body {
   text-decoration: none;
   cursor: pointer;
   padding: 0;
+}
+
+/* Первая кнопка (Вход) — 40% ширины */
+.auth-toggle .toggle-btn:first-child {
+  flex: 4; /* 40% в flex-grow пропорции */
+}
+
+/* Вторая кнопка (Создать аккаунт) — 60% ширины, растягивается */
+.auth-toggle .toggle-btn:last-child {
+  flex: 6; /* 60% в flex-grow пропорции */
 }
 
 /* Внутренние кнопки */
