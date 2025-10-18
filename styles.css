@@ -41,7 +41,7 @@ body {
   /* transform: translateZ(0); */
   backface-visibility: hidden;
   perspective: 1000;
-  will-change: transform;
+  /* will-change: transform; */
 }
 
 @media (max-width: 991px) {
