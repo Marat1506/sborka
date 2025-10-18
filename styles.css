@@ -647,7 +647,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: start;
-    overflow-y: scroll;
+    overflow-y: auto;
     /* Разрешаем прокрутку */
     -webkit-overflow-scrolling: touch;
     /* Убираем margin-top чтобы избежать прокрутки страницы */
@@ -669,6 +669,33 @@ body {
     /* или любой фон */
     z-index: 1050;
     /* поверх остального контента */
+  }
+
+ .header .navbar-collapse #navbarNav {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  .header .navbar-nav {
+    flex: 1;
+    overflow-y: visible;
+  }
+
+  .autorization {
+    flex-shrink: 0;
+    margin-bottom: 1rem;
+  }
+
+  .sidebar_footer,
+  .main-footer {
+    flex-shrink: 0;
+    margin-top: auto;
+    width: 100%;
+    padding-bottom: 1rem;
   }
 
   /* Чтобы не прыгал контент при открытии */
@@ -1304,7 +1331,6 @@ body {
     flex-direction: column;
     gap: 1.5rem;
     align-items: center;
-    margin-top: -0.5rem;
   }
 
 }
@@ -3171,14 +3197,15 @@ body {
     width: 100%;
     align-items: center;
     text-align: center;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+
   }
 }
 
 @media (max-width: 991px) {
   .content .content_wostour .wostour-text p {
-    font-size: 17px !important;
+    font-size: 18.04px !important;
     margin-bottom: 0.5rem;
   }
 
@@ -3208,9 +3235,10 @@ body {
 
 @media (max-width: 440px) {
   .content .content_wostour .wostour-text .p_two {
-    font-size: 11px !important;
-    padding-left: 1.7rem;
-    padding-right: 1.7rem;
+    font-size: 11.16px !important;
+    font-weight: 400;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -3475,6 +3503,13 @@ body {
   }
 }
 
+@media (max-width: 576px) {
+  .content .features-cards .feature-card p:nth-child(2) {
+    font-size: 11.16px !important;
+  }
+
+}
+
 @media (min-width: 1537px) {
   .content .features-cards .feature-card .bi-arrow-right {
     font-size: calc(1rem + (100vw - 1536px) * 0.01) !important;
@@ -3630,7 +3665,7 @@ body {
     /* Одна колонка на мобильных */
     grid-template-rows: auto;
     /* Автоматическая высота строк */
-    gap: 1.5rem;
+    gap: 1rem;
   }
 }
 
@@ -3758,6 +3793,7 @@ body {
 @media (max-width: 991px) {
   .why-choose-us .grid-container .side-card {
     align-items: center;
+    justify-content: center;
     height: auto;
     order: 2;
     /* Второй блок */
@@ -3773,8 +3809,13 @@ body {
 }
 
 .why-choose-us .grid-container .side-card {
+  display: flex;
+  gap: 1.2rem;
   position: relative;
   overflow: visible;
+  align-items: center;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
   /* Assuming flex is applied here or higher up */
 }
 
@@ -3784,18 +3825,19 @@ body {
   max-width: 250px;
   flex-shrink: 0;
   margin: 0;
-  padding-top: 1rem;
-  padding-right: 1rem;
+  /* padding-top: 1rem;
+  padding-right: 1rem; */
   padding-left: 1rem;
   position: relative;
   margin-left: 3rem;
+  display: flex;
   overflow: visible;
 }
 
 .why-choose-us .grid-container .side-card .container_moni1 .img-wrapper {
   position: relative;
   /* Pseudo-element positioned relative to this */
-  display: inline-block;
+  display: flex;
   /* Hugs the image dimensions */
   width: fit-content;
   height: fit-content;
@@ -3822,8 +3864,8 @@ body {
   /* Behind img */
   top: -8%;
   /* Slightly different offset for distinction */
-  left: -10%;
-  width: 120%;
+  left: -8%;
+  width: 116%;
   /* Slightly different size */
   height: 98%;
   /* Slightly different for ovality */
@@ -3842,21 +3884,21 @@ body {
   max-width: 250px;
   flex-shrink: 0;
   margin: 0;
-  padding-top: 1rem;
-  padding-right: 1rem;
+  /* padding-top: 1rem;
+  padding-right: 1rem; */
   padding-left: 1rem;
   position: relative;
   margin-left: 3rem;
+  display: flex;
   overflow: visible;
 }
 
 .why-choose-us .grid-container .side-card .container_moni2 .img-wrapper {
   position: relative;
   /* Pseudo-element positioned relative to this */
-  display: inline-block;
+  display: flex;
   /* Hugs the image dimensions */
-  width: fit-content;
-  height: fit-content;
+  align-items: center;
 }
 
 .why-choose-us .grid-container .side-card .container_moni2 .img-wrapper img.moni {
@@ -3903,14 +3945,12 @@ body {
     height: auto;
     max-width: 200px;
     /* Уменьшаем максимальную ширину */
-    margin-bottom: 0.5rem;
   }
 
   .why-choose-us .grid-container .side-card .container_moni2 img.moni {
     height: auto;
     max-width: 200px;
     /* Уменьшаем максимальную ширину */
-    margin-bottom: 0.5rem;
   }
 }
 
@@ -3926,13 +3966,13 @@ body {
 }
 
 @media (max-width: 480px) {
-  .why-choose-us .grid-container .side-card .container_moni1 img.moni {
-    max-width: 150px;
+  .why-choose-us .grid-container .side-card .container_moni1 .img-wrapper img.moni {
+    max-width: 125px !important;
     /* Еще меньше для очень маленьких экранов */
   }
 
-  .why-choose-us .grid-container .side-card .container_moni2 img.moni {
-    max-width: 150px;
+  .why-choose-us .grid-container .side-card .container_moni2 .img-wrapper img.moni {
+    max-width: 125px !important;
     /* Еще меньше для очень маленьких экранов */
   }
 }
@@ -3994,7 +4034,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 0;
   margin: 0;
 }
@@ -4037,6 +4077,11 @@ body {
     font-size: 17px;
   }
 }
+@media (max-width: 400px) {
+  .why-choose-us .grid-container .side-card .card-content .card_title {
+    font-size: 16px;
+  }
+}
 
 @media (min-width: 3840px) {
   .why-choose-us .grid-container .side-card .card-content .card_title {
@@ -4068,6 +4113,7 @@ body {
     font-size: 24px;
     /* Немного уменьшаем заголовки */
     margin-bottom: 0.5rem;
+    line-height: 1.2;
   }
 
   .why-choose-us .grid-container .side-card .card-content {}
@@ -4095,7 +4141,7 @@ body {
 
 @media (max-width: 480px) {
   .why-choose-us .grid-container .side-card .card-content .card_title2 {
-    font-size: 16px;
+    font-size: 18.04px;
   }
 }
 
