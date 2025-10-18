@@ -98,19 +98,20 @@ body {
 }
 
 .header_sidebar {
-  /* position: fixed; */
-  /* top: 0;
-  left: 0; */
+  position: sticky;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  z-index: 1000;
+  z-index: 10; /* Выше контента sidebar, но ниже общего z-index sidebar */
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem 0;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   align-items: center;
 }
 
@@ -695,6 +696,7 @@ body {
   .autorization {
     flex-shrink: 0;
     margin-bottom: 1rem;
+    margin-top: 4em;
   }
 
   
@@ -1494,11 +1496,14 @@ body {
 
 .vhod_info p {
   margin-bottom: 0 !important;
+  font-weight: 300;
 }
 
 .vhod_info a {
   text-decoration: none;
   color: #3773ff;
+  font-weight: 300;
+  
 }
 
 
@@ -1552,6 +1557,13 @@ body {
   .header .navbar-collapse {
     width: 100%;
   }
+    .vhod_info p {
+    font-size: 12px;
+  }
+
+  .vhod_info a {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -1562,11 +1574,11 @@ body {
   }
 
   .vhod_info p {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .vhod_info a {
-    font-size: 14px;
+    font-size: 13px;
   }
 
 
@@ -3413,6 +3425,7 @@ body {
 
 .content .features-cards .feature-card {
   flex: 1;
+  height: 100%;
   min-height: 300px;
   display: flex;
   flex-direction: column;
@@ -3433,12 +3446,14 @@ body {
 .content .features-cards .feature-card .p_one {
   font-size: 28px;
   font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .content .features-cards .feature-card .p_two {
   color: rgba(165, 165, 165, 1);
   font-weight: 400;
   font-size: 16px;
+  margin-bottom: 0;
 }
 
 .content .features-cards .feature-card .p_two a {
@@ -3465,6 +3480,8 @@ body {
 .content .features-cards .feature-card .feature-card-footer {
   margin-top: 4rem;
   padding-top: 1rem;
+  flex-shrink: 0; /* Добавлено: footer не сжимается */
+  height: 70px;
 }
 
 @media (min-width: 1080px) {
