@@ -58,7 +58,7 @@ body {
     padding: 0 1rem;
     padding-top: 80px; /* Отступ сверху для fixed header (высота header ~60px + margin) */
     padding-bottom: 80px; /* Отступ снизу для симметрии */
-    min-height: calc(100vh - 160px); /* Обеспечиваем минимальную высоту */
+    min-height: 80vh; /* Обеспечиваем минимальную высоту */
 }
 
 /* Контейнер с двумя кнопками */
@@ -82,7 +82,7 @@ body {
     border: none;
     background-color: rgba(39, 40, 40, 1);
     border-radius: 22px;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
     position: relative;
     z-index: 1;
     height: 42px;

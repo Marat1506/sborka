@@ -1,0 +1,1744 @@
+.hero-section {
+  margin-top: 10rem;
+}
+
+@media (max-width: 991px) and (max-height: 780px) {
+  .hero-section {
+    margin-top: 7rem;
+  }
+
+}
+
+@media (max-width: 991px) and (max-height: 770px) {
+  .hero-section {
+    margin-top: 6.5rem;
+  }
+
+}
+
+@media (max-width: 991px) and (max-height: 760px) {
+  .hero-section {
+    margin-top: 6rem;
+  }
+
+}
+
+
+@media (min-width: 1537px) {
+  .hero-section {
+    margin-top: calc(8rem + (100vh - 800px) * 0.3);
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero-section {
+    margin-top: calc(8rem + (100vh - 800px) * 0.4);
+  }
+}
+
+@media (min-width: 2560px) {
+  .hero-section {
+    margin-top: calc(8rem + (100vh - 800px) * 0.3);
+  }
+}
+
+@media (min-width: 3840px) {
+  .hero-section {
+    margin-top: calc(8rem + (100vh - 800px) * 0.29);
+  }
+}
+
+/* Основной контейнер с Grid */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-text-content {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-cards-content {
+  flex-shrink: 0;
+}
+
+.hero-section .card {
+  width: 193px;
+  height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1134px) {
+  .hero-section .card {
+    width: calc(183px + (100vw - 1080px) * 0.1);
+    height: calc(135px + (100vw - 1080px) * 0.08);
+  }
+}
+
+@media (max-width: 1094px) {
+  .hero-section .card {
+    width: calc(176px + (100vw - 1080px) * 0.1);
+    height: calc(135px + (100vw - 1080px) * 0.08);
+  }
+}
+
+@media (max-width: 1080px) {
+  .hero-section .card {
+    width: calc(173px + (100vw - 1080px) * 0.1);
+    height: calc(135px + (100vw - 1080px) * 0.08);
+  }
+}
+
+@media (min-width: 1537px) {
+  .hero-section .card {
+    width: calc(193px + (100vw - 1536px) * 0.1);
+    height: calc(145px + (100vw - 1536px) * 0.08);
+  }
+}
+
+.hero-section .hero_flex {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.hero-section .card-body {
+  padding-top: 1rem;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section .container {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.hero-section .hero-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 1537px) {
+  .hero-section .hero-title {
+    font-size: calc(2.5rem + (100vw - 1536px) * 0.02);
+  }
+}
+
+.hero-section .hero-title-responsive {
+  font-size: 55px;
+  font-weight: 700;
+}
+
+@media (max-width: 1080px) {
+  .hero-section .hero-title-responsive {
+    font-size: calc(35px + (100vw - 1080px) * 0.03);
+  }
+}
+
+@media (max-width: 1293px) {
+  .hero-section .hero-title-responsive {
+    font-size: calc(50px + (100vw - 1536px) * 0.03);
+  }
+}
+
+@media (min-width: 1537px) {
+  .hero-section .hero-title-responsive {
+    font-size: calc(55px + (100vw - 1536px) * 0.03);
+  }
+}
+
+.hero-section .hero-subtitle {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 1537px) {
+  .hero-section .hero-subtitle {
+    font-size: calc(1.25rem + (100vw - 1536px) * 0.01);
+  }
+}
+
+.hero-section .hero-subtitle-responsive {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+@media (max-width: 1080px) {
+  .hero-section .hero-subtitle-responsive {
+    font-size: calc(25px + (100vw - 1080px) * 0.015);
+  }
+}
+
+@media (min-width: 1537px) {
+  .hero-section .hero-subtitle-responsive {
+    font-size: calc(30px + (100vw - 1536px) * 0.015);
+  }
+}
+
+.hero-section .btn {
+  transition: all 0.3s ease;
+  align-items: center;
+}
+
+/* @media (min-width: 1537px) {
+  .hero-section .btn {
+    font-size: calc(19px + (100vw - 1536px) * 0.01) !important;
+    width: calc(223px + (100vw - 1536px) * 0.1) !important;
+    height: calc(55px + (100vw - 1536px) * 0.03) !important;
+  }
+} */
+
+@media (min-width: 3840px) {
+  .hero-section .btn {
+    border-radius: 56px;
+  }
+}
+
+.hero-section .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+}
+
+.hero-section .hero-btn-primary {
+  border: 1px solid white;
+  width: 223px;
+  height: 55px;
+  border-radius: 20px;
+  font-size: 19px;
+  font-weight: 600 !important;
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .hero-section .hero-btn-primary {
+    border: 1px solid white;
+    font-size: 16px;
+    width: 200px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section .hero-btn-primary {
+    border: 1px solid white;
+    font-size: 15px;
+    width: 190px;
+    height: 42px ;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-section .hero-btn-primary {
+    border: 1px solid white;
+    font-size: 14px;
+    width: 180px;
+    height: 42px;
+  }
+}
+
+/* @media (min-width: 1537px) {
+  .hero-section .hero-btn-primary {
+    width: calc(223px + (100vw - 1536px) * 0.1) !important;
+    height: calc(55px + (100vw - 1536px) * 0.03) !important;
+    font-size: calc(19px + (100vw - 1536px) * 0.01) !important;
+  }
+} */
+
+@media (min-width: 3840px) {
+  .hero-section .hero-btn-primary {
+    border-radius: 44px;
+  }
+}
+
+.hero-section .hero-btn-secondary {
+  border: 1px solid white;
+  width: 174px;
+  height: 55px;
+  border-radius: 20px;
+  font-size: 19px;
+  font-weight: 600 !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .hero-section .hero-btn-secondary {
+    font-size: 16px;
+    width: 160px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section .hero-btn-secondary {
+    font-size: 12px;
+    width: 150px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-section .hero-btn-secondary {
+    font-size: 12px;
+    width: 140px;
+    height: 42px;
+  }
+}
+
+/* @media (min-width: 1537px) {
+  .hero-section .hero-btn-secondary {
+    width: calc(174px + (100vw - 1536px) * 0.08) !important;
+    height: calc(55px + (100vw - 1536px) * 0.03) !important;
+    font-size: calc(19px + (100vw - 1536px) * 0.01) !important;
+  }
+} */
+
+@media (min-width: 3840px) {
+  .hero-section .hero-btn-secondary {
+    border-radius: 44px;
+  }
+}
+
+.hero-section .row.gx-0 .col-md-6,
+.hero-section .row.gx-0 .col-6 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.hero-section  .card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 3840px) {
+  .hero-section  .card {
+    border-radius: 36px;
+  }
+}
+
+.hero-section  .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
+  border-color: rgba(0, 123, 255, 0.3);
+}
+
+.hero-section .card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.hero-card-number {
+  font-size: 32px;
+  font-weight: 400;
+  color: white;
+}
+
+@media (min-width: 1537px) {
+  .hero-card-number {
+    font-size: calc(32px + (100vw - 1536px) * 0.015);
+  }
+}
+
+.hero-card-text {
+  color: rgb(165, 165, 165);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+@media (min-width: 1537px) {
+  .hero-card-text.hero-card-text {
+    font-size: calc(15px + (100vw - 1536px) * 0.008);
+  }
+}
+
+/* Мобильная версия - меняем порядок */
+@media (max-width: 991px) {
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-text-content {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .hero-cards-content {
+    order: 1;
+  }
+
+  /* Переопределяем порядок внутри текстового контента */
+  .hero-text-content .hero-subtitle {
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  .hero-text-content .hero-title {
+    order: 2;
+    margin-bottom: 0;
+  }
+
+  .hero-text-content .hero-buttons {
+    order: 3;
+    margin-top: 1rem;
+  }
+
+  /* Центрируем кнопки на мобильных */
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  /* Адаптация карточек для мобильных */
+  .hero_flex {
+    justify-content: center;
+    gap: 1.8rem;
+  }
+
+  .hero-section .card {
+    width: 150px;
+    height: 110px;
+  }
+
+  .hero-card-number {
+    font-size: 20px;
+  }
+
+  .hero-card-text {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  /* Адаптация шрифтов для мобильных */
+  .hero-section .hero-title-responsive {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero-section .hero-subtitle-responsive {
+    font-size: 18px;
+    margin-bottom: 0rem;
+  }
+}
+
+/* Адаптация для очень маленьких экранов */
+@media (max-width: 576px) {
+  .hero_flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+  }
+
+  .hero-section .card {
+    width: 140px;
+    height: 100px;
+  }
+
+  .hero-buttons {
+    align-items: stretch;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 100%;
+    font-size: 12px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .hero-section .hero-title-responsive {
+    font-size: 28px;
+  }
+
+  .hero-section .hero-subtitle-responsive {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 425px) {
+  .hero-section .hero-title-responsive {
+    font-size: 25px;
+  }
+
+  .hero-section .hero-subtitle-responsive {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-section .hero-title-responsive {
+    font-size: 22px;
+  }
+
+  .hero-section .hero-subtitle-responsive {
+    font-size: 13px;
+  }
+}
+
+/* Для очень больших мобильных (планшеты в портретной ориентации) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-section .card {
+    width: 170px;
+    height: 130px;
+  }
+
+  .hero-card-number {
+    font-size: 28px;
+  }
+
+  .hero-card-text {
+    font-size: 14px;
+  }
+
+  .hero-section .hero-title-responsive {
+    font-size: 40px;
+  }
+
+  .hero-section .hero-subtitle-responsive {
+    font-size: 22px;
+  }
+}
+
+/* CSS remains unchanged */
+.tournament-footer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 169px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  z-index: 2;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+@media (max-width: 991.98px) {
+  .tournament-footer .footer-right {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .tournament-footer {
+    position: relative;
+    /* Изменяем с sticky на relative для мобильных, чтобы логика JS работала корректно */
+  }
+}
+
+
+
+.tournament-footer .carousel-container {
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.tournament-footer .carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.tournament-footer .carousel-slide {
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.tournament-footer .carousel-slide .footer-left {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-top-right-radius: 10px;
+  display: flex;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.tournament-footer .carousel-slide .footer-left .container-logo-2025 {
+  width: 252;
+  height: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.tournament-footer .carousel-slide .footer-left .container-logo-2025 .logo-2025 {
+  width: 100%;
+  min-width: 230px;
+  max-width: 240px;
+  height: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  object-fit: cover;
+}
+
+@media(max-width: 1200px) {
+  .tournament-footer .carousel-slide .footer-left .container-logo-2025 .logo-2025 {
+    width: 200px;
+    min-width: 150px;
+    max-width: 210px;
+    height: 100%;
+  }
+}
+
+.tournament-footer .carousel-slide .footer-left .tournament-info {
+  margin-top: 2rem;
+}
+
+@media (min-width: 1537px) {
+  .tournament-footer .carousel-slide .footer-left .tournament-info {
+    margin-top: calc(2rem + (100vw - 1536px) * 0.02);
+  }
+
+}
+
+@media (min-width: 3840px) {
+  .tournament-footer .carousel-slide .footer-left .tournament-info {
+    margin-left: 5rem;
+  }
+
+  .tournament-footer .carousel-slide .footer-left .container-logo-2025 .logo-2025 {
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+  }
+}
+
+@media (min-width: 2500px) {
+
+  .tournament-footer .carousel-slide .footer-left .container-logo-2025 .logo-2025 {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+}
+
+.tournament-footer .carousel-slide .footer-left .tournament-info .date {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 1537px) {
+  .tournament-footer .carousel-slide .footer-left .tournament-info .date {
+    font-size: calc(15px + (100vw - 1536px) * 0.005);
+    margin-bottom: calc(15px + (100vw - 1536px) * 0.005);
+  }
+
+  .tournament-footer .carousel-slide .footer-left .container-logo-2025 .logo-2025 {
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tournament-footer .carousel-slide .footer-left .container-logo-2025 .logo-2025 {
+    max-width: 200px;
+  }
+}
+
+.tournament-footer .carousel-slide .footer-left .tournament-info .tournament-title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+@media (min-width: 1537px) {
+  .tournament-footer .carousel-slide .footer-left .tournament-info .tournament-title {
+    font-size: calc(22px + (100vw - 1536px) * 0.01);
+    margin-bottom: calc(5px + (100vw - 1536px) * 0.003);
+  }
+}
+
+.tournament-footer .carousel-slide .footer-left .tournament-info .location {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media (min-width: 1537px) {
+  .tournament-footer .carousel-slide .footer-left .tournament-info .location {
+    font-size: calc(16px + (100vw - 1536px) * 0.008);
+  }
+}
+
+@media (min-width: 1537px) {
+  .tournament-footer {
+    height: calc(169px + (100vw - 1536px) * 0.05);
+  }
+}
+
+@media (min-width: 3840px) {
+  .tournament-footer {
+    height: calc(169px + (100vw - 1536px) * 0.08);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1536px) {
+  .tournament-footer {
+    height: clamp(150px, 14vw, 165px);
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info {
+    margin-top: clamp(1.2rem, 2.2vw, 1.6rem);
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .date {
+    font-size: clamp(13px, 1.2vw, 14px);
+    margin-bottom: clamp(10px, 1.2vw, 12px);
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .tournament-title {
+    font-size: clamp(20px, 1.9vw, 22px);
+    margin-bottom: clamp(4px, 0.6vw, 5px);
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .location {
+    font-size: clamp(14px, 1.6vw, 16px);
+  }
+}
+
+@media (max-width: 1304px) {
+  .tournament-footer .carousel-slide .footer-left .tournament-info {
+    margin-top: 0.5rem;
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .tournament-title {
+    font-size: clamp(18px, 1.9vw, 20px);
+    margin-bottom: clamp(3px, 0.6vw, 4px);
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .location {
+    font-size: clamp(12px, 1.6vw, 16px);
+  }
+}
+
+@media (max-width: 1204px) {
+  .tournament-footer .carousel-slide .footer-left .tournament-info {
+    margin-top: 0.5rem;
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .tournament-title {
+    font-size: clamp(16px, 1.9vw, 18px);
+    margin-bottom: clamp(2px, 0.6vw, 3px);
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .location {
+    font-size: clamp(10px, 1.6vw, 14px);
+  }
+}
+
+
+.tournament-footer .footer-right {
+  position: relative;
+  border: none;
+  border-top-left-radius: 40px;
+  background-color: rgb(15, 16, 16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  height: 100%;
+  overflow: visible;
+}
+
+.tournament-footer .footer-right .controls-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 27px;
+}
+
+.tournament-footer .footer-right .arrow-btn {
+  width: 60px;
+  height: 60px;
+  border: 2px solid white;
+  background: transparent;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: all 0.2s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 1537px) {
+  .tournament-footer .footer-right .arrow-btn {
+    width: calc(60px + (100vw - 1536px) * 0.03);
+    height: calc(60px + (100vw - 1536px) * 0.03);
+    font-size: calc(1.3rem + (100vw - 1536px) * 0.01);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1536px) {
+  .tournament-footer .footer-right .arrow-btn {
+    width: clamp(48px, 4.2vw, 56px);
+    height: clamp(48px, 4.2vw, 56px);
+    font-size: clamp(1.1rem, 1.3vw, 1.25rem);
+  }
+}
+
+.tournament-footer .footer-right .divider {
+  display: block;
+  width: 86px;
+  height: 2px;
+  background: white;
+  margin: 0 5px;
+}
+
+@media (min-width: 1537px) {
+  .tournament-footer .footer-right .divider {
+    width: calc(86px + (100vw - 1536px) * 0.04);
+    height: calc(2px + (100vw - 1536px) * 0.001);
+    margin: 0 calc(5px + (100vw - 1536px) * 0.002);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1536px) {
+  .tournament-footer .footer-right .divider {
+    width: clamp(64px, 6.2vw, 80px);
+  }
+}
+
+.tournament-footer .footer-right .slide-number {
+  font-size: 49px;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-width: 1537px) {
+  .tournament-footer .footer-right .slide-number {
+    font-size: calc(49px + (100vw - 1536px) * 0.02);
+    margin-right: calc(20px + (100vw - 1536px) * 0.02);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1536px) {
+  .tournament-footer .footer-right .slide-number {
+    font-size: clamp(36px, 3.4vw, 44px);
+  }
+}
+
+@media (max-width: 1524px) {
+  .tournament-footer .carousel-container {
+    width: 69.8%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 30.2%;
+  }
+}
+
+@media (max-width: 1514px) {
+  .tournament-footer .carousel-container {
+    width: 69.6%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 30.4%;
+  }
+}
+
+@media (max-width: 1504px) {
+  .tournament-footer .carousel-container {
+    width: 69.4%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 30.6%;
+  }
+}
+
+@media (max-width: 1494px) {
+  .tournament-footer .carousel-container {
+    width: 69.2%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 30.8%;
+  }
+}
+
+@media (max-width: 1484px) {
+  .tournament-footer .carousel-container {
+    width: 69%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 31%;
+  }
+}
+
+@media (max-width: 1474px) {
+  .tournament-footer .carousel-container {
+    width: 68.8%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 31.2%;
+  }
+}
+
+@media (max-width: 1464px) {
+  .tournament-footer .carousel-container {
+    width: 68.6%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 31.4%;
+  }
+}
+
+@media (max-width: 1454px) {
+  .tournament-footer .carousel-container {
+    width: 68.4%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 31.6%;
+  }
+}
+
+@media (max-width: 1444px) {
+  .tournament-footer .carousel-container {
+    width: 68.2%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 31.8%;
+  }
+}
+
+@media (max-width: 1434px) {
+  .tournament-footer .carousel-container {
+    width: 68%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 32%;
+  }
+}
+
+@media (max-width: 1424px) {
+  .tournament-footer .carousel-container {
+    width: 67.8%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 32.2%;
+  }
+}
+
+@media (max-width: 1414px) {
+  .tournament-footer .carousel-container {
+    width: 67.4%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 32.6%;
+  }
+}
+
+@media (max-width: 1404px) {
+  .tournament-footer .carousel-container {
+    width: 67.4%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 32.6%;
+  }
+}
+
+@media (max-width: 1394px) {
+  .tournament-footer .carousel-container {
+    width: 67.2%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 32.8%;
+  }
+}
+
+@media (max-width: 1384px) {
+  .tournament-footer .carousel-container {
+    width: 67%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 33%;
+  }
+}
+
+@media (max-width: 1374px) {
+  .tournament-footer .carousel-container {
+    width: 66.8%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 33.2%;
+  }
+}
+
+@media (max-width: 1364px) {
+  .tournament-footer .carousel-container {
+    width: 66.6%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 33.4%;
+  }
+}
+
+@media (max-width: 1354px) {
+  .tournament-footer .carousel-container {
+    width: 66.4%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 33.6%;
+  }
+}
+
+@media (max-width: 1344px) {
+  .tournament-footer .carousel-container {
+    width: 66.2%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 33.8%;
+  }
+}
+
+@media (max-width: 1334px) {
+  .tournament-footer .carousel-container {
+    width: 65.7%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 34.3%;
+  }
+}
+
+@media (max-width: 1324px) {
+  .tournament-footer .carousel-container {
+    width: 65.3%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 34.7%;
+  }
+}
+
+@media (max-width: 1314px) {
+  .tournament-footer .carousel-container {
+    width: 65%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 35%;
+  }
+}
+
+@media (max-width: 1294px) {
+  .tournament-footer .carousel-container {
+    width: 64.6%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 35.4%;
+  }
+}
+
+@media (max-width: 1284px) {
+  .tournament-footer .carousel-container {
+    width: 64.1%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 35.9%;
+  }
+}
+
+@media (max-width: 1274px) {
+  .tournament-footer .carousel-container {
+    width: 63.8%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 36.2%;
+  }
+}
+
+@media (max-width: 1264px) {
+  .tournament-footer .carousel-container {
+    width: 63.6%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 36.4%;
+  }
+}
+
+@media (max-width: 1254px) {
+  .tournament-footer .carousel-container {
+    width: 63%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 37%;
+  }
+}
+
+@media (max-width: 1244px) {
+  .tournament-footer .carousel-container {
+    width: 63%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 37%;
+  }
+}
+
+@media (max-width: 1234px) {
+  .tournament-footer .carousel-container {
+    width: 62.7%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 37.3%;
+  }
+}
+
+@media (max-width: 1224px) {
+  .tournament-footer .carousel-container {
+    width: 62.4%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 37.6%;
+  }
+}
+
+@media (max-width: 1214px) {
+  .tournament-footer .carousel-container {
+    width: 62%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 38%;
+  }
+}
+
+@media (max-width: 1194px) {
+  .tournament-footer .carousel-container {
+    width: 61.4%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 38.6%;
+  }
+}
+
+@media (max-width: 1174px) {
+  .tournament-footer .carousel-container {
+    width: 61.1%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 38.9%;
+  }
+}
+
+@media (max-width: 1164px) {
+  .tournament-footer .carousel-container {
+    width: 60.8%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 39.2%;
+  }
+}
+
+@media (max-width: 1154px) {
+  .tournament-footer .carousel-container {
+    width: 60.6%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 39.4%;
+  }
+}
+
+@media (max-width: 1144px) {
+  .tournament-footer .carousel-container {
+    width: 60.3%;
+  }
+
+  .tournament-footer .footer-right {
+    width: 39.7%;
+  }
+}
+
+@media (max-width: 991px) {
+  .tournament-footer {
+    height: 120px;
+  }
+
+  .tournament-footer .carousel-container {
+    width: auto;
+    height: 100%;
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tournament-footer .carousel-container .footer-left .container-logo-2025 {
+    width: auto;
+    height: 100%;
+  }
+
+  .tournament-footer .carousel-container .footer-left .container-logo-2025 .logo-2025 {
+    width: 169px;
+    height: 100%;
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .tournament-title {
+    font-size: 13px;
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .location {
+    font-size: 8px;
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .date {
+    font-size: 8px;
+    margin-bottom: 8px;
+  }
+
+  .tournament-footer .carousel-slide .footer-left .tournament-info .location {
+    margin-bottom: 10px;
+  }
+
+  .tournament-footer .footer-right {
+    display: none;
+  }
+}
+
+.tournament-footer .scooped-box {
+  position: absolute;
+  left: -439.5px;
+  bottom: -60px;
+  width: 400px;
+  height: 140px;
+  background-color: transparent;
+  margin: 50px;
+  overflow: hidden;
+}
+
+.tournament-footer .scooped-box::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 400px;
+  height: 140px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 0 0 400px rgb(15, 16, 16);
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 40px, 40px 0);
+}
+
+.tournament-footer-mobile {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 120px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  z-index: 2;
+  overflow: hidden;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+.tournament-footer-mobile .carousel-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.tournament-footer-mobile .carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.tournament-footer-mobile .carousel-slide {
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.tournament-footer-mobile .carousel-slide .footer-left {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-top-right-radius: 10px;
+  display: flex;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.tournament-footer-mobile .carousel-slide .footer-left .container-logo-2025 {
+  width: 65% !important;
+  height: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.tournament-footer-mobile .carousel-slide .footer-left .container-logo-2025 .logo-2025 {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  object-fit: fill;
+  flex-shrink: 0;
+}
+
+.tournament-footer-mobile .carousel-slide .footer-left .tournament-info {
+  padding-right: 0.44rem;
+  margin-top: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tournament-footer-mobile .carousel-slide .footer-left .tournament-info .date {
+  color: rgb(255, 255, 255);
+  font-size: 8px;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.tournament-footer-mobile .carousel-slide .footer-left .tournament-info .tournament-title {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  margin-top: 0.2rem;
+}
+
+.tournament-footer-mobile .carousel-slide .footer-left .tournament-info .location {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 8px;
+  font-weight: 400;
+}
+
+@media (min-width: 992px) {
+  .tournament-footer-mobile {
+    display: none;
+  }
+}
+
+
+@media (min-width: 650px) {
+  .tournament-footer-mobile {
+    height: 200px;
+  }
+
+  .tournament-footer-mobile .carousel-slide .footer-left .tournament-info {
+    margin-top: 0.5rem;
+  }
+
+  .tournament-footer-mobile .carousel-slide .footer-left .tournament-info .date {
+    font-size: 18px;
+  }
+
+  .tournament-footer-mobile .carousel-slide .footer-left .tournament-info .tournament-title {
+    font-size: 25px;
+  }
+
+  .tournament-footer-mobile .carousel-slide .footer-left .tournament-info .location {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+/* Media Queries for Hero Section */
+
+@media (max-width: 991px) and (max-height: 780px) {
+  .hero-section {
+    margin-top: 7rem;
+  }
+}
+
+@media (max-width: 991px) and (max-height: 770px) {
+  .hero-section {
+    margin-top: 6.5rem;
+  }
+}
+
+@media (max-width: 991px) and (max-height: 760px) {
+  .hero-section {
+    margin-top: 6rem;
+  }
+}
+
+@media (min-width: 1537px) {
+  .hero-section {
+    margin-top: 8rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero-section {
+    margin-top: 8rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .hero-section {
+    margin-top: 8rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  .hero-section {
+    margin-top: 8rem;
+  }
+}
+
+@media (min-width: 1537px) {
+  .hero-section .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  .hero-section .hero-title-responsive {
+    font-size: 2.1875rem;
+  }
+}
+
+@media (max-width: 1293px) {
+  .hero-section .hero-title-responsive {
+    font-size: 3.125rem;
+  }
+}
+
+@media (min-width: 1537px) {
+  .hero-section .hero-title-responsive {
+    font-size: 3.4375rem;
+  }
+}
+
+@media (min-width: 1537px) {
+  .hero-section .hero-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  .hero-section .hero-subtitle-responsive {
+    font-size: 1.5625rem;
+  }
+}
+
+@media (min-width: 1537px) {
+  .hero-section .hero-subtitle-responsive {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 1537px) {
+  .hero-section .btn {
+    font-size: 1.1875rem;
+    width: 13.9375rem;
+    height: 3.4375rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  .hero-section .btn {
+    border-radius: 56px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-section .hero-btn-primary {
+    border: 1px solid white;
+    font-size: 16px;
+    width: 200px;
+    height: 50px;
+  }
+
+  .hero-section .hero-btn-secondary {
+    font-size: 16px;
+    width: 200px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section .hero-btn-primary {
+    border: 1px solid white;
+    font-size: 15px;
+    width: 150px;
+    height: 42px;
+    border-radius: 16px;
+  }
+
+  .hero-section .hero-btn-secondary {
+    font-size: 12px;
+    width: 150px;
+    height: 42px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-section .hero-btn-primary {
+    border: 1px solid white;
+    font-size: 12px;
+    width: 140px;
+    height: 42px;
+  }
+
+  .hero-section .hero-btn-secondary {
+    font-size: 12px;
+    width: 140px;
+    height: 42px;
+  }
+}
+
+/* @media (min-width: 1537px) {
+  .hero-section .hero-btn-primary {
+    width: 13.9375rem !important;
+    height: 3.4375rem !important;
+    font-size: 1.1875rem !important;
+  }
+
+  .hero-section .hero-btn-secondary {
+    width: 10.875rem !important;
+    height: 3.4375rem !important;
+    font-size: 1.1875rem !important;
+  }
+} */
+
+@media (min-width: 3840px) {
+  .hero-section .hero-btn-primary {
+    border-radius: 44px;
+  }
+
+  .hero-section .hero-btn-secondary {
+    border-radius: 44px;
+  }
+}
+
+@media (min-width: 1537px) {
+  .hero-card-text.hero-card-text {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-text-content {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .hero-cards-content {
+    order: 1;
+  }
+
+  .hero-text-content .hero-subtitle {
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  .hero-text-content .hero-title {
+    order: 2;
+    margin-bottom: 0;
+  }
+
+  .hero-text-content .hero-buttons {
+    order: 3;
+    margin-top: 1rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .hero_flex {
+    justify-content: center;
+    gap: 1.8rem;
+  }
+
+  .hero-section .card {
+    width: 150px;
+    height: 110px;
+  }
+
+  .hero-card-number {
+    font-size: 20px;
+  }
+
+  .hero-card-text {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .hero-section .hero-title-responsive {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero-section .hero-subtitle-responsive {
+    font-size: 18px;
+    margin-bottom: 0rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero_flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+  }
+
+  .hero-section .card {
+    width: 140px;
+    height: 100px;
+  }
+
+  .hero-buttons {
+    /* align-items: stretch; */
+    gap: 1rem;
+    /* width: 100%; */
+  }
+
+  .hero-section .hero-buttons  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 150px;
+    height: 42px;
+    font-size: 12px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .hero-section .hero-title-responsive {
+    font-size: 28px;
+  }
+
+  .hero-section .hero-subtitle-responsive {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 425px) {
+  .hero-section .hero-title-responsive {
+    font-size: 25px;
+  }
+
+  .hero-section .hero-subtitle-responsive {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-section .hero-title-responsive {
+    font-size: 22px;
+  }
+
+  .hero-section .hero-subtitle-responsive {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-section .card {
+    width: 170px;
+    height: 130px;
+  }
+
+  .hero-card-number {
+    font-size: 28px;
+  }
+
+  .hero-card-text {
+    font-size: 14px;
+  }
+
+  .hero-section .hero-title-responsive {
+    font-size: 40px;
+  }
+
+  .hero-section .hero-subtitle-responsive {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .hero-section .card {
+    border-radius: 36px;
+  }
+}
