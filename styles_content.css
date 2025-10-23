@@ -93,6 +93,7 @@
 .content .features-cards {
   display: flex;
   align-items: stretch;
+  gap: 1rem;
 }
 
 .content .features-cards .feature-card-footer .medal {
