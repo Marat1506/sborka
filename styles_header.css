@@ -728,7 +728,7 @@
     right: -100%;
     width: 100dvw;
     height: 100dvh;
-    background-color: rgb(15, 16, 16, 0.98) !important;
+    background-color: rgb(15, 16, 16, 1) !important;
     color: white;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     padding: 0;
