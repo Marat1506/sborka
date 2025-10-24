@@ -30,9 +30,8 @@
 
 @media (max-width: 991px) {
   .main-with-bg {
-    height: 100dvh;
+    height: 100vh;
     background-image: url("../assets/main_background_mobile.png");
-    transition: 0.19s ease-out;
   }
 }
 

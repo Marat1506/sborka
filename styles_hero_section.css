@@ -546,8 +546,13 @@
 
 @media (max-width: 991.98px) {
   .tournament-footer {
-    position: relative;
-    /* Изменяем с sticky на relative для мобильных, чтобы логика JS работала корректно */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    /* Позиционируем относительно dvh для адаптивности к адресной строке */
+    bottom: calc(100vh - 100dvh);
   }
 }
 
