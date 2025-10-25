@@ -133,19 +133,19 @@
 .header .settings_container {
   cursor: pointer;
   transition: opacity 0.3s ease;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #7EE18B !important;
+  background-color: rgba(139, 219, 149, 1) !important;
   border-radius: 50%;
   overflow: hidden;
 }
 
 .header .settings_container span {
-  color: #156D1E;
-  font-size: 22px;
+  color: rgba(34, 117, 44, 1);
+  font-size: 15px;
   font-weight: 600;
   margin-top: 5px;
 }
@@ -166,7 +166,7 @@
   max-width: 100px;
   border: 1px solid #ddd;
   border-radius: 9px;
-  /* left: -45px; */
+  left: -55px;
 }
 
 .header .right-actions .dropdown-item {
@@ -244,8 +244,8 @@
 .header .settings_container {
   cursor: pointer;
   transition: opacity 0.3s ease, background-color 0.3s ease;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   padding: 0;
@@ -703,6 +703,10 @@
 @media (min-width: 992px) {
   .header .navbar-nav {
     margin-right: 2rem;
+    gap: 2rem;
+  }
+  .header .navbar-nav .nav-item:first-child{
+    transform: translateX(0.5rem);
   }
 }
 
