@@ -308,27 +308,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-     const buttons2 = document.querySelectorAll('.dark-toggle-btn');
-    const forms2 = document.querySelectorAll('.form-block');
+    // Закомментировано, так как dark-auth-toggle больше не используется
+    // const buttons2 = document.querySelectorAll('.dark-toggle-btn');
+    // const forms2 = document.querySelectorAll('.form-block');
 
-    buttons2.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
+    // buttons2.forEach(btn => {
+    //     btn.addEventListener('click', (e) => {
+    //         e.preventDefault();
 
-            buttons2.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+    //         buttons2.forEach(b => b.classList.remove('active'));
+    //         btn.classList.add('active');
 
-            const target = btn.getAttribute('data-target');
-            forms2.forEach(f => f.style.display = 'none');
-            document.getElementById(target).style.display = 'block';
-        });
-    });
+    //         const target = btn.getAttribute('data-target');
+    //         forms2.forEach(f => f.style.display = 'none');
+    //         document.getElementById(target).style.display = 'block';
+    //     });
+    // });
 
     // Логика для sticky-карусели на мобильных устройствах
     function initStickyCarousel() {
         const isMobile = window.innerWidth <= 991;
         if (!isMobile) {
-            console.log('Not mobile, skipping sticky carousel');
             return;
         }
 
@@ -337,11 +337,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const mainWithBg = document.querySelector('.main-with-bg');
         
         if (!header || !carousel || !mainWithBg) {
-            console.log('Elements not found:', { header, carousel, mainWithBg });
             return;
         }
 
-        console.log('Sticky carousel initialized');
         let isCarouselSticky = false;
 
         function updateCarouselPosition() {
@@ -357,21 +355,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Вычисляем, где была бы карусель в исходном положении
             const carouselOriginalPosition = mainWithBgRect.bottom - carouselHeight;
             
-            console.log('Positions:', {
-                headerBottom,
-                carouselTop: carouselTopInViewport,
-                carouselOriginalPosition,
-                mainWithBgTop: mainWithBgRect.top,
-                mainWithBgBottom: mainWithBgRect.bottom,
-                windowHeight: window.innerHeight,
-                isSticky: isCarouselSticky
-            });
-            
             // Если карусель достигла header и main-with-bg еще прокручивается
             // И карусель в исходном положении была бы выше header (нужен sticky)
             if (carouselTopInViewport <= headerBottom && mainWithBgRect.top < 0 && carouselOriginalPosition <= headerBottom) {
                 if (!isCarouselSticky) {
-                    console.log('Making carousel sticky');
                     carousel.style.position = 'fixed';
                     carousel.style.top = `${headerRect.height}px`;
                     carousel.style.bottom = 'auto';
@@ -384,7 +371,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // Если карусель в исходном положении уже ниже header - возвращаем
             else if (carouselOriginalPosition > headerBottom) {
                 if (isCarouselSticky) {
-                    console.log('Returning carousel to original position');
                     carousel.style.position = 'absolute';
                     carousel.style.bottom = 'calc(100vh - 100dvh)';
                     carousel.style.top = 'auto';

@@ -1267,6 +1267,12 @@
   }
 }
 
+@media(max-width: 400px) {
+  .tournament-footer .carousel-slide .footer-left .tournament-info .tournament-title {
+    font-size: 11px;
+  }
+}
+
 .tournament-footer .scooped-box {
   position: absolute;
   left: -439.5px;
