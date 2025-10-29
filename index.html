@@ -75,7 +75,7 @@
                     </div>
 
                     <!-- Не Зареган -->
-                    <div class="sidebar-auth-container  d-lg-none ">
+                    <div class="sidebar-auth-container  d-lg-none d-none">
                         <!-- <div class="dark-auth-toggle">
                             <a href="#" class="dark-toggle-btn active" data-target="login">
                                 <button class="dark-btn-inner">Вход</button>
@@ -105,7 +105,7 @@
                         </div>
                     </div>
                     <!-- Форма авторизации -->
-                    <div class="autorization d-none">
+                    <div class="autorization">
 
                         <div class="auth-toggle">
                             <a href="#" class="toggle-btn active" data-target="login">
@@ -122,16 +122,18 @@
                             <div class="form-block" id="login" style="display: block;">
                                 <form>
                                     <div class="mb-3">
-                                        <input type="text" class="form-control" placeholder="Логин">
+                                        <input type="text" class="form-control error" placeholder="Логин">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="password" class="form-control" placeholder="Пароль">
+                                        <input type="password" class="form-control error" placeholder="Пароль">
                                     </div>
+
                                     <a href="#">
                                         <button type="submit"
                                             class="btn btn-primary w-100 rounded-pill submit-btn">Войти</button>
                                     </a>
                                 </form>
+
                                 <div class="d-flex flex-column align-items-center  vhod_info">
                                     <div class="d-flex gap-1 align-items-center">
                                         <p>Не можете войти? </p>
@@ -151,19 +153,22 @@
                                         <input type="text" class="form-control" placeholder="Фамилия">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="email" class="form-control" placeholder="E-mail">
+                                        <input type="email" class="form-control error" placeholder="E-mail">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="password" class="form-control" placeholder="Пароль">
+                                        <input type="password" class="form-control error" placeholder="Пароль">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="password" class="form-control" placeholder="Повторить пароль">
+                                        <input type="password" class="form-control error"
+                                            placeholder="Повторить пароль">
                                     </div>
+
                                     <a href="#">
                                         <button type="submit"
                                             class="btn btn-primary w-100 rounded-pill submit-btn">Зарегистрироваться</button>
                                     </a>
                                 </form>
+
                                 <div class="d-flex flex-column align-items-center  vhod_info">
                                     <div class="d-flex gap-3 align-items-center">
                                         <p>Уже Eсть Регистрация?</p>
@@ -173,8 +178,18 @@
                             </div>
                         </div>
 
+                        <!-- Общее уведомление об ошибке для всех форм -->
+                        <div class="error-message show">
+                            <i class="bi bi-exclamation-circle"></i>
+                            <div class="error-message-block">
+                                <p class="error-message-title">Ошибка в данных</p>
+                                <p class="error-message-text">Некорректный формат логина</p>
+                            </div>
+
+                        </div>
+
                     </div>
-                    <ul class="navbar-nav  d-lg-flex ">
+                    <ul class="navbar-nav  d-lg-flex d-none">
                         <li class="nav-item">
                             <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle drop-btn" type="button"
@@ -199,7 +214,7 @@
                         
                         <div class="mobile-header-btn-container"></div>
                     </div> -->
-                    <div class="sidebar_footer  d-lg-none ">
+                    <div class="sidebar_footer  d-lg-none d-none">
                         <p class="sidebar_footer_title">Связаться с нами</p>
                         <div class="sidebar_footer_main">
                             <a href="#">

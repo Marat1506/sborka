@@ -325,6 +325,39 @@ document.addEventListener('DOMContentLoaded', () => {
     //     });
     // });
 
+    /* 
+    Пример использования стилей ошибок для форм авторизации:
+    
+    // Показать ошибку для конкретного поля:
+    const loginInput = document.querySelector('#login input[type="text"]');
+    loginInput.classList.add('error');
+    
+    // Показать общее уведомление об ошибке (вынесено за пределы auth-box):
+    const errorMessage = document.querySelector('.autorization .error-message');
+    errorMessage.classList.remove('d-none');
+    errorMessage.classList.add('show');
+    
+    // Скрыть ошибки:
+    loginInput.classList.remove('error');
+    errorMessage.classList.add('d-none');
+    errorMessage.classList.remove('show');
+    
+    // Для всех полей активной формы входа:
+    const loginInputs = document.querySelectorAll('#login .form-control');
+    loginInputs.forEach(input => input.classList.add('error'));
+    
+    // Для всех полей формы регистрации:
+    const registerInputs = document.querySelectorAll('#register .form-control');
+    registerInputs.forEach(input => input.classList.add('error'));
+    
+    // Универсальная функция для показа ошибок:
+    function showFormError(formId) {
+        const inputs = document.querySelectorAll(`#${formId} .form-control`);
+        inputs.forEach(input => input.classList.add('error'));
+        document.querySelector('.autorization .error-message').classList.add('show');
+    }
+    */
+
     // Логика для sticky-карусели на мобильных устройствах
     function initStickyCarousel() {
         const header = document.querySelector('.header');

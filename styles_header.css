@@ -17,7 +17,8 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  z-index: 10; /* Выше контента sidebar, но ниже общего z-index sidebar */
+  z-index: 10;
+  /* Выше контента sidebar, но ниже общего z-index sidebar */
   background: rgba(100, 105, 105, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-left: 1.5rem;
@@ -266,10 +267,10 @@
 
 .header .right-actions .settings-dropdown {
   background: #000;
-  min-width: 270px ;
+  min-width: 270px;
   max-width: 250px;
-  border: 1px solid #333 ;
-  border-radius: 19px ;
+  border: 1px solid #333;
+  border-radius: 19px;
   left: -215px;
   padding: 1rem 1.2rem;
 }
@@ -502,7 +503,7 @@
   box-sizing: border-box;
 }
 
-.dark-toggle-btn + .dark-toggle-btn {
+.dark-toggle-btn+.dark-toggle-btn {
   position: relative;
   left: -1.5rem;
 }
@@ -520,7 +521,6 @@
   display: none;
   overflow: auto;
   padding: 0 1.5rem;
-  padding-top: 2rem;
 }
 
 .auth-toggle {
@@ -621,6 +621,67 @@
   box-shadow: none;
 }
 
+/* Стили для полей с ошибкой */
+.form-control.error {
+  border-color: rgba(220, 0, 36, 1) !important;
+  color: rgba(220, 0, 36, 1) !important;
+}
+
+.form-control.error::placeholder {
+  color: rgba(220, 0, 36, 1) !important;
+}
+
+.form-control.error:focus {
+  border-color: rgba(220, 0, 36, 1) !important;
+}
+
+/* Уведомление об ошибке */
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  background-color: rgba(220, 0, 36, 1);
+  border: 1px solid rgba(220, 0, 36, 1);
+  border-radius: 20px;
+  padding: 0.75rem 1rem;
+  margin-top: -0.7rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.error-message .bi-exclamation-circle {
+  font-size: 38px;
+  min-width: 38px;
+  line-height: 1;
+  flex: 0 0 38px;
+}
+
+.error-message-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  text-align: left;
+}
+
+.error-message-title {
+  font-weight: 800;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.error-message-text {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 300;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+/* Показать уведомление об ошибке */
+.error-message.show {
+  display: flex;
+}
+
 .submit-btn {
   background-color: #1e63ff;
   border: none;
@@ -705,7 +766,8 @@
     margin-right: 2rem;
     gap: 2rem;
   }
-  .header .navbar-nav .nav-item:first-child{
+
+  .header .navbar-nav .nav-item:first-child {
     transform: translateX(0.5rem);
   }
 }
@@ -785,7 +847,7 @@
     z-index: 1050;
   }
 
- .header .navbar-collapse #navbarNav {
+  .header .navbar-collapse #navbarNav {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -798,6 +860,7 @@
     flex: 1;
     overflow-y: visible;
   }
+
   .sidebar_footer,
   .main-footer {
     flex-shrink: 0;
@@ -809,7 +872,7 @@
   .autorization {
     flex-shrink: 0;
     margin-bottom: 1rem;
-    margin-top: 4em;
+    margin-top: 2rem;
   }
 
   body {
@@ -1160,6 +1223,7 @@
     justify-content: space-between;
     width: 100%;
   }
+
   .sidebar_footer .sidebar_footer_main a {
     text-decoration: none;
   }
@@ -1243,7 +1307,8 @@
   .header .navbar-collapse {
     width: 100%;
   }
-    .vhod_info p {
+
+  .vhod_info p {
     font-size: 12px;
   }
 
@@ -1292,7 +1357,7 @@
     font-size: 12px;
   }
 
-   .dark-btn-inner {
+  .dark-btn-inner {
     border-radius: 13px;
   }
 
