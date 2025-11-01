@@ -142,6 +142,56 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Функция для клонирования меню из main-footer в sidebar_footer
+    function cloneFooterMenuToSidebar() {
+        // Находим оригинальное меню в main-footer внутри sidebar
+        const originalMenu = document.querySelector('#navbarNav .main-footer .footer-nav .navbar-nav');
+        const sidebarMenuContainer = document.querySelector('#sidebar-footer-menu');
+        
+        if (!originalMenu || !sidebarMenuContainer) return;
+
+        // Очищаем старый клон
+        sidebarMenuContainer.innerHTML = '';
+
+        // Создаем глубокий клон оригинального меню
+        const clonedMenu = originalMenu.cloneNode(true);
+        
+        // Обновляем ID кнопки dropdown, чтобы избежать конфликта
+        const clonedDropdownButton = clonedMenu.querySelector('#dropdownMenuButton3');
+        if (clonedDropdownButton) {
+            clonedDropdownButton.id = 'dropdownMenuButtonSidebar';
+            // Обновляем aria-labelledby в связанном dropdown-menu
+            const clonedDropdownMenu = clonedMenu.querySelector('.dropdown-menu');
+            if (clonedDropdownMenu) {
+                clonedDropdownMenu.setAttribute('aria-labelledby', 'dropdownMenuButtonSidebar');
+            }
+        }
+        
+        // Переносим все элементы из клона в sidebar-footer
+        while (clonedMenu.firstChild) {
+            sidebarMenuContainer.appendChild(clonedMenu.firstChild);
+        }
+    }
+
+    // Инициализация клонирования меню
+    setTimeout(cloneFooterMenuToSidebar, 50);
+
+    // Обновляем клон при открытии/закрытии сайдбара
+    if (navbarNav) {
+        navbarNav.addEventListener('show.bs.collapse', function () {
+            setTimeout(cloneFooterMenuToSidebar, 100);
+        });
+        
+        navbarNav.addEventListener('hide.bs.collapse', function () {
+            setTimeout(cloneFooterMenuToSidebar, 100);
+        });
+    }
+
+    // Обновляем клон при изменении размера окна
+    window.addEventListener('resize', () => {
+        setTimeout(cloneFooterMenuToSidebar, 50);
+    });
+
 
     function reorderNavItems(isMobile) {
         const ul = navbarNav ? navbarNav.querySelector('.navbar-nav') : null;
