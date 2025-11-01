@@ -1291,6 +1291,7 @@
   .header .navbar-nav .nav-item:hover a,
   .header .navbar-nav .nav-item:hover .drop-btn {
     color: #ccc;
+    font-size: 12px;
   }
 
   .header .navbar-nav .nav-item:hover {
