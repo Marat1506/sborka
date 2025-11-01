@@ -175,7 +175,7 @@
 
 @media (max-width: 1080px) {
   .main-footer .footer-nav .navbar-nav .nav-item .dropdown {
-    top: 0;
+    top: 0px;
   }
 
   .main-footer .footer-nav .navbar-nav .nav-item .dropdown .drop-btn {
@@ -185,9 +185,15 @@
 
 }
 
-@media (max-width: 760px) {
+@media (max-width: 991px) {
   .main-footer .footer-nav .navbar-nav .nav-item .dropdown {
     top: 6px;
+  }
+}
+
+@media (max-width: 760px) {
+  .main-footer .footer-nav .navbar-nav .nav-item .dropdown {
+    top: 7px;
   }
 
   .main-footer .footer-nav .navbar-nav .nav-item .dropdown .drop-btn {
@@ -197,7 +203,7 @@
 
 @media (max-width: 470px) {
   .main-footer .footer-nav .navbar-nav .nav-item .dropdown {
-    top: 3px;
+    top: 4px;
   }
 
   .main-footer .footer-nav .navbar-nav .nav-item .dropdown .drop-btn {
