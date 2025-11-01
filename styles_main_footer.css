@@ -198,6 +198,7 @@
 
   .main-footer .footer-nav .navbar-nav .nav-item .dropdown .drop-btn {
     font-size: 14px;
+    padding-left: 0;
   }
 }
 
