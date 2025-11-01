@@ -910,7 +910,8 @@
     color: white;
     top: -3.8px;
   }
-/* 
+
+  /* 
   .header .main-footer .navbar-nav .nav-item:nth-child(2) {
     left: 13px;
   } */
@@ -934,6 +935,11 @@
 
   .header .main-footer .footer-nav .navbar-nav .nav-item .dropdown .drop-btn {
     font-size: 14px;
+
+  }
+
+  .header .main-footer .footer-nav .navbar-nav .nav-item .dropdown {
+    top: 3px;
   }
 
 

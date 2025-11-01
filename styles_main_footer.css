@@ -193,7 +193,7 @@
 
 @media (max-width: 760px) {
   .main-footer .footer-nav .navbar-nav .nav-item .dropdown {
-    top: 7px;
+    top: 6px;
   }
 
   .main-footer .footer-nav .navbar-nav .nav-item .dropdown .drop-btn {
