@@ -1036,10 +1036,22 @@
 
   .info_main_block_one .settings-dropdown.mobile-version {
     display: none;
+    background: #000;
+    position: static;
+    width: 100%;
+    transform: none !important;
+    box-shadow: none;
+    border: none;
   }
 
   .info_main_block_one .settings-dropdown.mobile-version.show {
     display: block;
+    background: #000;
+    position: static;
+    width: 100%;
+    transform: none !important;
+    box-shadow: none;
+    border: none;
   }
 
   .info_main_block_one .settings-dropdown.mobile-version .dropdown-item {
@@ -1068,7 +1080,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    color: #ff6b6b !important;
+    color: white !important;
   }
 
   .info_main_block_one .settings-dropdown.mobile-version .dropdown-item_exit img {
@@ -1085,9 +1097,51 @@
   .header .navbar-nav {
     width: 100%;
     flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 1rem;
     align-items: start;
     gap: 0;
+  }
+
+  .header .navbar-nav .nav-group-mobile-wrapper {
+    padding: 0 !important;
+    border-bottom: none !important;
+    width: 100%;
+  }
+
+  .header .navbar-nav .nav-group-mobile {
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .header .navbar-nav .nav-group-mobile .nav-item-inner {
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: none;
+  }
+
+  .header .navbar-nav .nav-group-mobile .nav-item-inner:first-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 12px;
+    margin-bottom: 0;
+  }
+
+  .header .navbar-nav .nav-group-mobile .nav-item-inner:last-child {
+    border-bottom: none;
+    padding-top: 12px;
+  }
+
+  .header .navbar-nav .nav-group-mobile .nav-item-inner .drop-btn,
+  .header .navbar-nav .nav-group-mobile .nav-item-inner .nav-link {
+    color: white !important;
   }
 
   .dark-auth-toggle {
@@ -1270,7 +1324,7 @@
   }
 
   .sidebar_footer {
-    margin-top: 3rem;
+    margin-top: 2rem;
     width: 100%;
   }
 

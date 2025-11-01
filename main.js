@@ -142,86 +142,67 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Функция для клонирования меню из main-footer в sidebar_footer
-    function cloneFooterMenuToSidebar() {
-        // Находим оригинальное меню в main-footer внутри sidebar
-        const originalMenu = document.querySelector('#navbarNav .main-footer .footer-nav .navbar-nav');
-        const sidebarMenuContainer = document.querySelector('#sidebar-footer-menu');
+    // Функция для перемещения меню из ПК версии в main-footer .footer-nav на мобильной версии
+    function moveMenuToFooterNav() {
+        const isMobile = window.innerWidth < 992;
+        // Ищем меню - либо с классом d-lg-flex, либо в footer
+        const desktopMenuInNav = document.querySelector('#navbarNav .navbar-nav.d-lg-flex');
+        const desktopMenuInFooter = document.querySelector('#navbarNav .main-footer .footer-nav .navbar-nav');
+        const desktopMenu = desktopMenuInNav || desktopMenuInFooter;
+        const footerNav = document.querySelector('#navbarNav .main-footer .footer-nav');
+        const autorizationBlock = document.querySelector('#navbarNav .autorization');
         
-        if (!originalMenu || !sidebarMenuContainer) return;
+        if (!desktopMenu || !footerNav) return;
 
-        // Очищаем старый клон
-        sidebarMenuContainer.innerHTML = '';
+        const isInFooter = footerNav.contains(desktopMenu);
 
-        // Создаем глубокий клон оригинального меню
-        const clonedMenu = originalMenu.cloneNode(true);
-        
-        // Обновляем ID кнопки dropdown, чтобы избежать конфликта
-        const clonedDropdownButton = clonedMenu.querySelector('#dropdownMenuButton3');
-        if (clonedDropdownButton) {
-            clonedDropdownButton.id = 'dropdownMenuButtonSidebar';
-            // Обновляем aria-labelledby в связанном dropdown-menu
-            const clonedDropdownMenu = clonedMenu.querySelector('.dropdown-menu');
-            if (clonedDropdownMenu) {
-                clonedDropdownMenu.setAttribute('aria-labelledby', 'dropdownMenuButtonSidebar');
+        if (isMobile) {
+            // На мобильной версии: перемещаем меню в main-footer .footer-nav
+            if (!isInFooter) {
+                footerNav.appendChild(desktopMenu);
+                desktopMenu.classList.remove('d-lg-flex');
+            }
+        } else {
+            // На десктопе: возвращаем меню обратно после autorization блока
+            if (isInFooter) {
+                // Ищем блок авторизации для правильного размещения
+                const authContainer = document.querySelector('#navbarNav .sidebar-auth-container, #navbarNav .info_main');
+                if (authContainer && authContainer.nextElementSibling) {
+                    authContainer.parentNode.insertBefore(desktopMenu, authContainer.nextElementSibling);
+                } else if (authContainer) {
+                    authContainer.parentNode.appendChild(desktopMenu);
+                } else if (autorizationBlock && autorizationBlock.nextElementSibling) {
+                    autorizationBlock.parentNode.insertBefore(desktopMenu, autorizationBlock.nextElementSibling);
+                } else if (autorizationBlock) {
+                    autorizationBlock.parentNode.appendChild(desktopMenu);
+                } else {
+                    // Если ничего не найдено, ищем просто после любых элементов авторизации
+                    const sidebarAuth = document.querySelector('#navbarNav .sidebar-auth-container');
+                    if (sidebarAuth) {
+                        sidebarAuth.parentNode.insertBefore(desktopMenu, sidebarAuth.nextElementSibling);
+                    }
+                }
+                desktopMenu.classList.add('d-lg-flex');
             }
         }
-        
-        // Переносим все элементы из клона в sidebar-footer
-        while (clonedMenu.firstChild) {
-            sidebarMenuContainer.appendChild(clonedMenu.firstChild);
-        }
     }
 
-    // Инициализация клонирования меню
-    setTimeout(cloneFooterMenuToSidebar, 50);
+    // Инициализация перемещения меню
+    setTimeout(moveMenuToFooterNav, 50);
 
-    // Обновляем клон при открытии/закрытии сайдбара
+    // Обновляем перемещение при изменении размера окна
+    window.addEventListener('resize', moveMenuToFooterNav);
+
+    // Обновляем при открытии/закрытии сайдбара
     if (navbarNav) {
-        navbarNav.addEventListener('show.bs.collapse', function () {
-            setTimeout(cloneFooterMenuToSidebar, 100);
-        });
-        
-        navbarNav.addEventListener('hide.bs.collapse', function () {
-            setTimeout(cloneFooterMenuToSidebar, 100);
-        });
+        navbarNav.addEventListener('show.bs.collapse', () => setTimeout(moveMenuToFooterNav, 100));
+        navbarNav.addEventListener('hide.bs.collapse', () => setTimeout(moveMenuToFooterNav, 100));
     }
-
-    // Обновляем клон при изменении размера окна
-    window.addEventListener('resize', () => {
-        setTimeout(cloneFooterMenuToSidebar, 50);
-    });
 
 
     function reorderNavItems(isMobile) {
-        const ul = navbarNav ? navbarNav.querySelector('.navbar-nav') : null;
-        if (!ul) return;
-
-        const tournamentsLi = ul.querySelector('.dropdown').closest('li'); // li с Турниры (dropdown)
-        const communityLi = Array.from(ul.querySelectorAll('.nav-link')).find(link => link.textContent.trim() === 'Сообщество').closest('li');
-        const membershipLi = Array.from(ul.querySelectorAll('.nav-link')).find(link => link.textContent.trim() === 'Membership').closest('li');
-
-        if (!tournamentsLi || !communityLi || !membershipLi) return;
-
-        // Очищаем ul
-        ul.innerHTML = '';
-
-        if (isMobile) {
-            // Мобильный порядок: Сообщество, Турниры, Membership
-            // Сообщество вне блока
-            ul.appendChild(communityLi);
-            // Блок для Турниры и Membership
-            const wrapper = document.createElement('div');
-            wrapper.classList.add('nav-group');
-            wrapper.appendChild(tournamentsLi);
-            wrapper.appendChild(membershipLi);
-            ul.appendChild(wrapper);
-        } else {
-            // Десктопный порядок: Турниры, Сообщество, Membership
-            ul.appendChild(tournamentsLi);
-            ul.appendChild(communityLi);
-            ul.appendChild(membershipLi);
-        }
+        // Эта функция больше не изменяет структуру меню - убрана логика деформации
+        // Структура меню остается как на ПК версии
     }
 
     // Переменная для обработчика клика (чтобы удалять при необходимости)
@@ -285,8 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Переупорядочиваем навигацию при смене вида
-        reorderNavItems(isMobile);
+        // Логика деформации меню убрана - структура меню остается как на ПК
     }
 
     // Инициализация при загрузке

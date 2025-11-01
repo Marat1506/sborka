@@ -75,7 +75,7 @@
                     </div>
 
                     <!-- Не Зареган -->
-                    <div class="sidebar-auth-container  d-lg-none">
+                    <div class="sidebar-auth-container  d-lg-none d-none">
                         <!-- <div class="dark-auth-toggle">
                             <a href="#" class="dark-toggle-btn active" data-target="login">
                                 <button class="dark-btn-inner">Вход</button>
@@ -90,7 +90,7 @@
                     </div>
 
                     <!-- Зареган -->
-                    <div class="info_main d-lg-none d-none">
+                    <div class="info_main d-lg-none">
                         <p>Аккаунт</p>
                         <div class="info_main_block_one">
                             <div class="d-flex justify-content-between align-items-center mt-3 pb-2">
@@ -189,6 +189,33 @@
                         </div>
 
                     </div>
+                    <ul class="navbar-nav d-lg-none" style="order: 0;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Сообщество</a>
+                        </li>
+                        <li class="nav-item nav-group-mobile-wrapper"
+                            style="padding: 0; border-bottom: none; width: 100%;">
+                            <div class="nav-group-mobile">
+                                <div class="nav-item-inner" style=" border-bottom: none;">
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle drop-btn" type="button"
+                                            id="dropdownMenuButtonMobile" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            Турниры
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonMobile">
+                                            <a class="dropdown-item" href="#">Предстоящие турниры</a>
+                                            <a class="dropdown-item" href="#">Прошедшие турниры</a>
+                                            <a class="dropdown-item" href="#">Все турниры</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-item-inner">
+                                    <a class="nav-link" href="#">Membership</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                     <ul class="navbar-nav  d-lg-flex">
                         <li class="nav-item">
                             <div class="dropdown">
@@ -232,14 +259,13 @@
 
                     <div class="main-footer d-lg-none" style="padding-bottom: 3rem;">
 
-                        <div
-                            class="footer-top d-flex justify-content-between align-items-center p-3">
+                        <div class="footer-top d-flex justify-content-between align-items-center p-3">
                             <img src="assets/_105553233322080.png" alt="footer_logo" class="footer-logo">
 
                         </div>
                         <div
                             class="footer-nav d-flex flex-column flex-md-row justify-content-between align-items-center">
-                            <ul class="navbar-nav">
+                            <!-- <ul class="navbar-nav">
                                 <li class="nav-item">
                                     <div class="dropdown">
                                         <button class="btn btn-secondary dropdown-toggle drop-btn" type="button"
@@ -259,7 +285,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Membership</a>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
                         <div class="footer-divider"></div>
 
