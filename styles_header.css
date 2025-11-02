@@ -23,8 +23,8 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  padding-top: 0.9rem;
-  padding-bottom: 0.9rem;
+  padding-top: 2.15rem;
+  padding-bottom: 2.15rem;
   align-items: center;
 }
 
@@ -43,6 +43,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header .navbar .container-fluid .logo-container {
+  position: relative;
+  z-index: 10001; /* Выше sidebar (z-index: 9999), чтобы логотип был виден поверх */
 }
 
 .header .navbar .container-fluid .logo-container .header-logo {
@@ -68,6 +73,7 @@
 }
 
 .header .navbar-nav .nav-item .dropdown .drop-btn {
+  font-weight: 600;
   background: none;
   border: none;
   color: white;
@@ -98,6 +104,8 @@
   align-items: center;
   margin-left: auto;
   gap: 1rem;
+  position: relative;
+  z-index: 10001; /* Выше sidebar (z-index: 9999), чтобы флаг и бутерброд были видны поверх */
 }
 
 .header .right-actions .dropdown .drop_btn_flag {
@@ -168,6 +176,7 @@
   border: 1px solid #ddd;
   border-radius: 9px;
   left: -55px;
+  z-index: 10002; /* Выше элементов header, чтобы dropdown был виден поверх sidebar */
 }
 
 .header .right-actions .dropdown-item {
@@ -828,7 +837,7 @@
     height: 100dvh;
     background-color: rgb(15, 16, 16, 1) !important;
     color: white;
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border: none;
     padding: 0;
     z-index: 9999;
     transition: right 0.3s ease-in-out;
@@ -917,6 +926,7 @@
   } */
 
   .header .main-footer .navbar-nav .nav-item .nav-link:first-child {
+    font-weight: 500;
     color: white;
   }
 
@@ -934,6 +944,7 @@
   }
 
   .header .main-footer .footer-nav .navbar-nav .nav-item .dropdown .drop-btn {
+    font-weight: 500;
     font-size: 14px;
 
   }
@@ -996,7 +1007,7 @@
     color: white;
     font-size: 18px;
     margin: 0;
-    font-weight: 500;
+    font-weight: 800;
     padding-left: 0;
     padding-right: 0;
   }
@@ -1234,6 +1245,7 @@
 
   .header .navbar-nav .nav-item .nav-link:first-child {
     color: rgba(165, 165, 165, 1);
+    font-weight: 600;
   }
 
   .header .navbar-nav .main-footer .nav-item .nav-link:first-child {
@@ -1282,12 +1294,11 @@
 
   .header .navbar-nav .nav-item a.nav-link {
     font-size: 13px;
-    font-weight: 500;
     color: white;
     text-decoration: none;
     padding: 0;
     border-bottom: none;
-    font-weight: 400;
+    font-weight: 600;
   }
 
   .header .navbar-nav .nav-item:hover {
@@ -1352,6 +1363,7 @@
   }
 
   .sidebar_footer .sidebar_footer_title {
+    font-weight: 600;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     color: rgba(165, 165, 165, 1);
@@ -1367,18 +1379,21 @@
   }
 
   .sidebar_footer .sidebar_footer_main>a:nth-child(1) .hero-btn-secondary {
+    font-weight: 400;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     width: 81px;
   }
 
   .sidebar_footer .sidebar_footer_main>a:nth-child(2) .hero-btn-secondary {
+    font-weight: 400;
     padding-left: 2rem;
     padding-right: 2rem;
     width: 114px;
   }
 
   .sidebar_footer .sidebar_footer_main>a:nth-child(3) .hero-btn-secondary {
+    font-weight: 400;
     padding-left: 2rem;
     padding-right: 2rem;
     width: 120px;
