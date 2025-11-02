@@ -173,10 +173,10 @@
 }
 
 @media (max-width: 991px) {
-  .why-choose-us {
+  /* .why-choose-us {
     padding-left: 1rem;
     padding-right: 1rem;
-  }
+  } */
 }
 
 /* 
@@ -429,10 +429,10 @@
 }
 
 @media (max-width: 991px) {
-  .container-cards {
+  /* .container-cards {
     padding-left: 1rem;
     padding-right: 1rem;
-  }
+  } */
 }
 
 @media (min-width: 1537px) {
