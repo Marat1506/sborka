@@ -26,6 +26,107 @@
   margin-top: 2.7rem;
 }
 
+/* Отступы для main-content-responsive на разных экранах ПК */
+@media (min-width: 992px) {
+  .main-content .main-content-responsive {
+    margin-top: 2.7rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-content .main-content-responsive {
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-content .main-content-responsive {
+    margin-top: 5rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .main-content .main-content-responsive {
+    margin-top: 6rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .main-content .main-content-responsive {
+    margin-top: 7rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .main-content .main-content-responsive {
+    margin-top: 8rem;
+  }
+}
+
+@media (min-width: 2200px) {
+  .main-content .main-content-responsive {
+    margin-top: 9rem;
+  }
+}
+
+@media (min-width: 2400px) {
+  .main-content .main-content-responsive {
+    margin-top: 10rem;
+  }
+}
+
+@media (min-width: 2600px) {
+  .main-content .main-content-responsive {
+    margin-top: 11rem;
+  }
+}
+
+@media (min-width: 2800px) {
+  .main-content .main-content-responsive {
+    margin-top: 12rem;
+  }
+}
+
+@media (min-width: 3000px) {
+  .main-content .main-content-responsive {
+    margin-top: 13rem;
+  }
+}
+
+@media (min-width: 3200px) {
+  .main-content .main-content-responsive {
+    margin-top: 14rem;
+  }
+}
+
+@media (min-width: 3400px) {
+  .main-content .main-content-responsive {
+    margin-top: 15rem;
+  }
+}
+
+@media (min-width: 3580px) {
+  .main-content .main-content-responsive {
+    margin-top: 16rem;
+  }
+}
+
+@media (min-height: 1200px) {
+  .main-content .main-content-responsive {
+    margin-top: 12rem;
+  }
+}
+
+@media (min-height: 1400px) {
+  .main-content .main-content-responsive {
+    margin-top: 14rem;
+  }
+}
+@media (min-height: 1600px) {
+  .main-content .main-content-responsive {
+    margin-top: 17rem;
+  }
+}
 /* Media Queries for Main with Background */
 
 @media (max-width: 991px) {

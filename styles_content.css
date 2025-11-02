@@ -58,6 +58,7 @@
   flex-direction: column;
   justify-content: center;
   font-weight: 600;
+  padding-right: 3rem;
 }
 
 .content .content_wostour .wostour-text .p_one {
@@ -71,6 +72,10 @@
 }
 
 .content .content_wostour .wostour-text a {
+  text-decoration: none;
+}
+
+.content .content_wostour .wostour-text a button {
   width: 251px;
   height: 55px;
   border-radius: 20px;
@@ -83,10 +88,14 @@
   align-self: flex-start;
   padding-top: 0.6rem;
   width: auto;
+  text-decoration: none;
+}
+
+.content .content_wostour .wostour-text a button {
   transition: box-shadow 0.3s ease;
 }
 
-.content .content_wostour a:hover {
+.content .content_wostour .wostour-text a button:hover {
   box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
 }
 
@@ -162,6 +171,21 @@
   padding-top: 3rem;
   color: white;
 }
+
+@media (max-width: 991px) {
+  .why-choose-us {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* 
+@media (min-width: 1537px) {
+  .why-choose-us {
+    padding-left: calc(3.5rem + (100vw - 1536px) * 0.1);
+    padding-right: calc(3.5rem + (100vw - 1536px) * 0.1);
+  }
+} */
 
 .why-choose-us .section-title {
   font-size: 2.5rem;
@@ -404,6 +428,20 @@
   margin-top: 3rem;
 }
 
+@media (max-width: 991px) {
+  .container-cards {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 1537px) {
+  /* .container-cards {
+    padding-left: calc(3.5rem + (100vw - 1536px) * 0.1);
+    padding-right: calc(3.5rem + (100vw - 1536px) * 0.1);
+  } */
+}
+
 .container-cards-title {
   font-size: 32px;
   font-weight: 600;
@@ -582,8 +620,8 @@
 
 @media (min-width: 1537px) {
   .content {
-    padding-left: 3.5rem !important;
-    padding-right: 3.5rem !important;
+    padding-left: calc(3.5rem + (100vw - 1536px) * 0.1) !important;
+    padding-right: calc(3.5rem + (100vw - 1536px) * 0.1) !important;
   }
 }
 
@@ -632,7 +670,7 @@
     gap: 0;
   }
 
-  .content .content_wostour .wostour-text .btn {
+  .content .content_wostour .wostour-text a button {
     width: 255px !important;
     height: 44px;
     font-size: 13.5px;
@@ -666,9 +704,91 @@
   }
 }
 
-@media (min-width: 1537px) {
+@media (min-width: 1537px) and (max-width: 2199px) {
   .content .content_wostour .wostour-text p {
     font-size: 2rem;
+  }
+
+  .content .content_wostour .wostour-text {
+    padding-right: 8rem;
+  }
+
+  .content .content_wostour .wostour-text .p_one {
+    font-size: 40px !important;
+  }
+
+  .content .content_wostour .wostour-text .p_two {
+    font-size: 24px !important;
+  }
+}
+
+/* Адаптивные стили для wostour-text на больших экранах */
+@media (min-width: 2200px) {
+  .content .content_wostour .wostour-text {
+    padding-right: 6rem;
+  }
+
+  .content .content_wostour .wostour-text .p_one {
+    font-size: 40px !important;
+  }
+
+
+  .content .content_wostour .wostour-text .p_two {
+    font-size: 24px !important;
+  }
+
+  .content .content_wostour .wostour-text a button {
+    font-size: 22px !important;
+    width: 280px !important;
+    height: 62px !important;
+  }
+}
+
+@media (min-width: 2500px) {
+  .content .content_wostour .wostour-text .p_one {
+    font-size: 46px !important;
+  }
+
+  .content .content_wostour .wostour-text .p_two {
+    font-size: 28px !important;
+  }
+
+  .content .content_wostour .wostour-text a button {
+    font-size: 24px !important;
+    width: 310px !important;
+    height: 68px !important;
+  }
+}
+
+@media (min-width: 2900px) {
+  .content .content_wostour .wostour-text .p_one {
+    font-size: 52px !important;
+  }
+
+  .content .content_wostour .wostour-text .p_two {
+    font-size: 32px !important;
+  }
+
+  .content .content_wostour .wostour-text a button {
+    font-size: 26px !important;
+    width: 340px !important;
+    height: 74px !important;
+  }
+}
+
+@media (min-width: 3580px) {
+  .content .content_wostour .wostour-text .p_one {
+    font-size: 58px !important;
+  }
+
+  .content .content_wostour .wostour-text .p_two {
+    font-size: 36px !important;
+  }
+
+  .content .content_wostour .wostour-text a button {
+    font-size: 28px !important;
+    width: 370px !important;
+    height: 80px !important;
   }
 }
 
@@ -690,7 +810,7 @@
   }
 }
 
-@media (min-width: 1537px) {
+@media (min-width: 1537px) and (max-width: 2199px) {
   .content .content_wostour .wostour-text p:nth-child(2) {
     font-size: 1.125rem;
   }
@@ -716,7 +836,7 @@
   }
 }
 
-@media (min-width: 1537px) {
+@media (min-width: 1537px) and (max-width: 2199px) {
   .content .content_wostour a {
     width: 15.6875rem;
     height: 3.4375rem;
@@ -946,9 +1066,9 @@
   }
 }
 
-@media (min-width: 3840px) {
+@media (min-width: 1920px) {
   .why-choose-us .grid-container .main-card {
-    border-radius: 60px;
+    border-radius: 20px;
   }
 }
 
@@ -958,9 +1078,9 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 3840px) {
   .why-choose-us .grid-container .main-card {
-    border-radius: 20px;
+    border-radius: 60px;
   }
 }
 
@@ -972,10 +1092,10 @@
   }
 }
 
-@media (min-width: 3840px) {
+@media (min-width: 1920px) {
   .why-choose-us .grid-container .main-card .notification-img {
     width: 80%;
-    margin-top: 20rem;
+    margin-top: 5rem;
   }
 }
 
@@ -986,10 +1106,10 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 3840px) {
   .why-choose-us .grid-container .main-card .notification-img {
     width: 80%;
-    margin-top: 5rem;
+    margin-top: 20rem;
   }
 }
 
@@ -1000,15 +1120,15 @@
   }
 }
 
-@media (min-width: 3840px) {
-  .why-choose-us .grid-container .side-card {
-    border-radius: 50px;
-  }
-}
-
 @media (min-width: 2560px) {
   .why-choose-us .grid-container .side-card {
     border-radius: 30px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .why-choose-us .grid-container .side-card {
+    border-radius: 50px;
   }
 }
 
@@ -1068,13 +1188,13 @@
   }
 }
 
-@media (min-width: 3840px) {
+@media (min-width: 1080px) {
   .why-choose-us .grid-container .side-card .container_moni1 img.moni {
-    max-width: 800px;
+    max-width: 200px;
   }
 
   .why-choose-us .grid-container .side-card .container_moni2 img.moni {
-    max-width: 800px;
+    max-width: 200px;
   }
 }
 
@@ -1088,13 +1208,13 @@
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 3840px) {
   .why-choose-us .grid-container .side-card .container_moni1 img.moni {
-    max-width: 200px;
+    max-width: 800px;
   }
 
   .why-choose-us .grid-container .side-card .container_moni2 img.moni {
-    max-width: 200px;
+    max-width: 800px;
   }
 }
 
@@ -1138,9 +1258,24 @@
   }
 }
 
-@media (min-width: 3840px) {
+@media (min-width: 1080px) {
   .why-choose-us .grid-container .side-card .card-content .card_title {
-    font-size: 80px;
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .why-choose-us .grid-container .side-card .card-content .card_title {
+    font-size: 35px;
+  }
+
+ 
+  .why-choose-us .grid-container .side-card .card-content .card_text {
+    font-size: 20px;
+  }
+
+  .why-choose-us .grid-container .side-card .card-content {
+    padding-right: 12rem !important;
   }
 }
 
@@ -1150,9 +1285,9 @@
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 3840px) {
   .why-choose-us .grid-container .side-card .card-content .card_title {
-    font-size: 25px;
+    font-size: 80px;
   }
 }
 
@@ -1199,9 +1334,15 @@
   }
 }
 
-@media (min-width: 3840px) {
+@media (min-width: 1080px) {
   .why-choose-us .grid-container .side-card .card-content .card_title2 {
-    font-size: 76px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .why-choose-us .grid-container .side-card .card-content .card_title2 {
+    font-size: 30px;
   }
 }
 
@@ -1211,9 +1352,9 @@
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 3840px) {
   .why-choose-us .grid-container .side-card .card-content .card_title2 {
-    font-size: 20px;
+    font-size: 76px;
   }
 }
 
@@ -1241,15 +1382,15 @@
   }
 }
 
-@media (min-width: 3840px) {
-  .why-choose-us .grid-container .side-card .card-content .card_text {
-    font-size: 35px;
-  }
-}
-
 @media (min-width: 2560px) {
   .why-choose-us .grid-container .side-card .card-content .card_text {
     font-size: 25px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .why-choose-us .grid-container .side-card .card-content .card_text {
+    font-size: 35px;
   }
 }
 

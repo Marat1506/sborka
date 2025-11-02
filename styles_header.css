@@ -701,7 +701,7 @@
   background-color: #1e63ff;
   border: none;
   font-weight: 600;
-  border-radius: 20px;
+  border-radius: 19.6px;
   padding: 12px;
   width: 100%;
   margin-top: 1.2rem;
@@ -734,13 +734,11 @@
   font-weight: 300;
 }
 
-/* Media Queries for Header */
 
-@media (min-width: 3840px) {
-  .header {
-    padding: 3rem;
-  }
+.hero-buttons {
+  margin-top: 3rem;
 }
+/* Media Queries for Header */
 
 @media (min-width: 1537px) {
   .header.header-responsive {
@@ -807,7 +805,123 @@
   }
 }
 
+@media (min-width: 2560px) {
+  .header {
+    padding: 1.5rem 0;
+  }
+
+  .header .navbar .container-fluid .logo-container .header-logo {
+    max-height: 48px;
+  }
+
+  .header .navbar-nav {
+    gap: 3rem;
+  }
+
+  .header .navbar-nav .nav-item .dropdown .drop-btn {
+    font-size: 20px;
+  }
+
+  .header .navbar-nav .nav-link {
+    font-size: 20px;
+  }
+
+  .header .header-btn {
+    width: 170px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 25px;
+  }
+
+  .header .right-actions {
+    gap: 1.5rem;
+  }
+
+  .header .selected-flag-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .header .settings_container {
+    width: 50px;
+    height: 50px;
+  }
+
+  .header .settings_container span {
+    font-size: 18px;
+  }
+
+  .header .right-actions .dropdown-menu {
+    min-width: 130px;
+    max-width: 130px;
+    border-radius: 12px;
+    left: -70px;
+  }
+
+  .header .right-actions .dropdown-item {
+    font-size: 16px;
+    padding: 0.5rem;
+  }
+}
+
 @media (min-width: 3840px) {
+  .header {
+    padding: 2rem 0;
+  }
+
+  .header .navbar .container-fluid .logo-container .header-logo {
+    max-height: 60px;
+  }
+
+  .header .navbar-nav {
+    gap: 4rem;
+  }
+
+  .header .navbar-nav .nav-item .dropdown .drop-btn {
+    font-size: 24px;
+  }
+
+  .header .navbar-nav .nav-link {
+    font-size: 24px;
+  }
+
+  .header .header-btn {
+    width: 200px;
+    height: 60px;
+    font-size: 22px;
+    border-radius: 30px;
+  }
+
+  .header .right-actions {
+    gap: 2rem;
+  }
+
+  .header .selected-flag-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .header .settings_container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .header .settings_container span {
+    font-size: 22px;
+  }
+
+  .header .right-actions .dropdown-menu {
+    min-width: 160px;
+    max-width: 160px;
+    border-radius: 14px;
+    left: -85px;
+  }
+
+  .header .right-actions .dropdown-item {
+    font-size: 18px;
+    padding: 0.75rem;
+  }
+
   .header .header-btn {
     border-radius: 56px;
   }

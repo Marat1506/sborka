@@ -152,9 +152,98 @@
   }
 }
 
-@media (min-width: 1537px) {
+@media (min-width: 1537px) and (max-width: 2199px) {
   .hero-section .hero-title-responsive {
     font-size: calc(55px + (100vw - 1536px) * 0.03);
+  }
+}
+
+/* Адаптивные стили для hero-text-content начиная с 2200px */
+@media (min-width: 2200px) {
+  .hero-section .hero-title-responsive {
+    font-size: 65px !important;
+  }
+
+  .hero-section .hero-subtitle-responsive {
+    font-size: 35px !important;
+  }
+
+  .hero-section .hero-btn-primary {
+    font-size: 21px !important;
+    width: 245px !important;
+    height: 60px !important;
+  }
+
+  .hero-section .hero-btn-secondary {
+    font-size: 21px !important;
+    width: 192px !important;
+    height: 60px !important;
+  }
+}
+
+@media (min-width: 2500px) {
+  .hero-section .hero-title-responsive {
+    font-size: 75px !important;
+  }
+
+  .hero-section .hero-subtitle-responsive {
+    font-size: 40px !important;
+  }
+
+  .hero-section .hero-btn-primary {
+    font-size: 23px !important;
+    width: 270px !important;
+    height: 65px !important;
+  }
+
+  .hero-section .hero-btn-secondary {
+    font-size: 23px !important;
+    width: 210px !important;
+    height: 65px !important;
+  }
+}
+
+@media (min-width: 2900px) {
+  .hero-section .hero-title-responsive {
+    font-size: 85px !important;
+  }
+
+  .hero-section .hero-subtitle-responsive {
+    font-size: 45px !important;
+  }
+
+  .hero-section .hero-btn-primary {
+    font-size: 25px !important;
+    width: 295px !important;
+    height: 70px !important;
+  }
+
+  .hero-section .hero-btn-secondary {
+    font-size: 25px !important;
+    width: 230px !important;
+    height: 70px !important;
+  }
+}
+
+@media (min-width: 3580px) {
+  .hero-section .hero-title-responsive {
+    font-size: 95px !important;
+  }
+
+  .hero-section .hero-subtitle-responsive {
+    font-size: 50px !important;
+  }
+
+  .hero-section .hero-btn-primary {
+    font-size: 27px !important;
+    width: 320px !important;
+    height: 75px !important;
+  }
+
+  .hero-section .hero-btn-secondary {
+    font-size: 27px !important;
+    width: 250px !important;
+    height: 75px !important;
   }
 }
 
@@ -179,7 +268,7 @@
   }
 }
 
-@media (min-width: 1537px) {
+@media (min-width: 1537px) and (max-width: 2199px) {
   .hero-section .hero-subtitle-responsive {
     font-size: calc(30px + (100vw - 1536px) * 0.015);
   }
@@ -621,7 +710,7 @@
 
 @media (min-width: 1537px) {
   .tournament-footer .carousel-slide .footer-left .tournament-info {
-    margin-top: calc(2rem + (100vw - 1536px) * 0.02);
+    margin-top: 2rem;
   }
 
 }
@@ -640,11 +729,18 @@
 @media (min-width: 2500px) {
 
   .tournament-footer .carousel-slide .footer-left .container-logo-2025 .logo-2025 {
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
   }
 }
 
+@media (min-width: 1920px) {
+
+  .tournament-footer .carousel-slide .footer-left .container-logo-2025 .logo-2025 {
+     min-width: 320px;
+  max-width: 340px;
+  }
+}
 .tournament-footer .carousel-slide .footer-left .tournament-info .date {
   color: rgb(255, 255, 255);
   font-size: 15px;
@@ -1480,7 +1576,12 @@
 
 @media (max-width: 1293px) {
   .hero-section .hero-title-responsive {
-    font-size: 3.125rem;
+    font-size: 2.425rem;
+  }
+}
+@media (max-width: 1193px) {
+  .hero-section .hero-title-responsive {
+    font-size: 2.125rem;
   }
 }
 
@@ -1498,7 +1599,7 @@
 
 @media (max-width: 1080px) {
   .hero-section .hero-subtitle-responsive {
-    font-size: 1.5625rem;
+    font-size: 1.2625rem;
   }
 }
 
@@ -1595,7 +1696,7 @@
 
 @media (min-width: 1537px) {
   .hero-card-text.hero-card-text {
-    font-size: 0.9375rem;
+    font-size: 1rem;
   }
 }
 
