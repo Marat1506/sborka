@@ -725,11 +725,11 @@
 /* Адаптивные стили для wostour-text на больших экранах */
 @media (min-width: 2200px) {
   .content .content_wostour .wostour-text {
-    padding-right: 6rem;
+    padding-right: 7rem;
   }
 
   .content .content_wostour .wostour-text .p_one {
-    font-size: 40px !important;
+    font-size: 49px !important;
   }
 
 
@@ -746,7 +746,7 @@
 
 @media (min-width: 2500px) {
   .content .content_wostour .wostour-text .p_one {
-    font-size: 46px !important;
+    font-size: 56px !important;
   }
 
   .content .content_wostour .wostour-text .p_two {
@@ -894,6 +894,186 @@
 @media (min-width: 1537px) {
   .content .features-cards .feature-card {
     min-height: 18.75rem;
+  }
+}
+
+@media (min-width: 2200px) {
+  .content .features-cards {
+    gap: 1.5rem;
+  }
+
+  .content .features-cards .feature-card {
+    min-height: 380px;
+    border-radius: 24px;
+    padding: 2.5rem;
+  }
+
+  .content .features-cards .feature-card .p_one {
+    font-size: 34px !important;
+    margin-bottom: 0.75rem;
+  }
+
+  .content .features-cards .feature-card .p_two {
+    font-size: 19px !important;
+  }
+
+  .content .features-cards .feature-card .feature-card-footer {
+    height: 85px;
+    padding-top: 1.25rem;
+  }
+
+  .content .features-cards .feature-card-footer .medal {
+    width: 42px;
+    height: 62px;
+  }
+
+  .content .features-cards .feature-card-footer .pushka {
+    width: 70px;
+    height: 38px;
+  }
+
+  .content .features-cards .feature-card-footer .borba {
+    width: 64px;
+    height: 52px;
+  }
+
+  .content .features-cards .feature-card-footer a .bi-arrow-right {
+    width: 52px !important;
+  }
+}
+
+@media (min-width: 2500px) {
+  .content .features-cards {
+    gap: 2rem;
+  }
+
+  .content .features-cards .feature-card {
+    min-height: 420px;
+    border-radius: 28px;
+    padding: 3rem;
+  }
+
+  .content .features-cards .feature-card .p_one {
+    font-size: 38px !important;
+    margin-bottom: 1rem;
+  }
+
+  .content .features-cards .feature-card .p_two {
+    font-size: 21px !important;
+  }
+
+  .content .features-cards .feature-card .feature-card-footer {
+    height: 95px;
+    padding-top: 1.5rem;
+  }
+
+  .content .features-cards .feature-card-footer .medal {
+    width: 48px;
+    height: 72px;
+  }
+
+  .content .features-cards .feature-card-footer .pushka {
+    width: 80px;
+    height: 44px;
+  }
+
+  .content .features-cards .feature-card-footer .borba {
+    width: 72px;
+    height: 60px;
+  }
+
+  .content .features-cards .feature-card-footer a .bi-arrow-right {
+    width: 60px !important;
+  }
+}
+
+@media (min-width: 2900px) {
+  .content .features-cards {
+    gap: 2.5rem;
+  }
+
+  .content .features-cards .feature-card {
+    min-height: 480px;
+    border-radius: 36px;
+    padding: 3.5rem;
+  }
+
+  .content .features-cards .feature-card .p_one {
+    font-size: 44px !important;
+    margin-bottom: 1.25rem;
+  }
+
+  .content .features-cards .feature-card .p_two {
+    font-size: 24px !important;
+  }
+
+  .content .features-cards .feature-card .feature-card-footer {
+    height: 110px;
+    padding-top: 1.75rem;
+  }
+
+  .content .features-cards .feature-card-footer .medal {
+    width: 56px;
+    height: 84px;
+  }
+
+  .content .features-cards .feature-card-footer .pushka {
+    width: 92px;
+    height: 50px;
+  }
+
+  .content .features-cards .feature-card-footer .borba {
+    width: 84px;
+    height: 68px;
+  }
+
+  .content .features-cards .feature-card-footer a .bi-arrow-right {
+    width: 68px !important;
+  }
+}
+
+@media (min-width: 3580px) {
+  .content .features-cards {
+    gap: 3rem;
+  }
+
+  .content .features-cards .feature-card {
+    min-height: 540px;
+    border-radius: 44px;
+    padding: 4rem;
+  }
+
+  .content .features-cards .feature-card .p_one {
+    font-size: 50px !important;
+    margin-bottom: 1.5rem;
+  }
+
+  .content .features-cards .feature-card .p_two {
+    font-size: 27px !important;
+  }
+
+  .content .features-cards .feature-card .feature-card-footer {
+    height: 125px;
+    padding-top: 2rem;
+  }
+
+  .content .features-cards .feature-card-footer .medal {
+    width: 64px;
+    height: 96px;
+  }
+
+  .content .features-cards .feature-card-footer .pushka {
+    width: 106px;
+    height: 58px;
+  }
+
+  .content .features-cards .feature-card-footer .borba {
+    width: 96px;
+    height: 78px;
+  }
+
+  .content .features-cards .feature-card-footer a .bi-arrow-right {
+    width: 78px !important;
   }
 }
 
@@ -1200,21 +1380,22 @@
 
 @media (min-width: 2560px) {
   .why-choose-us .grid-container .side-card .container_moni1 img.moni {
-    max-width: 400px;
+    min-width: 260px;
+    max-width: 260px;
   }
 
   .why-choose-us .grid-container .side-card .container_moni2 img.moni {
-    max-width: 400px;
+    max-width: 260px;
   }
 }
 
 @media (min-width: 3840px) {
   .why-choose-us .grid-container .side-card .container_moni1 img.moni {
-    max-width: 800px;
+    max-width: 200px;
   }
 
   .why-choose-us .grid-container .side-card .container_moni2 img.moni {
-    max-width: 800px;
+    max-width: 200px;
   }
 }
 

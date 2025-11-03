@@ -158,10 +158,21 @@
   }
 }
 
+@media (min-width: 1820px) {
+  .hero-section .hero-title-responsive {
+    font-size: 65px !important;
+  }
+}
+@media (min-width: 2000px) {
+  .hero-section .hero-title-responsive {
+    font-size: 75px !important;
+  }
+}
+
 /* Адаптивные стили для hero-text-content начиная с 2200px */
 @media (min-width: 2200px) {
   .hero-section .hero-title-responsive {
-    font-size: 65px !important;
+    font-size: 85px !important;
   }
 
   .hero-section .hero-subtitle-responsive {
@@ -183,7 +194,7 @@
 
 @media (min-width: 2500px) {
   .hero-section .hero-title-responsive {
-    font-size: 75px !important;
+    font-size: 90px !important;
   }
 
   .hero-section .hero-subtitle-responsive {
@@ -205,7 +216,7 @@
 
 @media (min-width: 2900px) {
   .hero-section .hero-title-responsive {
-    font-size: 85px !important;
+    font-size: 95px !important;
   }
 
   .hero-section .hero-subtitle-responsive {
@@ -227,7 +238,7 @@
 
 @media (min-width: 3580px) {
   .hero-section .hero-title-responsive {
-    font-size: 95px !important;
+    font-size: 105px !important;
   }
 
   .hero-section .hero-subtitle-responsive {
@@ -411,6 +422,18 @@
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 1920px) {
+  .hero-section .card {
+    border-radius: 16px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .hero-section .card {
+    border-radius: 24px;
+  }
 }
 
 @media (min-width: 3840px) {
