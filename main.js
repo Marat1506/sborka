@@ -421,14 +421,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // Вычисляем, где была бы карусель в исходном положении
             const carouselOriginalPosition = mainWithBgRect.bottom - carouselHeight;
             
-            // Вычисляем разницу между vh и dvh (высота адресной строки)
-            const addressBarHeight = window.innerHeight - document.documentElement.clientHeight;
-            
-            // Проверяем, перекрывает ли адресная строка карусель
-            const carouselBottom = carouselRect.bottom;
-            const viewportHeight = window.innerHeight;
-            const isAddressBarOverlapping = carouselBottom > viewportHeight && addressBarHeight > 0;
-            
             // Если карусель достигла header и main-with-bg еще прокручивается
             // И карусель в исходном положении была бы выше header (нужен sticky)
             if (carouselTopInViewport <= headerBottom && mainWithBgRect.top < 0 && carouselOriginalPosition <= headerBottom) {
@@ -446,12 +438,21 @@ document.addEventListener('DOMContentLoaded', () => {
             else if (carouselOriginalPosition > headerBottom) {
                 if (isCarouselSticky) {
                     carousel.style.position = 'absolute';
-                    // Поднимаем карусель только если адресная строка действительно перекрывает её
-                    if (isAddressBarOverlapping) {
-                        carousel.style.bottom = `${addressBarHeight}px`;
+                    
+                    // Вычисляем разницу между vh и dvh (высота адресной строки)
+                    const viewportHeightDiff = window.innerHeight - window.visualViewport.height;
+                    
+                    // Проверяем, находится ли карусель в нижней части экрана
+                    const carouselBottomPosition = mainWithBgRect.bottom;
+                    const isCarouselAtBottom = carouselBottomPosition <= window.innerHeight + carouselHeight;
+                    
+                    // Поднимаем карусель только если она внизу и есть разница в высоте viewport
+                    if (isCarouselAtBottom && viewportHeightDiff > 0) {
+                        carousel.style.bottom = `${viewportHeightDiff}px`;
                     } else {
                         carousel.style.bottom = '0';
                     }
+                    
                     carousel.style.top = 'auto';
                     carousel.style.left = '0';
                     carousel.style.right = '0';
