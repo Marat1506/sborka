@@ -389,104 +389,104 @@ document.addEventListener('DOMContentLoaded', () => {
     */
 
     // Логика для sticky-карусели на мобильных устройствах
-    function initStickyCarousel() {
-        const header = document.querySelector('.header');
-        const carousel = document.querySelector('.tournament-footer');
-        const mainWithBg = document.querySelector('.main-with-bg');
+    // function initStickyCarousel() {
+    //     const header = document.querySelector('.header');
+    //     const carousel = document.querySelector('.tournament-footer');
+    //     const mainWithBg = document.querySelector('.main-with-bg');
         
-        if (!header || !carousel || !mainWithBg) {
-            return;
-        }
+    //     if (!header || !carousel || !mainWithBg) {
+    //         return;
+    //     }
 
-        let isCarouselSticky = false;
+    //     let isCarouselSticky = false;
 
-        function updateCarouselPosition() {
-            // Проверяем размер экрана при каждом вызове
-            const isMobile = window.innerWidth <=550;
+    //     function updateCarouselPosition() {
+    //         // Проверяем размер экрана при каждом вызове
+    //         const isMobile = window.innerWidth <=550;
             
-            // Если не мобильная версия, не применяем sticky логику
-            if (!isMobile) {
-                return;
-            }
+    //         // Если не мобильная версия, не применяем sticky логику
+    //         if (!isMobile) {
+    //             return;
+    //         }
 
-            const headerRect = header.getBoundingClientRect();
-            const carouselRect = carousel.getBoundingClientRect();
-            const mainWithBgRect = mainWithBg.getBoundingClientRect();
-            const carouselHeight = carousel.offsetHeight;
+    //         const headerRect = header.getBoundingClientRect();
+    //         const carouselRect = carousel.getBoundingClientRect();
+    //         const mainWithBgRect = mainWithBg.getBoundingClientRect();
+    //         const carouselHeight = carousel.offsetHeight;
             
-            // Вычисляем, где карусель находится относительно viewport
-            const carouselTopInViewport = carouselRect.top;
-            const headerBottom = headerRect.bottom;
+    //         // Вычисляем, где карусель находится относительно viewport
+    //         const carouselTopInViewport = carouselRect.top;
+    //         const headerBottom = headerRect.bottom;
             
-            // Вычисляем, где была бы карусель в исходном положении
-            const carouselOriginalPosition = mainWithBgRect.bottom - carouselHeight;
+    //         // Вычисляем, где была бы карусель в исходном положении
+    //         const carouselOriginalPosition = mainWithBgRect.bottom - carouselHeight;
             
-            // Если карусель достигла header и main-with-bg еще прокручивается
-            // И карусель в исходном положении была бы выше header (нужен sticky)
-            if (carouselTopInViewport <= headerBottom && mainWithBgRect.top < 0 && carouselOriginalPosition <= headerBottom) {
-                if (!isCarouselSticky) {
-                    carousel.style.position = 'fixed';
-                    carousel.style.top = `${headerRect.height}px`;
-                    carousel.style.bottom = 'auto';
-                    carousel.style.left = '0';
-                    carousel.style.right = '0';
-                    carousel.style.width = '100%';
-                    isCarouselSticky = true;
-                }
-            } 
-            // Если карусель в исходном положении уже ниже header - возвращаем
-            else if (carouselOriginalPosition > headerBottom) {
-                if (isCarouselSticky) {
-                    carousel.style.position = 'absolute';
-                    carousel.style.bottom = 'calc(100vh - 100dvh)';
-                    carousel.style.top = 'auto';
-                    carousel.style.left = '0';
-                    carousel.style.right = '0';
-                    carousel.style.width = '100%';
-                    isCarouselSticky = false;
-                }
-            }
-        }
+    //         // Если карусель достигла header и main-with-bg еще прокручивается
+    //         // И карусель в исходном положении была бы выше header (нужен sticky)
+    //         if (carouselTopInViewport <= headerBottom && mainWithBgRect.top < 0 && carouselOriginalPosition <= headerBottom) {
+    //             if (!isCarouselSticky) {
+    //                 carousel.style.position = 'fixed';
+    //                 carousel.style.top = `${headerRect.height}px`;
+    //                 carousel.style.bottom = 'auto';
+    //                 carousel.style.left = '0';
+    //                 carousel.style.right = '0';
+    //                 carousel.style.width = '100%';
+    //                 isCarouselSticky = true;
+    //             }
+    //         } 
+    //         // Если карусель в исходном положении уже ниже header - возвращаем
+    //         else if (carouselOriginalPosition > headerBottom) {
+    //             if (isCarouselSticky) {
+    //                 carousel.style.position = 'absolute';
+    //                 carousel.style.bottom = 'calc(100vh - 100dvh)';
+    //                 carousel.style.top = 'auto';
+    //                 carousel.style.left = '0';
+    //                 carousel.style.right = '0';
+    //                 carousel.style.width = '100%';
+    //                 isCarouselSticky = false;
+    //             }
+    //         }
+    //     }
 
-        // Throttle для оптимизации производительности
-        let ticking = false;
-        function handleScroll() {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    updateCarouselPosition();
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        }
+    //     // Throttle для оптимизации производительности
+    //     let ticking = false;
+    //     function handleScroll() {
+    //         if (!ticking) {
+    //             window.requestAnimationFrame(() => {
+    //                 updateCarouselPosition();
+    //                 ticking = false;
+    //             });
+    //             ticking = true;
+    //         }
+    //     }
 
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('resize', () => {
-            const isMobile = window.innerWidth <= 991;
+    //     window.addEventListener('scroll', handleScroll);
+    //     window.addEventListener('resize', () => {
+    //         const isMobile = window.innerWidth <= 991;
             
-            if (!isMobile) {
-                // Переключились на десктоп - полностью сбрасываем все стили
-                carousel.style.position = '';
-                carousel.style.bottom = '';
-                carousel.style.top = '';
-                carousel.style.left = '';
-                carousel.style.right = '';
-                carousel.style.width = '';
-                isCarouselSticky = false;
-            } else {
-                // Мобильная версия - пересчитываем позицию
-                updateCarouselPosition();
-            }
-        });
+    //         if (!isMobile) {
+    //             // Переключились на десктоп - полностью сбрасываем все стили
+    //             carousel.style.position = '';
+    //             carousel.style.bottom = '';
+    //             carousel.style.top = '';
+    //             carousel.style.left = '';
+    //             carousel.style.right = '';
+    //             carousel.style.width = '';
+    //             isCarouselSticky = false;
+    //         } else {
+    //             // Мобильная версия - пересчитываем позицию
+    //             updateCarouselPosition();
+    //         }
+    //     });
         
-        // Инициализация только для мобильной версии
-        const isMobile = window.innerWidth <= 550;
-        if (isMobile) {
-            updateCarouselPosition();
-        }
-    }
+    //     // Инициализация только для мобильной версии
+    //     const isMobile = window.innerWidth <= 550;
+    //     if (isMobile) {
+    //         updateCarouselPosition();
+    //     }
+    // }
 
-    // Запускаем логику sticky-карусели
-    initStickyCarousel();
+    // // Запускаем логику sticky-карусели
+    // initStickyCarousel();
 
 });
