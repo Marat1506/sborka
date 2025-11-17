@@ -438,21 +438,7 @@ document.addEventListener('DOMContentLoaded', () => {
             else if (carouselOriginalPosition > headerBottom) {
                 if (isCarouselSticky) {
                     carousel.style.position = 'absolute';
-                    
-                    // Вычисляем разницу между vh и dvh (высота адресной строки)
-                    const viewportHeightDiff = window.innerHeight - window.visualViewport.height;
-                    
-                    // Проверяем, находится ли карусель в нижней части экрана
-                    const carouselBottomPosition = mainWithBgRect.bottom;
-                    const isCarouselAtBottom = carouselBottomPosition <= window.innerHeight + carouselHeight;
-                    
-                    // Поднимаем карусель только если она внизу и есть разница в высоте viewport
-                    if (isCarouselAtBottom && viewportHeightDiff > 0) {
-                        carousel.style.bottom = `${viewportHeightDiff}px`;
-                    } else {
-                        carousel.style.bottom = '0';
-                    }
-                    
+                    carousel.style.bottom = 'calc(100vh - 100dvh)';
                     carousel.style.top = 'auto';
                     carousel.style.left = '0';
                     carousel.style.right = '0';
