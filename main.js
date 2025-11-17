@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbarNav = document.getElementById('navbarNav');
     const menuIcon = navbarToggler.querySelector('.menu-icon');
 
+
     if (navbarToggler && navbarNav && menuIcon) {
         const originalSrc = menuIcon.src;
         const closeSrc = '/assets/close.png'; 
@@ -212,6 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function initMobileSettingsToggle() {
         const settingsImg = document.querySelector('.info_main_block_one img[src*="/assets/settings.png"]');
         const settingsDropdown = document.querySelector('.settings-dropdown');
+
 
         if (settingsImg && settingsDropdown) {
             // Удаляем старый обработчик, если есть
@@ -306,6 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navbarCollapse.addEventListener('hidden.bs.collapse', function () {
             // Получаем top
             const top = document.body.style.top;
+
 
             // Сбрасываем стили
             document.body.style.position = '';
@@ -408,6 +411,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isMobile) {
                 return;
             }
+
 
             const headerRect = header.getBoundingClientRect();
             const carouselRect = carousel.getBoundingClientRect();
