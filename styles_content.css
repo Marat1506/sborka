@@ -99,6 +99,25 @@
   box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
 }
 
+.content .content_wostour .wostour-text a.btn {
+  width: 251px;
+  height: 55px;
+  border-radius: 20px;
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+}
+
+.content .content_wostour .wostour-text a.btn:hover {
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+}
+
 .content .features-cards {
   display: flex;
   align-items: stretch;
@@ -503,6 +522,8 @@
 .container-cards .hero-btn-secondary {
   border: 1px solid white;
   width: 207px;
+  max-width: 207px;
+  min-width: 207px;
   height: 55px;
   border-radius: 20px;
   font-size: 19px;
@@ -510,6 +531,12 @@
   background-color: rgba(255, 255, 255, 0.15);
   text-decoration: none;
   transition: box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 .container-cards .hero-btn-secondary:hover {
@@ -520,9 +547,17 @@
   .container-cards .hero-btn-secondary {
     font-size: 16px;
     width: 140px;
+    max-width: 140px;
+    min-width: 140px;
     height: 42px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(12px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
   }
 }
 
@@ -530,11 +565,18 @@
   .container-cards .hero-btn-secondary {
     font-size: 12px;
     width: 140px;
+    max-width: 140px;
+    min-width: 140px;
     height: 42px;
     border-radius: 18px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(12px);
-
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
   }
 }
 
@@ -542,26 +584,50 @@
   .container-cards .hero-btn-secondary {
     font-size: 12px;
     width: 140px;
+    max-width: 140px;
+    min-width: 140px;
     height: 42px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(12px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
   }
 }
 
 @media (min-width: 1537px) {
   .container-cards .hero-btn-secondary {
     width: 220px;
+    max-width: 220px;
+    min-width: 220px;
     height: 60px;
     font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
   }
 }
 
 @media (min-width: 3840px) {
   .container-cards .hero-btn-secondary {
     width: 280px;
+    max-width: 280px;
+    min-width: 280px;
     height: 75px;
     font-size: 24px;
     border-radius: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
   }
 }
 
@@ -671,6 +737,12 @@
   }
 
   .content .content_wostour .wostour-text a button {
+    width: 255px !important;
+    height: 44px;
+    font-size: 13.5px;
+  }
+
+  .content .content_wostour .wostour-text a.btn {
     width: 255px !important;
     height: 44px;
     font-size: 13.5px;

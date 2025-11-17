@@ -312,11 +312,19 @@
 .hero-section .hero-btn-primary {
   border: 1px solid white;
   width: 223px;
+  max-width: 223px;
+  min-width: 223px;
   height: 55px;
   border-radius: 20px;
   font-size: 19px;
   font-weight: 600 !important;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 @media (max-width: 991px) {
@@ -324,7 +332,15 @@
     border: 1px solid white;
     font-size: 14px;
     width: 200px;
+    max-width: 200px;
+    min-width: 200px;
     height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
   }
 }
 
@@ -332,17 +348,33 @@
   .hero-section .hero-btn-primary {
     border: 1px solid white;
     font-size: 12px;
-    width: 190px;
-    height: 42px ;
+    width: 160px;
+    max-width: 160px;
+    min-width: 160px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 410px) {
   .hero-section .hero-btn-primary {
     border: 1px solid white;
     font-size: 12px;
-    width: 180px;
+    width: 140px;
+    max-width: 140px;
+    min-width: 140px;
     height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
   }
 }
 
@@ -363,6 +395,8 @@
 .hero-section .hero-btn-secondary {
   border: 1px solid white;
   width: 174px;
+  max-width: 174px;
+  min-width: 174px;
   height: 55px;
   border-radius: 20px;
   font-size: 19px;
@@ -370,13 +404,27 @@
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 @media (max-width: 991px) {
   .hero-section .hero-btn-secondary {
     font-size: 14px;
     width: 160px;
+    max-width: 160px;
+    min-width: 160px;
     height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
   }
 }
 
@@ -384,7 +432,15 @@
   .hero-section .hero-btn-secondary {
     font-size: 12px;
     width: 150px;
+    max-width: 150px;
+    min-width: 150px;
     height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
   }
 }
 
@@ -392,7 +448,15 @@
   .hero-section .hero-btn-secondary {
     font-size: 12px;
     width: 140px;
+    max-width: 140px;
+    min-width: 140px;
     height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
   }
 }
 
