@@ -72,7 +72,7 @@ body {
     position: relative;
 }
 
-/* Кнопки как ссылки с кнопками внутри */
+/* Кнопки как ссылки */
 .toggle-btn {
     display: flex;
     align-items: center;
@@ -84,28 +84,13 @@ body {
     transition: background-color 0.3s ease;
     position: relative;
     z-index: 1;
-    height: 42px;
+    height: 55px;
     text-decoration: none;
     cursor: pointer;
     padding: 0;
-}
-
-/* Внутренние кнопки */
-.btn-inner {
-    width: 100%;
-    height: 100%;
-    border: none;
-    background: transparent;
     color: #fff;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
-    border-radius: 22px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
 }
 
 /* правая немного заходит на левую */
@@ -128,9 +113,6 @@ body {
 .toggle-btn.active {
     background-color: #fff;
     z-index: 3;
-}
-
-.toggle-btn.active .btn-inner {
     color: #000;
 }
 
@@ -211,6 +193,7 @@ body {
 
 .vhod_info p {
     margin-bottom: 0 !important;
+    font-size: 16.67px;
 }
 
 .vhod_info a {

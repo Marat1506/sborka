@@ -108,29 +108,25 @@
 
                     <div class="w-100 d-lg-none "> <!-- Экран 2 -->
                         <div class="autorization">
-                            <!-- <div class="auth-toggle">
-                                <a href="#" class="toggle-btn active" data-target="login">
-                                    <button class="btn-inner">Вход</button>
-                                </a>
-                                <a href="#" class="toggle-btn" data-target="register">
-                                    <button class="btn-inner">Создать аккаунт</button>
-                                </a>
-                            </div> -->
 
-                            <div class="auth-toggle">
-                                <a href="#" class="toggle-btn btn-inner active" data-target="login">
+
+                            <div class="auth-toggle" role="tablist">
+                                <a href="#login" class="toggle-btn btn-inner active" data-bs-toggle="tab" role="tab"
+                                    aria-controls="login" aria-selected="true">
                                     Вход
                                 </a>
-                                <a href="#" class="toggle-btn btn-inner" data-target="register">
+                                <a href="#register" class="toggle-btn btn-inner" data-bs-toggle="tab" role="tab"
+                                    aria-controls="register" aria-selected="false">
                                     Создать аккаунт
                                 </a>
                             </div>
 
                             <!-- Форма -->
                             <div class="auth-box p-4 rounded-4">
-                                <!-- Вход -->
-                                <div class="form-block" id="login" style="display: block;">
-                                    <form>
+                                <div class="tab-content">
+                                    <!-- Вход -->
+                                    <div class="form-block tab-pane fade show active" id="login" role="tabpanel">
+                                        <form>
                                         <div class="mb-3">
                                             <input type="text" class="form-control error" placeholder="Логин">
                                         </div>
@@ -145,51 +141,52 @@
                                         <a href="#" class="btn btn-primary w-100 submit-btn mt-4">
                                             Войти
                                         </a>
-                                    </form>
+                                        </form>
 
-                                    <div class="d-flex flex-column align-items-center  vhod_info">
-                                        <div class="d-flex gap-1 align-items-center">
-                                            <p>Не можете войти? </p>
-                                            <a href="#"> Восстановить пароль!</a>
+                                        <div class="d-flex flex-column align-items-center  vhod_info">
+                                            <div class="d-flex gap-1 align-items-center">
+                                                <p>Не можете войти? </p>
+                                                <a href="#"> Восстановить пароль!</a>
+                                            </div>
+                                            <a href="#">Зарегистрируйтесь!</a>
                                         </div>
-                                        <a href="#">Зарегистрируйтесь!</a>
                                     </div>
-                                </div>
 
-                                <!-- Регистрация -->
-                                <div class="form-block" id="register" style="display: none;">
-                                    <form>
-                                        <div class="mb-3">
-                                            <input type="text" class="form-control" placeholder="Имя">
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="text" class="form-control" placeholder="Фамилия">
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="email" class="form-control error" placeholder="E-mail">
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="password" class="form-control error" placeholder="Пароль">
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="password" class="form-control error"
-                                                placeholder="Повторить пароль">
-                                        </div>
+                                    <!-- Регистрация -->
+                                    <div class="form-block tab-pane fade" id="register" role="tabpanel">
+                                        <form>
+                                            <div class="mb-3">
+                                                <input type="text" class="form-control" placeholder="Имя">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="text" class="form-control" placeholder="Фамилия">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="email" class="form-control error" placeholder="E-mail">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="password" class="form-control error" placeholder="Пароль">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="password" class="form-control error"
+                                                    placeholder="Повторить пароль">
+                                            </div>
 
-                                        <!-- <a href="#">
+                                            <!-- <a href="#">
                                             <button type="submit"
                                                 class="btn btn-primary w-100 submit-btn">Зарегистрироваться</button>
                                         </a> -->
 
-                                        <a href="#" class="btn btn-primary w-100 submit-btn">
-                                            Зарегистрироваться
-                                        </a>
-                                    </form>
+                                            <a href="#" class="btn btn-primary w-100 submit-btn">
+                                                Зарегистрироваться
+                                            </a>
+                                        </form>
 
-                                    <div class="d-flex flex-column align-items-center  vhod_info">
-                                        <div class="d-flex gap-3 align-items-center">
-                                            <p>Уже Eсть Регистрация?</p>
-                                            <a href="#">Войти</a>
+                                        <div class="d-flex flex-column align-items-center  vhod_info">
+                                            <div class="d-flex gap-3 align-items-center">
+                                                <p>Уже Eсть Регистрация?</p>
+                                                <a href="#">Войти</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
